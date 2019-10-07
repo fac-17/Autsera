@@ -7,6 +7,10 @@ test("The HomePage should render", () => {
   render(<HomePage />);
 })
 
+test("The HomePage should include the StartButton", () => {
+  const { getByText } = render(<HomePage />);
+  getByText("START PLAYING!");
+})
 
 
 
