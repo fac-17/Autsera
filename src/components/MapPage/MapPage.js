@@ -5,8 +5,9 @@ import "./map.css";
 const MapPage = props => {
   return (
     <div className="map-background">
-      <h2>This is the MAP page</h2>
+      <h2>AUTSERA LAND</h2>
       <RouterLink to="/" label="Go Back" />
+      <RouterLink to="/place" label="Playground" />
     </div>
   );
 };

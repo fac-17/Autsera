@@ -1,7 +1,8 @@
 .map-background {
-  background-image: url("/img/Playground.png");
+  background-image: url("/img/map.png");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: grayscale(70%);
 }

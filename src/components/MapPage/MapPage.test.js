@@ -19,3 +19,12 @@ test("MapPage includes a Go Back Button", () => {
   );
   getByText("Go Back");
 });
+
+test("MapPage includes a Playground Button", () => {
+  const { getByText } = render(
+    <Router>
+      <MapPage />
+    </Router>
+  );
+  getByText("Playground");
+});
