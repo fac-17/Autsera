@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import RouterLink from "../components/RouterLink";
+import RouterLink from "./RouterLink";
 
 test("RouterLink renders", () => {
   const { getByText } =  render(

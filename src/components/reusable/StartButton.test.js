@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import StartButton from "../components/StartButton";
+import StartButton from "./StartButton";
 
 test("startButton is rendered", () => {
   render(<StartButton />);
