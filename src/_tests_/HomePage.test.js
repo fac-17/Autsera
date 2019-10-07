@@ -20,7 +20,7 @@ test("The StartButton on HomePage uses function passed to HomePage",()=>{
   expect(startFunction).toHaveBeenCalledTimes(1);
 })
 
-// should render
-// should include start now button
+
+
 // should have 'more info' button
 // should display the avatar
