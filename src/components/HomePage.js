@@ -1,13 +1,13 @@
 import React from "react";
 import StartButton from "./StartButton"
 
-const HomePage = (props) => {
+const HomePage = ({startFunction}) => {
 
   return (
 
     <>
       <h1>Homepage</h1>
-      <StartButton />
+      <StartButton whenClicked={startFunction}/>
     </>
 
   )

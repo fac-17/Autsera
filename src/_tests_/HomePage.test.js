@@ -12,7 +12,13 @@ test("The HomePage should include the StartButton", () => {
   getByText("START PLAYING!");
 })
 
-
+test("The StartButton on HomePage uses function passed to HomePage",()=>{
+  const startFunction=jest.fn();
+  const { getByText } = render(<HomePage startFunction={startFunction}/>);
+  const button=getByText("START PLAYING!");
+  fireEvent.click(button);
+  expect(startFunction).toHaveBeenCalledTimes(1);
+})
 
 // should render
 // should include start now button
