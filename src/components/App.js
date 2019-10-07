@@ -2,8 +2,8 @@ import React from "react";
 import logo from "../logo.svg";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import HomePage from "./HomePage";
-import HelpPage from "./HelpPage";
+import HomePage from "./HomePage/HomePage";
+import HelpPage from "./HelpPage/HelpPage";
 
 function App() {
   return (

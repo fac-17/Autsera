@@ -1,6 +1,6 @@
 import React from "react";
-import StartButton from "./StartButton";
-import RouterLink from "./RouterLink";
+import StartButton from "../reusable/StartButton";
+import RouterLink from "../reusable/RouterLink";
 
 const HomePage = ({startFunction}) => {
 
