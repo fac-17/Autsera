@@ -13,7 +13,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "report-coverage":"npm test -- --coverage --watchAll=false"
+    "report-coverage":"npm test -- --coverage --watchAll=false && codecov"
   },
   "eslintConfig": {
     "extends": "react-app"
