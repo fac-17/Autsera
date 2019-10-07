@@ -1,5 +1,6 @@
 import React from "react";
-import StartButton from "./StartButton"
+import StartButton from "./StartButton";
+import RouterLink from "./RouterLink";
 
 const HomePage = ({startFunction}) => {
 
@@ -8,6 +9,7 @@ const HomePage = ({startFunction}) => {
     <>
       <h1>Homepage</h1>
       <StartButton whenClicked={startFunction}/>
+      <RouterLink to="/help" label="Help" />
     </>
 
   )
