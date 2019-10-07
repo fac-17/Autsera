@@ -29,6 +29,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^9.2.0",
     "node-sass": "^4.12.0"
   }
 }

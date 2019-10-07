@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React from "react";
+import logo from "../logo.svg";
+import "./App.scss";
+import StartButton from "./StartButton";
 
 function App() {
   return (
@@ -10,6 +11,11 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
           <span className="x">Jan</span>
+          <StartButton
+            whenClicked={() => {
+              console.log("clicked");
+            }}
+          />
         </p>
         <a
           className="App-link"
@@ -20,7 +26,9 @@ function App() {
           Learn React
         </a>
       </header>
-      <p><span className="x">Jan</span></p>
+      <p>
+        <span className="x">Jan</span>
+      </p>
     </div>
   );
 }
