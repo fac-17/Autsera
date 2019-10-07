@@ -14,7 +14,7 @@ export default {
           image: "leoniereuben.png",
           coordinates: [20, 10],
           radius: 12,
-          localStarsToUnlock: 0,
+          requiredStars: 0,
           answers: [
             {
               id: 2,
@@ -60,7 +60,7 @@ export default {
           image: "janisababy.png",
           coordinates: [80, 60],
           radius: 8,
-          localStarsToUnlock: 1,
+          requiredStars: 1,
           answers: [
             {
               id: 9,
