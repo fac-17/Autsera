@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 test("The Place Page renders", () => {
   render(
     <Router>
-      <PlacePage />
+      <PlacePage id="0" />
     </Router>
   );
 });

@@ -7,7 +7,7 @@ const MapPage = props => {
     <div className="map-background">
       <h2>AUTSERA LAND</h2>
       <RouterLink to="/" label="Go Back" />
-      <RouterLink to="/place" label="Playground" />
+      <RouterLink to="/place/0" label="Playground" />
     </div>
   );
 };

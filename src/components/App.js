@@ -13,7 +13,10 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/help" component={HelpPage} />
         <Route path="/map" component={MapPage} />
-        <Route path="/place" component={PlacePage} />
+        <Route
+          path="/place/:id"
+          render={({ match }) => <PlacePage id={match.params.id} />}
+        />
       </Router>
     </div>
   );
