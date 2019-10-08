@@ -1,7 +1,7 @@
 import React from "react";
 import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
-import InteractionCircle from "./InteractionCircle"
+import InteractionCircle from "./InteractionCircle";
 import Stars from "../reusable/Stars";
 
 const PlacePage = ({ id }) => {
@@ -13,8 +13,9 @@ const PlacePage = ({ id }) => {
 
       {/* Sample Stars Component */}
       <Stars has="3" max="5" />
-      {placeData.interactions.map(interaction=><InteractionCircle key={interaction.id} interaction={interaction} />)}
-
+      {placeData.interactions.map(interaction => (
+        <InteractionCircle key={interaction.id} interaction={interaction} />
+      ))}
     </div>
   );
 };
