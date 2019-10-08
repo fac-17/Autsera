@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
 
-const InteractionPage = ({ id }) => {
-
+const InteractionPage = ({ id, completed, setCompleted }) => {
+  const [selectedAnswers,setSelectedAnswers]=useState([])
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
       interaction => interaction.id === Number(id)
@@ -12,7 +12,7 @@ const InteractionPage = ({ id }) => {
   }, {});
 
   let placeObj = data.places.find(place => place.interactions.includes(interactionObj));
-
+ 
   return (
     <div
       className="interaction-background"
@@ -21,7 +21,14 @@ const InteractionPage = ({ id }) => {
       <h2>{interactionObj.text}</h2>
       <ul>
         {interactionObj.answers.map(answer => (
-          <li key={answer.id}>{answer.text}</li>
+          <li key={answer.id}> <button onClick={()=>{
+            if (answer.correct && !selectedAnswers.includes(answer.id)) {
+              setSelectedAnswers([...selectedAnswers,answer.id])
+            } else {
+              
+            }
+            console.log(answer.response)
+          }}>{answer.text} {selectedAnswers.includes(answer.id)?" + ":""}</button></li>
         ))}
       </ul>
       <RouterLink to={"/place/" + placeObj.id} label="Go Back" />
