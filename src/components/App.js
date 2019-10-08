@@ -10,7 +10,7 @@ import InteractionPage from "./InteractionPage/InteractionPage";
 
 function App() {
 
-  const [completed, setCompleted] = useState([]);
+  const [completed, setCompleted] = useState([1, 8, 13]);
 
 
   return (
