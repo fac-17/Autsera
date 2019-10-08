@@ -1,6 +1,6 @@
 import React from "react";
 import RouterLink from "../reusable/RouterLink";
-import "./map.css";
+import "./map.scss";
 import data from "../../data/data";
 import PlaceCircle from "./PlaceCircle";
 const MapPage = ({ completed }) => {

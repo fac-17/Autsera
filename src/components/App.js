@@ -8,7 +8,7 @@ import PlacePage from "./PlacePage/PlacePage";
 import InteractionPage from "./InteractionPage/InteractionPage";
 
 function App() {
-  const [completed, setCompleted] = useState([1, 8, 13]);
+  const [completed, setCompleted] = useState([]);
 
   return (
     <div className="App">
