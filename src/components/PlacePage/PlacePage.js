@@ -7,7 +7,7 @@ import {countStarsInPlace} from "../../utils/starsCounting";
 
 const PlacePage = ({ id, completed }) => {
   const placeData = data.places.find(place => place.id === Number(id));
-
+  const {has}=countStarsInPlace(id, completed)
   return (
     <div style={{ backgroundImage: `url(/img/${placeData.image})` }}>
       <h2>{placeData.text}</h2>
@@ -15,7 +15,7 @@ const PlacePage = ({ id, completed }) => {
       {/* Sample Stars Component */}
       <Stars {...countStarsInPlace(id, completed)} />
       {placeData.interactions.map(interaction => (
-        <InteractionCircle key={interaction.id} interaction={interaction} isCompleted={completed.includes(interaction.id)} />
+        <InteractionCircle key={interaction.id} isUnlocked={has>=interaction.requiredStars} interaction={interaction} isCompleted={completed.includes(interaction.id)} />
       ))}
     </div>
   );
