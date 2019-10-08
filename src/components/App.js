@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "./HomePage/HomePage";
@@ -7,7 +7,12 @@ import MapPage from "./MapPage/MapPage";
 import PlacePage from "./PlacePage/PlacePage";
 import InteractionPage from "./InteractionPage/InteractionPage";
 
+
 function App() {
+
+  const [completed, setCompleted] = useState([]);
+
+
   return (
     <div className="App">
       <Router>
@@ -16,7 +21,7 @@ function App() {
         <Route path="/map" component={MapPage} />
         <Route
           path="/place/:id"
-          render={({ match }) => <PlacePage id={match.params.id} />}
+          render={({ match }) => <PlacePage id={match.params.id} completed={completed} setCompleted={setCompleted} />}
         />
         <Route
           path="/interaction/:id"
