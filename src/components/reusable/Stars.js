@@ -1,4 +1,5 @@
 import React from "react";
+// returns an array of max Boolean elements like [true,true,true,false,false] for has=3, max=5
 const starsArray=(has,max)=>Array(max).fill(0).map( (_,i) => i<has)
 
 const Star = ( {full} ) => (
