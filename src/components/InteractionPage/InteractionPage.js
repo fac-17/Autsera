@@ -3,12 +3,15 @@ import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
 
 const InteractionPage = ({ id }) => {
+
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
       interaction => interaction.id === Number(id)
     );
     return foundInteraction ? foundInteraction : interactionObj;
   }, {});
+
+  let placeObj = data.places.find(place => place.interactions.includes(interactionObj));
 
   return (
     <div
@@ -21,7 +24,7 @@ const InteractionPage = ({ id }) => {
           <li key={answer.id}>{answer.text}</li>
         ))}
       </ul>
-      <RouterLink to="/" label="Go Back" />
+      <RouterLink to={"/place/" + placeObj.id} label="Go Back" />
     </div>
   );
 };
