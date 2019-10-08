@@ -109,7 +109,7 @@ export default {
        "33"
       ],
       "radius": "33",
-      "requiredStars": "3",
+      "requiredStars": "2",
       "answers": [
        {
         "id": 25,
@@ -255,7 +255,7 @@ export default {
         ]
        }
       ],
-      "requiredStars": "2"
+      "requiredStars": "0"
      }
     ]
    }
