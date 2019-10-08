@@ -15,7 +15,7 @@ const PlacePage = ({ id, completed }) => {
       {/* Sample Stars Component */}
       <Stars {...countStarsInPlace(id, completed)} />
       {placeData.interactions.map(interaction => (
-        <InteractionCircle key={interaction.id} interaction={interaction} />
+        <InteractionCircle key={interaction.id} interaction={interaction} isCompleted={completed.includes(interaction.id)} />
       ))}
     </div>
   );
