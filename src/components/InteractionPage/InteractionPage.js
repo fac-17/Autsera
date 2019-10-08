@@ -5,11 +5,11 @@ import data from "../../data/data";
 const InteractionPage = ({ id }) => {
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
-      interaction => Object.values(interaction).indexOf(Number(id)) >= 0
+      interaction => interaction.id === Number(id)
     );
-    if (foundInteraction) return foundInteraction;
-    else return interactionObj;
+    return foundInteraction ? foundInteraction : interactionObj;
   }, {});
+
   return (
     <div
       className="interaction-background"
@@ -18,7 +18,7 @@ const InteractionPage = ({ id }) => {
       <h2>{interactionObj.text}</h2>
       <ul>
         {interactionObj.answers.map(answer => (
-          <li>{answer.text}</li>
+          <li key={answer.id}>{answer.text}</li>
         ))}
       </ul>
       <RouterLink to="/" label="Go Back" />
