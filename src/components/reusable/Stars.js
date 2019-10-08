@@ -1,6 +1,6 @@
 import React from "react";
 // returns an array of max Boolean elements like [true,true,true,false,false] for has=3, max=5
-const starsArray=(has,max)=>Array(max).fill(0).map( (_,i) => i<has)
+const starsArray=(has,max)=>Array(max).fill(0).map( (elem,i) => i<has)
 
 const Star = ( {full} ) => (
   <svg viewBox="0 0 51 48" fill={full?"#000":"none"} stroke="#000" width="20px">
