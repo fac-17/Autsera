@@ -25,7 +25,7 @@ function App() {
         />
         <Route
           path="/interaction/:id"
-          render={({ match }) => <InteractionPage id={match.params.id} />}
+          render={({ match }) => <InteractionPage id={Number(match.params.id)} setCompleted={setCompleted} />}
         />
       </Router>
     </div>
