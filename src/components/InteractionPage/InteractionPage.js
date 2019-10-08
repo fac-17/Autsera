@@ -2,14 +2,25 @@ import React, { useState, useEffect } from "react";
 import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
 
-
-
-const InteractionPage = ({id}) => {
-
+const InteractionPage = ({ id }) => {
+  let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
+    let foundInteraction = currentPlace.interactions.find(
+      interaction => Object.values(interaction).indexOf(Number(id)) >= 0
+    );
+    if (foundInteraction) return foundInteraction;
+    else return interactionObj;
+  }, {});
   return (
-    <div className="interaction-background">
-      <h2>INTERACTION PAGE</h2>
-      <p>{object.text}</p>
+    <div
+      className="interaction-background"
+      style={{ backgroundImage: `url(/img/${interactionObj.image})` }}
+    >
+      <h2>{interactionObj.text}</h2>
+      <ul>
+        {interactionObj.answers.map(answer => (
+          <li>{answer.text}</li>
+        ))}
+      </ul>
       <RouterLink to="/" label="Go Back" />
     </div>
   );
