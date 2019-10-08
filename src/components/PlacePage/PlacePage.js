@@ -10,7 +10,6 @@ const PlacePage = ({ id }) => {
     <div style={{ backgroundImage: `url(/img/${placeData.image})` }}>
       <h2>{placeData.text}</h2>
       <RouterLink to="/map" label="Go Back" />
-
       {/* Sample Stars Component */}
       <Stars has="3" max="5" />
       {placeData.interactions.map(interaction => (

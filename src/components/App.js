@@ -5,6 +5,7 @@ import HomePage from "./HomePage/HomePage";
 import HelpPage from "./HelpPage/HelpPage";
 import MapPage from "./MapPage/MapPage";
 import PlacePage from "./PlacePage/PlacePage";
+import InteractionPage from "./InteractionPage/InteractionPage";
 
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
         <Route
           path="/place/:id"
           render={({ match }) => <PlacePage id={match.params.id} completed={completed} setCompleted={setCompleted} />}
+        />
+        <Route
+          path="/interaction/:id"
+          render={({ match }) => <InteractionPage id={match.params.id} />}
         />
       </Router>
     </div>

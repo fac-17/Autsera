@@ -2,6 +2,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import MapPage from "./MapPage";
 import { BrowserRouter as Router } from "react-router-dom";
+import data from "../../data/data";
 
 test("The Map Page renders", () => {
   render(
@@ -28,3 +29,15 @@ test("MapPage includes a Playground Button", () => {
   );
   getByText("Playground");
 });
+
+test("Places rendered on the map match places available on data", () => {
+  const { getByText } = render(
+    <Router>
+      <MapPage />
+    </Router>
+  );
+
+  data.places.map(place => {
+    getByText(place.text);
+  })
+})
