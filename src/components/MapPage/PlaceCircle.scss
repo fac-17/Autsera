@@ -1,0 +1,16 @@
+.place-circle {
+  height: 20vh;
+  width: 20vw;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  &.unlocked {
+    border: 20px solid green;
+  }
+  &.locked {
+    border: 20px solid red;
+  }
+}
