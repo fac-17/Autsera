@@ -1,7 +1,9 @@
 import React from "react";
 import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
+
 const PlacePage = ({ id }) => {
+
   const placeData = data.places.find(place => place.id === Number(id));
   console.log(placeData);
   return (
