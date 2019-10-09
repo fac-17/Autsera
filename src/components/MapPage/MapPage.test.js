@@ -42,3 +42,25 @@ test("Places rendered on the map match places available on data", () => {
     getByText(place.text);
   });
 });
+
+
+test("Locked places render with locked class", () => {
+  const completedOne = [1];
+  const { getByText, container } = render(
+    <Router>
+      <MapPage completed={completedOne} />
+    </Router>
+  );
+
+  const buttons = container.querySelectorAll(".place-circle");
+
+  buttons.forEach((button, index) => {
+    if (data.places[index].requiredStars < completedOne.length) {
+      expect(button.className).toBe("place-circle unlocked")
+    } else {
+      expect(button.className).toBe("place-circle locked")
+    }
+
+  })
+
+})
