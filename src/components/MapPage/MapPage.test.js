@@ -43,7 +43,6 @@ test("Places rendered on the map match places available on data", () => {
   });
 });
 
-// BULLSHIT BELOW
 
 test("Locked places render with locked class", () => {
   const completedOne = [1];
