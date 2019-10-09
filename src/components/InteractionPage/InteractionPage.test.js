@@ -54,7 +54,7 @@ test("Test if there is a back button with correct link'", () => {
     </Router>
   );
   const backButton = getByText("Go Back");
-  expect(backButton.href).toMatch(/0/);
+  expect(backButton.href).toMatch(/\/place\/0$/);
 });
 
 test("Test if setCompleted gets called with the right argument", () => {
