@@ -26,9 +26,28 @@ test("When both speechText and helpText are passed in , the helper component rep
   const avatar = getByAltText("helper-avatar");
   getByText(speechText);
   //expect speechText to be displayed and helpText to not be displayed on initial render;
-  expect(getByText(helpText)).toThrow();
+  expect(() => getByText(helpText)).toThrow();
   fireEvent.click(avatar);
   //expect speechText to disappear and helpText to be displayed after clicking
-  expect(getByText(speechText)).toThrow();
+  expect(() => getByText(speechText)).toThrow();
+  getByText(helpText);
+});
+test(`when both speechText and helpText are passed in,
+the helper component replaces the speechText with the helpText when clicked, 
+and keeps the helpText visible when clicked again.`, () => {
+  const { getByAltText, getByText } = render(
+    <HelperAvatar helpText={helpText} speechText={speechText} />
+  );
+  const avatar = getByAltText("helper-avatar");
+  getByText(speechText);
+  //expect speechText to be displayed and helpText to not be displayed on initial render;
+  expect(() => getByText(helpText)).toThrow();
+  fireEvent.click(avatar);
+  //expect speechText to disappear and helpText to be displayed after clicking
+  expect(() => getByText(speechText)).toThrow();
+  getByText(helpText);
+  fireEvent.click(avatar);
+  //expect helpText to stay, and speechText to not reappear on subsequent clicks
+  expect(() => getByText(speechText)).toThrow();
   getByText(helpText);
 });

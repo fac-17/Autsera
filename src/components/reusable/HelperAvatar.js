@@ -14,8 +14,12 @@ const HelperAvatar = ({ speechText, helpText, timeOut }) => {
         alt="helper-avatar"
         onClick={toggleshowHint}
       ></img>
-      {speechText ? <div className="speech-box">{speechText}</div> : null}
-      {showHint ? <div className="speech-box">{helpText}</div> : null}
+      {speechText && !showHint ? (
+        <div className="speech-box">{speechText}</div>
+      ) : null}
+      {helpText && showHint ? (
+        <div className="speech-box">{helpText}</div>
+      ) : null}
     </div>
   );
 };
