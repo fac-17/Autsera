@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
 import RouterLink from "../reusable/RouterLink";
-import data from "../../data/data";
-
+// import data from "../../data/data";
+import * as dataUtils from "../../utils/dataUtils";
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers,setSelectedAnswers]=useState([]);
-  let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
-    let foundInteraction = currentPlace.interactions.find(
-      interaction => interaction.id === Number(id)
-      );
-      return foundInteraction ? foundInteraction : interactionObj;
-    }, {});
+  // let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
+  //   let foundInteraction = currentPlace.interactions.find(
+  //     interaction => interaction.id === Number(id)
+  //     );
+  //     return foundInteraction ? foundInteraction : interactionObj;
+  //   }, {});
+
+    let interactionObj=dataUtils.getById(Number(id));
+    let placeObj=dataUtils.getParent(interactionObj)
     
-    let placeObj = data.places.find(place => place.interactions.includes(interactionObj));
+    // let placeObj = data.places.find(place => place.interactions.includes(interactionObj));
    
     useEffect(()=>{
       const correctAnswersIds=interactionObj.answers
