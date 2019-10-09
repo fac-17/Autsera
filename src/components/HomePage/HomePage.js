@@ -12,6 +12,7 @@ const HomePage = ({ startFunction }) => {
       <RouterLink to="/help" label="Help" />
       <RouterLink to="/map" label="Start Playing" />
       <HelperAvatar speechText="Hi, welcome to Autsera" />
+      <HelperAvatar helpText="Here is a helpful hint" />
     </>
   );
 };
