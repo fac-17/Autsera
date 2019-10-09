@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, wait } from "@testing-library/react";
+import { render, fireEvent, act } from "@testing-library/react";
 import HelperAvatar from "./HelperAvatar";
 const helpText = "Look again, are they smiling?";
 const speechText = "Hi i'm a hippo";
@@ -58,9 +58,13 @@ test("speechText disappears after timeOut", () => {
     <HelperAvatar helpText={helpText} speechText={speechText} timeOut={1000} />
   );
   getByText(speechText);
-  jest.advanceTimersByTime(500); //halfway through timer, speechText should still be visible
+  act(() => {
+    jest.advanceTimersByTime(500); //halfway through timer, speechText should still be visible
+  });
   getByText(speechText);
-  jest.advanceTimersByTime(500); //timer completed, speechText should disappear
+  act(() => {
+    jest.advanceTimersByTime(500); //timer completed, speechText should disappear
+  });
   expect(() => getByText(speechText)).toThrow();
 });
 
@@ -72,8 +76,12 @@ test("helpText disappears after timeOut expires", () => {
   getByText(speechText);
   fireEvent.click(avatar);
   getByText(helpText);
-  jest.advanceTimersByTime(500); //halfway through timer, helpText should still be visible
+  act(() => {
+    jest.advanceTimersByTime(500); //halfway through timer, helpText should still be visible
+  });
   getByText(helpText);
-  jest.advanceTimersByTime(500); //timer completed, helpText should disappear
+  act(() => {
+    jest.advanceTimersByTime(500); //timer completed, helpText should disappear
+  });
   expect(() => getByText(helpText)).toThrow();
 });

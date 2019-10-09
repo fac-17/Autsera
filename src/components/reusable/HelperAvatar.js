@@ -17,7 +17,6 @@ const HelperAvatar = ({ speechText, helpText, timeOut }) => {
     setdisplaySomething(true);
     setshowHint(true);
     setclickCount(clickCount => clickCount + 1);
-    console.log(e);
   };
 
   return (
