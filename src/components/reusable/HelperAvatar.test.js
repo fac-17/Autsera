@@ -11,7 +11,7 @@ test("The image of the helper appears when there is no speech provided", () => {
   const { getByAltText } = render(<HelperAvatar />);
   getByAltText("helper-avatar");
 });
-test("The helper component shows the helpText when clicked", async () => {
+test("The helper component shows the helpText when clicked", () => {
   const { getByAltText, getByText } = render(
     <HelperAvatar helpText={helpText} />
   );
