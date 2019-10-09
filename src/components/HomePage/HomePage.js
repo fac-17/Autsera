@@ -1,6 +1,7 @@
 import React from "react";
 import StartButton from "../reusable/StartButton";
 import RouterLink from "../reusable/RouterLink";
+import HelperAvatar from "../reusable/HelperAvatar";
 
 const HomePage = ({ startFunction }) => {
   return (
@@ -10,6 +11,7 @@ const HomePage = ({ startFunction }) => {
       <StartButton whenClicked={startFunction} />
       <RouterLink to="/help" label="Help" />
       <RouterLink to="/map" label="Start Playing" />
+      <HelperAvatar speechText="Hi, welcome to Autsera" />
     </>
   );
 };

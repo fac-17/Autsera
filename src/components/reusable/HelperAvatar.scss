@@ -1,0 +1,21 @@
+.helper-avatar-container {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+  .helper-avatar {
+    position: absolute;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+  }
+  .speech-box {
+    position: absolute;
+    right: 200px;
+    height: 100px;
+    width: auto;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+  }
+}
