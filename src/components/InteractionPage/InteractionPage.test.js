@@ -15,7 +15,7 @@ test("The Interaction Page renders", () => {
 });
 
 test("Game starts from scratch when user re-enters page", () => {
-  const { getByText, getByLabelText, getByTestId } = render(
+  const { getByText } = render(
     <Router>
       <InteractionPage id="1" />
     </Router>
@@ -26,7 +26,7 @@ test("Game starts from scratch when user re-enters page", () => {
   );
 });
 
-test("Selecting an answer changes the class to 'selected'", () => {
+test("Selecting first answer changes the class accordingly", () => {
   const { getByText } = render(
     <Router>
       <InteractionPage id="1" />
@@ -40,6 +40,26 @@ test("Selecting an answer changes the class to 'selected'", () => {
   } else {
     expect(oneAnswer.className).toBe("option");
   }
+});
+
+test("Selecting an answer changes the class to 'selected'", () => {
+  const { getByText } = render(
+    <Router>
+      <InteractionPage id="1" />
+    </Router>
+  );
+  const answers = data.places[0].interactions[0].answers;
+  const setCompleted = jest.fn(x => x);
+
+  answers.map(answer => {
+    const oneAnswer = getByText(answer.text);
+    fireEvent.click(oneAnswer);
+    if (answer.correct) {
+      expect(oneAnswer.className).toBe("selected");
+    } else {
+      expect(oneAnswer.className).toBe("option");
+    }
+  });
 });
 
 test("Test if there is a back button with correct link'", () => {
