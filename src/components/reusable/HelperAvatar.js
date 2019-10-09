@@ -4,7 +4,7 @@ const HelperAvatar = ({ speechText, helpText, timeOut }) => {
   //   console.log({ hintText });
   let [showHint, setshowHint] = React.useState(false);
   let toggleshowHint = e => {
-    setshowHint(!showHint);
+    setshowHint(true);
     console.log(e);
   };
   return (
