@@ -26,30 +26,15 @@ test("Game starts from scratch when user re-enters page", () => {
   );
 });
 
-test("Selecting first answer changes the class accordingly", () => {
-  const { getByText } = render(
-    <Router>
-      <InteractionPage id="1" />
-    </Router>
-  );
-  const answers = data.places[0].interactions[0].answers;
-  const oneAnswer = getByText(answers[0].text);
-  fireEvent.click(oneAnswer);
-  if (answers[0].correct) {
-    expect(oneAnswer.className).toBe("selected");
-  } else {
-    expect(oneAnswer.className).toBe("option");
-  }
-});
 
 test("Selecting an answer changes the class to 'selected'", () => {
+  const setCompleted = jest.fn();
   const { getByText } = render(
     <Router>
-      <InteractionPage id="1" />
+      <InteractionPage id="1" setCompleted={setCompleted} />
     </Router>
   );
   const answers = data.places[0].interactions[0].answers;
-  const setCompleted = jest.fn(x => x);
 
   answers.map(answer => {
     const oneAnswer = getByText(answer.text);
@@ -70,4 +55,26 @@ test("Test if there is a back button with correct link'", () => {
   );
   const backButton = getByText("Go Back");
   expect(backButton.href).toMatch(/0/);
+});
+
+test("Test if setCompleted gets called with the right argument", () => {
+  const setCompleted = jest.fn();
+  const completed = []
+  const { getByText } = render(
+    <Router>
+      <InteractionPage id="1" setCompleted={setCompleted} completed={completed} />
+    </Router>
+  );
+
+  const answers = data.places[0].interactions[0].answers;
+
+  answers.map(answer => {
+    const oneAnswer = getByText(answer.text);
+    if (answer.correct) {
+      fireEvent.click(oneAnswer);
+    }
+  })
+
+  expect(setCompleted).toBeCalledTimes(1);
+
 });
