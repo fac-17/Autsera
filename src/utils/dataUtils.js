@@ -3,12 +3,16 @@ import data from "../data/data";
 // object with keys as object Ids mapping to actual object {8: {id:8,text:"Leonie fighting",...}}
 export const dataObjects = {};
 
+// array of all interactions from the whole data
+export const interactions=[];
+
 // object with keys as object Ids and value parent Id { 8:0 } 
 export const parentsId = {};
 
 data.places.forEach(place => {
   dataObjects[place.id] = place;
   place.interactions.forEach(interaction => {
+    interactions.push(interaction)
     parentsId[interaction.id] = place.id;
     dataObjects[interaction.id] = interaction;
     interaction.hints.forEach(hint => {
