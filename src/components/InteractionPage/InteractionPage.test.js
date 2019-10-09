@@ -27,7 +27,7 @@ test("Game starts from scratch when user re-enters page", () => {
 });
 
 test("Selecting an answer changes the class to 'selected'", () => {
-  const { getByText, getByLabelText, getByTestId } = render(
+  const { getByText } = render(
     <Router>
       <InteractionPage id="1" />
     </Router>
@@ -40,4 +40,14 @@ test("Selecting an answer changes the class to 'selected'", () => {
   } else {
     expect(oneAnswer.className).toBe("option");
   }
+});
+
+test("Test if there is a back button with correct link'", () => {
+  const { getByText } = render(
+    <Router>
+      <InteractionPage id="1" />
+    </Router>
+  );
+  const backButton = getByText("Go Back");
+  expect(backButton.href).toMatch(/0/);
 });
