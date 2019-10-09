@@ -2,9 +2,9 @@ import React from "react";
 import "./HelperAvatar.scss";
 const HelperAvatar = ({ speechText, timeOut }) => {
   return (
-    <div class="helper-avatar-container">
-      <div class="helper-avatar"></div>
-      <div class="speech-box">{speechText}</div>
+    <div className="helper-avatar-container">
+      <img className="helper-avatar" alt="helper-avatar"></img>
+      {speechText ? <div className="speech-box">{speechText}</div> : null}
     </div>
   );
 };
