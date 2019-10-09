@@ -11,11 +11,12 @@ const HomePage = ({ startFunction }) => {
       <StartButton whenClicked={startFunction} />
       <RouterLink to="/help" label="Help" />
       <RouterLink to="/map" label="Start Playing" />
-      <HelperAvatar speechText="Hi, welcome to Autsera" />
-      <HelperAvatar helpText="Here is a helpful hint" />
+      <HelperAvatar speechText="Hi, welcome to Autsera" timeOut={1000} />
+      <HelperAvatar helpText="Here is a helpful hint" timeOut={2000} />
       <HelperAvatar
         speechText="Hi, welcome to Autsera"
         helpText="Here is a helpful hint"
+        timeOut={3000}
       />
     </>
   );

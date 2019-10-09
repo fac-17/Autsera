@@ -51,3 +51,29 @@ and keeps the helpText visible when clicked again.`, () => {
   expect(() => getByText(speechText)).toThrow();
   getByText(helpText);
 });
+jest.useFakeTimers();
+
+test("speechText disappears after timeOut", () => {
+  const { getByText } = render(
+    <HelperAvatar helpText={helpText} speechText={speechText} timeOut={1000} />
+  );
+  getByText(speechText);
+  jest.advanceTimersByTime(500); //halfway through timer, speechText should still be visible
+  getByText(speechText);
+  jest.advanceTimersByTime(500); //timer completed, speechText should disappear
+  expect(() => getByText(speechText)).toThrow();
+});
+
+test("helpText disappears after timeOut expires", () => {
+  const { getByAltText, getByText } = render(
+    <HelperAvatar helpText={helpText} speechText={speechText} timeOut={1000} />
+  );
+  const avatar = getByAltText("helper-avatar");
+  getByText(speechText);
+  fireEvent.click(avatar);
+  getByText(helpText);
+  jest.advanceTimersByTime(500); //halfway through timer, helpText should still be visible
+  getByText(helpText);
+  jest.advanceTimersByTime(500); //timer completed, helpText should disappear
+  expect(() => getByText(helpText)).toThrow();
+});
