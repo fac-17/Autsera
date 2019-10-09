@@ -7,6 +7,7 @@ import PlaceCircle from "./PlaceCircle";
 const testPlace = data.places[0];
 //sample completed interactions array
 const completed = [1, 8, 13];
+
 test("if placeCircle renders when given a place", () => {
   render(
     <Router>
@@ -14,6 +15,7 @@ test("if placeCircle renders when given a place", () => {
     </Router>
   );
 });
+
 test("if placeCircle renders the text of the place correctly", () => {
   const { getByText } = render(
     <Router>
@@ -22,6 +24,7 @@ test("if placeCircle renders the text of the place correctly", () => {
   );
   getByText(testPlace.text);
 });
+
 test("if placeCircle renders the right link", () => {
   const { getByText } = render(
     <Router>
