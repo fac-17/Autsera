@@ -6,7 +6,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
-      interaction => interaction.id === Number(id)
+      interaction => interaction.id === id
     );
     return foundInteraction ? foundInteraction : interactionObj;
   }, {});
