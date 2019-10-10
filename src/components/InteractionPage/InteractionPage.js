@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
+import HelperAvatar from "../reusable/HelperAvatar";
 
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
+  const [helpText, setHelpText] = useState(null);
+  const [speechText, setSpeechText] = useState(null);
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
       interaction => interaction.id === Number(id)
@@ -24,6 +27,7 @@ const InteractionPage = ({ id, setCompleted }) => {
     if (
       correctAnswersIds.every(correctId => selectedAnswers.includes(correctId))
     ) {
+      setSpeechText("Well done!");
       setCompleted(completed =>
         completed.includes(id) ? completed : completed.concat(id)
       );
@@ -40,28 +44,28 @@ const InteractionPage = ({ id, setCompleted }) => {
           <li key={answer.id}>
             {" "}
             <button
-              className={
-                selectedAnswers.includes(answer.id) ? "selected" : "option"
-              }
               onClick={() => {
                 if (answer.correct && !selectedAnswers.includes(answer.id)) {
                   setSelectedAnswers([...selectedAnswers, answer.id]);
                 } else {
                 }
                 console.log(answer.response);
+                setSpeechText(answer.response);
               }}
             >
-              {answer.text}
-              {selectedAnswers.includes(answer.id) ? " + " : ""}
+              {answer.text} {selectedAnswers.includes(answer.id) ? " + " : ""}
             </button>
           </li>
         ))}
       </ul>
       <RouterLink to={"/place/" + placeObj.id} label="Go Back" />
+      <HelperAvatar
+        speechText={speechText}
+        helpText={helpText}
+        timeOut={4000}
+      />
     </div>
   );
 };
 
 export default InteractionPage;
-
-// {data.places.map(interaction => <Something key={interaction.id} label={place.text} />)}

@@ -2,16 +2,17 @@ import React from "react";
 import "./HelperAvatar.scss";
 
 const HelperAvatar = ({ speechText, helpText, timeOut }) => {
-  //   console.log({ hintText });
   let [displaySomething, setdisplaySomething] = React.useState(true);
   let [showHint, setshowHint] = React.useState(false);
   let [clickCount, setclickCount] = React.useState(0);
+  console.log({ helpText },{speechText},{displaySomething});
   React.useEffect(() => {
+    setdisplaySomething(true)
     const timer = setTimeout(() => {
       setdisplaySomething(false);
     }, timeOut);
     return () => clearTimeout(timer);
-  }, [setdisplaySomething, showHint, clickCount]);
+  }, [setdisplaySomething, showHint, clickCount,speechText]);
 
   let toggleshowHint = e => {
     setdisplaySomething(true);
