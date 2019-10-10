@@ -87,7 +87,7 @@ test("if clicking on answer gives the right response from avatar", () => {
 
   const { getByText } = render(
     <Router>
-      <InteractionPage id="1" setCompleted={setCompleted} completed={[]} />
+      <InteractionPage id={1} setCompleted={setCompleted} completed={[]} />
     </Router>
   );
   answers.forEach(answer => {
@@ -98,12 +98,11 @@ test("if clicking on answer gives the right response from avatar", () => {
 });
 
 test("if clicking on avatar gives the right hint", () => {
-  const answers = data.places[0].interactions[0].answers;
   const setCompleted = jest.fn();
 
-  const { getByText, getByAltText, queryByText } = render(
+  const { getByAltText, queryByText } = render(
     <Router>
-      <InteractionPage id="1" setCompleted={setCompleted} completed={[]} />
+      <InteractionPage id={1} setCompleted={setCompleted} completed={[]} />
     </Router>
   );
   const avatar = getByAltText("helper-avatar");
