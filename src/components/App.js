@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "./HomePage/HomePage";
@@ -8,13 +8,18 @@ import PlacePage from "./PlacePage/PlacePage";
 import InteractionPage from "./InteractionPage/InteractionPage";
 
 function App() {
-  const [completed, setCompleted] = useState([]);
+  const [completed, setCompleted] = useState(JSON.parse(localStorage.getItem("completed")) || []);
+
+  useEffect(() => {
+    localStorage.setItem("completed", JSON.stringify(completed));
+  }, [completed])
 
   return (
     <div className="App">
       <Router>
         <Route exact path="/" component={HomePage} />
         <Route path="/help" component={HelpPage} />
+        {console.log(completed)}
         <Route
           path="/map"
           render={() => (
