@@ -22,7 +22,7 @@ test("Game starts from scratch when user re-enters page", () => {
   );
   const answers = data.places[0].interactions[0].answers;
   answers.map(answer =>
-    expect(getByText(answer.text).className).toBe("option")
+    expect(getByText(answer.text).className).toBe("btn-answer option")
   );
 });
 
@@ -40,9 +40,9 @@ test("Selecting an answer changes the class to 'selected'", () => {
     const oneAnswer = getByText(answer.text);
     fireEvent.click(oneAnswer);
     if (answer.correct) {
-      expect(oneAnswer.className).toBe("selected");
+      expect(oneAnswer.className).toBe("btn-answer selected");
     } else {
-      expect(oneAnswer.className).toBe("option");
+      expect(oneAnswer.className).toBe("btn-answer option");
     }
   });
 });
