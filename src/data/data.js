@@ -160,7 +160,7 @@ export default {
    {
     "id": 12,
     "text": "The Old Cementary",
-    "requiredStars": "2",
+    "requiredStars": 2,
     "image": "cemetary.png",
     "coordinates": [
      "73",
