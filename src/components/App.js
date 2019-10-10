@@ -30,7 +30,7 @@ function App() {
           path="/place/:id"
           render={({ match }) => (
             <PlacePage
-              id={match.params.id}
+              id={Number(match.params.id)}
               completed={completed}
               setCompleted={setCompleted}
             />
