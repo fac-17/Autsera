@@ -7,6 +7,8 @@ const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [helpText, setHelpText] = useState(null);
   const [speechText, setSpeechText] = useState(null);
+  const [answerClickCount, setAnswerClickCount] = React.useState(0);
+
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
       interaction => interaction.id === Number(id)
@@ -23,11 +25,30 @@ const InteractionPage = ({ id, setCompleted }) => {
       .filter(answer => answer.correct)
       .map(answer => answer.id);
 
+    // update hint
+    const unAnsweredCorrectIds = correctAnswersIds.filter(
+      ca => !selectedAnswers.includes(ca)
+    );
+    const hintedAnswerId =
+      unAnsweredCorrectIds[
+        Math.floor(Math.random() * unAnsweredCorrectIds.length)
+      ];
+    const hint = interactionObj.hints.find(hint =>
+      hint.answers.includes(hintedAnswerId)
+    );
+    if (hint) {
+      setHelpText(hint.text);
+    }
+    else {
+      setHelpText("")
+    }
+    // console.log({ unAnsweredCorrectIds });
     // all answers are correctly guessed
     if (
       correctAnswersIds.every(correctId => selectedAnswers.includes(correctId))
     ) {
-      setSpeechText("Well done!");
+      // TODO instead of below it should trigger some animation like star popping up
+      // setSpeechText("Well done!");
       setCompleted(completed =>
         completed.includes(id) ? completed : completed.concat(id)
       );
@@ -44,12 +65,16 @@ const InteractionPage = ({ id, setCompleted }) => {
           <li key={answer.id}>
             {" "}
             <button
+              className={
+                selectedAnswers.includes(answer.id) ? "selected" : "option"
+              }
               onClick={() => {
                 if (answer.correct && !selectedAnswers.includes(answer.id)) {
                   setSelectedAnswers([...selectedAnswers, answer.id]);
                 } else {
                 }
-                console.log(answer.response);
+                // console.log(answer.response);
+                setAnswerClickCount(click=>click+1);
                 setSpeechText(answer.response);
               }}
             >
@@ -63,6 +88,7 @@ const InteractionPage = ({ id, setCompleted }) => {
         speechText={speechText}
         helpText={helpText}
         timeOut={4000}
+        answerClickCount={answerClickCount}
       />
     </div>
   );
