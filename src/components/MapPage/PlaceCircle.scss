@@ -8,9 +8,9 @@
   justify-content: center;
   background-color: white;
   &.unlocked {
-    border: 20px solid green;
+    border: 20px solid #f69a5d;
   }
   &.locked {
-    border: 20px solid red;
+    border: 20px solid #8f8aef;
   }
 }
