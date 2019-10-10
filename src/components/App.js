@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "./HomePage/HomePage";
@@ -8,7 +8,11 @@ import PlacePage from "./PlacePage/PlacePage";
 import InteractionPage from "./InteractionPage/InteractionPage";
 
 function App() {
-  const [completed, setCompleted] = useState([]);
+  const [completed, setCompleted] = useState(localStorage.getItem("completed"));
+
+  useEffect(() => {
+    localStorage.setItem("completed", completed);
+  }, [completed])
 
   return (
     <div className="App">
