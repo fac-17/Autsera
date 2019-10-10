@@ -1,14 +1,13 @@
 .helper-avatar-container {
-  width: 100vw;
-  height: 20vh;
   position: relative;
   .helper-avatar {
     position: absolute;
-    right: 50px;
-    width: 100px;
-    height: 100px;
-    background-color: violet;
+    right: 14px;
+    top: 40px;
+    height: 320px;
+    width: auto;
   }
+
   .speech-box {
     position: absolute;
     right: 200px;
