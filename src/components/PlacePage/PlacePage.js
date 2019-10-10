@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
 import InteractionCircle from "./InteractionCircle";
 import Stars from "../reusable/Stars";
 import { countStarsInPlace } from "../../utils/starsCounting";
+import HelperAvatar from "../reusable/HelperAvatar";
 import "./placepage.scss";
 
 const PlacePage = ({ id, completed }) => {
   const placeData = data.places.find(place => place.id === id);
-  const { has } = countStarsInPlace(id, completed);
 
   const style = {
     backgroundImage: `url(/img/${placeData.image})`,
@@ -17,6 +17,16 @@ const PlacePage = ({ id, completed }) => {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
   };
+
+  const [speechText, setspeechText] = useState("");
+  const { has, max } = countStarsInPlace(id, completed);
+  useEffect(() => {
+    let newMessage =
+      has === 0
+        ? `Welcome to ${placeData.text}, there are ${max} stars to collect here`
+        : `Keep going, you're doing great!`;
+    setspeechText(newMessage);
+  }, [completed]);
 
   return (
     <div style={style}>
@@ -35,6 +45,7 @@ const PlacePage = ({ id, completed }) => {
           isCompleted={completed.includes(interaction.id)}
         />
       ))}
+      <HelperAvatar speechText={speechText} timeOut={5000} />
     </div>
   );
 };
