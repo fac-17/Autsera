@@ -2,16 +2,21 @@ import React, {useState, useEffect} from "react";
 import RouterLink from "../reusable/RouterLink";
 import "./map.scss";
 import data from "../../data/data";
-import nextLevel from "../../utils/nextLevel"
+import findNextLevel from "../../utils/findNextLevel"
 import PlaceCircle from "./PlaceCircle";
 import HelperAvatar from "../reusable/HelperAvatar"
 
 
 const MapPage = ({ completed }) => {
 
-  const [next, setNext] = useState({})
+  const [message, setMessage] = useState("")
   useEffect(() => {
-    setNext(nextLevel(completed));
+    let next = findNextLevel(completed);
+    if (next.requiredStars) {
+      setMessage("You're doing great, you only need " + (next.requiredStars-completed.length) + " more stars to unlock " + next.text);
+    } else {
+      setMessage("Congratulations, you have unlocked every level in the game!")
+    }
   }, [completed])
 
   return (
@@ -23,7 +28,7 @@ const MapPage = ({ completed }) => {
       ))}
 
       <HelperAvatar
-        speechText={"You're doing great, you only need " + (next.requiredStars-completed.length) + " more stars to unlock " + next.text}
+        speechText={message}
         timeOut={100000}
         />
     </div>

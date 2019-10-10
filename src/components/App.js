@@ -7,8 +7,6 @@ import MapPage from "./MapPage/MapPage";
 import PlacePage from "./PlacePage/PlacePage";
 import InteractionPage from "./InteractionPage/InteractionPage";
 
-import nextLevel from "../utils/nextLevel.js";
-
 function App() {
   const [completed, setCompleted] = useState(JSON.parse(localStorage.getItem("completed")) || []);
 
