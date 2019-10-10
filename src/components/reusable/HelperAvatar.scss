@@ -1,11 +1,11 @@
 .helper-avatar-container {
-  position: relative;
-  .helper-avatar {
-    position: absolute;
-    right: 14px;
-    top: 40px;
-    height: 320px;
-  }
+  position: absolute;
+  right: 15px;
+  top: 529px;
+}
+
+.helper-avatar {
+  height: 320px;
 }
 
 .speech-box {
@@ -20,10 +20,10 @@
   border-radius: 2em;
   position: absolute;
   right: 220px;
-  top: 150px;
-  min-width: 20rem;
+  top: 127px;
+  min-width: 25rem;
   align-items: center;
-  padding: 1%;
+  padding: 3%;
 }
 
 .speech-box p {

@@ -30,12 +30,13 @@ const PlacePage = ({ id, completed }) => {
 
   return (
     <div style={style}>
-      <RouterLink className="btn-back" to="/map" label="Go Back" />
       <div className="hud">
+        <RouterLink className="btn-back" to="/map" label="Go Back" />
         <span className="signpost">Playground</span>
+        <span className="signpost stars-container">
+          <Stars {...countStarsInPlace(id, completed)} />
+        </span>
       </div>
-      {/* Sample Stars Component */}
-      <Stars {...countStarsInPlace(id, completed)} />
 
       {placeData.interactions.map(interaction => (
         <InteractionCircle

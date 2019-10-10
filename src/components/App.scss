@@ -26,7 +26,19 @@ html {
   box-sizing: inherit;
 }
 
-// ____________________________Text____________________________
+// ____________________________Layout____________________________
+
+.hud {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2%;
+}
+
+// ____________________________Text, Links____________________________
+
+a {
+  text-decoration: none;
+}
 
 // ____________________________Buttons & Signposts____________________________
 
@@ -64,16 +76,18 @@ html {
 
 .btn-back {
   @include buttons(#8f8aef, #726ceb);
-  position: absolute;
   border-radius: 20px;
   height: 3rem;
   width: 9rem;
   line-height: 2.5rem;
   font-size: 1.4rem;
   margin: 2%;
+  justify-self: start;
 }
 
 @mixin signpost {
+  display: inline-block;
+
   color: #f8feff;
   text-align: center;
   font-family: "Fredoka One";
@@ -85,17 +99,11 @@ html {
   cursor: pointer;
 }
 
-.hud {
-  display: flex;
-  justify-content: center;
-  padding: 2%;
-}
-
 .signpost {
   @include signpost;
-  height: 3rem;
-  min-width: 20rem;
-  line-height: 1.5rem;
+  min-height: 3rem;
+  line-height: 2rem;
   font-size: 1.4rem;
   padding: 1% 5%;
+  margin: 2%;
 }

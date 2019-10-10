@@ -39,9 +39,8 @@ const InteractionPage = ({ id, setCompleted }) => {
     );
     if (hint) {
       setHelpText(hint.text);
-    }
-    else {
-      setHelpText("")
+    } else {
+      setHelpText("");
     }
     // console.log({ unAnsweredCorrectIds });
     // all answers are correctly guessed
@@ -66,12 +65,12 @@ const InteractionPage = ({ id, setCompleted }) => {
 
   return (
     <div className="interaction-background" style={style}>
-      <RouterLink
-        className="btn-back"
-        to={"/place/" + placeObj.id}
-        label="Go Back"
-      />
       <div className="hud">
+        <RouterLink
+          className="btn-back"
+          to={"/place/" + placeObj.id}
+          label="Go Back"
+        />
         <span className="signpost">{interactionObj.text}</span>
       </div>
       <img src="/img/Interaction.png" className="interaction-image" />
@@ -90,7 +89,7 @@ const InteractionPage = ({ id, setCompleted }) => {
                 } else {
                 }
                 // console.log(answer.response);
-                setAnswerClickCount(click=>click+1);
+                setAnswerClickCount(click => click + 1);
                 setSpeechText(answer.response);
               }}
             >

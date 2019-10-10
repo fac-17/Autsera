@@ -22,8 +22,8 @@ const MapPage = ({ completed }) => {
 
   return (
     <div className="map-background">
-      <RouterLink className="btn-back" to="/" label="Go Back" />
       <div className="hud">
+        <RouterLink className="btn-back" to="/" label="Go Back" />
         <span className="signpost">AUTSERA LAND</span>
       </div>
 
