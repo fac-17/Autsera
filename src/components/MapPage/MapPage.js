@@ -6,8 +6,11 @@ import PlaceCircle from "./PlaceCircle";
 const MapPage = ({ completed }) => {
   return (
     <div className="map-background">
-      <h2>AUTSERA LAND</h2>
       <RouterLink className="btn-back" to="/" label="Go Back" />
+      <div className="hud">
+        <span className="signpost">AUTSERA LAND</span>
+      </div>
+
       {data.places.map(place => (
         <PlaceCircle key={place.id} place={place} completed={completed} />
       ))}

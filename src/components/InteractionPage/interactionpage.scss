@@ -1,0 +1,40 @@
+.btn-answer {
+  border: 3px solid #f69a5d;
+  background: #feee7e;
+  box-shadow: 0 5px 5px rgba(65, 8, 8, 0.17),
+    0 15px rgba(255, 255, 255, 0.25) inset;
+  display: inline-block;
+  color: #0a2e27;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 3rem;
+  width: 15rem;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+}
+
+ul {
+  margin: 12% 0;
+  height: 40vh;
+  width: 90vw;
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 20% 20%;
+  grid-column-gap: 60%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.interaction-image {
+  position: absolute;
+  width: 42vw;
+  border-radius: 20px;
+  border: 5px solid #f69a5d;
+  top: 212px;
+  right: 293px;
+}

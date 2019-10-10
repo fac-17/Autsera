@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
+import "./interactionpage.scss";
 
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
@@ -29,19 +30,34 @@ const InteractionPage = ({ id, setCompleted }) => {
       );
     }
   }, [selectedAnswers]);
+
+  const style = {
+    backgroundImage: `url(/SVG/${placeObj.text}.svg)`,
+    minHeight: "100vh",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
+  };
+
   return (
-    <div
-      className="interaction-background"
-      style={{ backgroundImage: `url(/img/${interactionObj.image})` }}
-    >
-      <h2>{interactionObj.text}</h2>
+    <div className="interaction-background" style={style}>
+      <RouterLink
+        className="btn-back"
+        to={"/place/" + placeObj.id}
+        label="Go Back"
+      />
+      <div className="hud">
+        <span className="signpost">{interactionObj.text}</span>
+      </div>
+      <img src="/img/Interaction.png" className="interaction-image" />
       <ul>
         {interactionObj.answers.map(answer => (
           <li key={answer.id}>
-            {" "}
             <button
               className={
-                selectedAnswers.includes(answer.id) ? "selected" : "option"
+                selectedAnswers.includes(answer.id)
+                  ? "btn-answer selected"
+                  : "btn-answer option"
               }
               onClick={() => {
                 if (answer.correct && !selectedAnswers.includes(answer.id)) {
@@ -57,11 +73,6 @@ const InteractionPage = ({ id, setCompleted }) => {
           </li>
         ))}
       </ul>
-      <RouterLink
-        className="btn-help"
-        to={"/place/" + placeObj.id}
-        label="Go Back"
-      />
     </div>
   );
 };

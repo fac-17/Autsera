@@ -6,3 +6,9 @@
   background-size: cover;
   filter: grayscale(70%);
 }
+
+.hud {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}

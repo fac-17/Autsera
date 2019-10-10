@@ -30,8 +30,6 @@ html {
 
 // ____________________________Buttons & Signposts____________________________
 
-// ____________________________HOMEPAGE____________________________
-
 @mixin buttons($bg-color, $shadow-color) {
   border: 3px solid #fff;
   background: $bg-color;
@@ -66,10 +64,38 @@ html {
 
 .btn-back {
   @include buttons(#8f8aef, #726ceb);
+  position: absolute;
   border-radius: 20px;
   height: 3rem;
   width: 9rem;
   line-height: 2.5rem;
   font-size: 1.4rem;
   margin: 2%;
+}
+
+@mixin signpost {
+  color: #f8feff;
+  text-align: center;
+  font-family: "Fredoka One";
+  background: #5bdcc2;
+  border: 3px solid #25ac91;
+  border-radius: 10px;
+  box-shadow: 0 -2px 0 3px #3fd6b7 inset, 0 2px 2px rgba(241, 78, 61, 0.17),
+    0 10px rgba(255, 255, 255, 0.25) inset;
+  cursor: pointer;
+}
+
+.hud {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+.signpost {
+  @include signpost;
+  height: 3rem;
+  min-width: 20rem;
+  line-height: 1.5rem;
+  font-size: 1.4rem;
+  padding: 1% 5%;
 }
