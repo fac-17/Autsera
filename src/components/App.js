@@ -8,10 +8,10 @@ import PlacePage from "./PlacePage/PlacePage";
 import InteractionPage from "./InteractionPage/InteractionPage";
 
 function App() {
-  const [completed, setCompleted] = useState(localStorage.getItem("completed"));
+  const [completed, setCompleted] = useState(JSON.parse(localStorage.getItem("completed")) || []);
 
   useEffect(() => {
-    localStorage.setItem("completed", completed);
+    localStorage.setItem("completed", JSON.stringify(completed));
   }, [completed])
 
   return (
@@ -19,6 +19,7 @@ function App() {
       <Router>
         <Route exact path="/" component={HomePage} />
         <Route path="/help" component={HelpPage} />
+        {console.log(completed)}
         <Route
           path="/map"
           render={() => (
