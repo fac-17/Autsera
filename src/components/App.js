@@ -19,7 +19,6 @@ function App() {
       <Router>
         <Route exact path="/" component={HomePage} />
         <Route path="/help" component={HelpPage} />
-        {console.log(completed)}
         <Route
           path="/map"
           render={() => (

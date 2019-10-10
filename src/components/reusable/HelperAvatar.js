@@ -6,6 +6,7 @@ const HelperAvatar = ({ speechText, helpText, timeOut }) => {
   let [displaySomething, setdisplaySomething] = React.useState(true);
   let [showHint, setshowHint] = React.useState(false);
   let [clickCount, setclickCount] = React.useState(0);
+
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setdisplaySomething(false);
