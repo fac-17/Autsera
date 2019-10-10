@@ -6,7 +6,7 @@ import Stars from "../reusable/Stars";
 import {countStarsInPlace} from "../../utils/starsCounting";
 
 const PlacePage = ({ id, completed }) => {
-  const placeData = data.places.find(place => place.id === Number(id));
+  const placeData = data.places.find(place => place.id === id);
   const {has}=countStarsInPlace(id, completed)
   return (
     <div style={{ backgroundImage: `url(/img/${placeData.image})` }}>

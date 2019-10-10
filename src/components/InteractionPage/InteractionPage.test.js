@@ -9,7 +9,7 @@ afterEach(cleanup);
 test("The Interaction Page renders", () => {
   render(
     <Router>
-      <InteractionPage id="1" />
+      <InteractionPage id={1} />
     </Router>
   );
 });
@@ -17,7 +17,7 @@ test("The Interaction Page renders", () => {
 test("Game starts from scratch when user re-enters page", () => {
   const { getByText } = render(
     <Router>
-      <InteractionPage id="1" />
+      <InteractionPage id={1} />
     </Router>
   );
   const answers = data.places[0].interactions[0].answers;
@@ -30,7 +30,7 @@ test("Selecting an answer changes the class to 'selected'", () => {
   const setCompleted = jest.fn();
   const { getByText } = render(
     <Router>
-      <InteractionPage id="1" setCompleted={setCompleted} />
+      <InteractionPage id={1} setCompleted={setCompleted} />
     </Router>
   );
   const answers = data.places[0].interactions[0].answers;
@@ -49,7 +49,7 @@ test("Selecting an answer changes the class to 'selected'", () => {
 test("Test if there is a back button with correct link'", () => {
   const { getByText } = render(
     <Router>
-      <InteractionPage id="1" />
+      <InteractionPage id={1} />
     </Router>
   );
   const backButton = getByText("Go Back");
@@ -62,7 +62,7 @@ test("Test if setCompleted gets called with the right argument", () => {
   const { getByText } = render(
     <Router>
       <InteractionPage
-        id="1"
+        id={1}
         setCompleted={setCompleted}
         completed={completed}
       />
