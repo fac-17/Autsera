@@ -57,7 +57,11 @@ const InteractionPage = ({ id, setCompleted }) => {
           </li>
         ))}
       </ul>
-      <RouterLink to={"/place/" + placeObj.id} label="Go Back" />
+      <RouterLink
+        className="btn-help"
+        to={"/place/" + placeObj.id}
+        label="Go Back"
+      />
     </div>
   );
 };

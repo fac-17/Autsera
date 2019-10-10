@@ -5,7 +5,7 @@ const HelpPage = props => {
   return (
     <>
       <h2>This is the HEEELP! page</h2>
-      <RouterLink to="/" label="Back" />
+      <RouterLink className="btn-back" to="/" label="< Go Back" />
     </>
   );
 };
