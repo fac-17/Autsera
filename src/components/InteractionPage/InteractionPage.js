@@ -70,6 +70,7 @@ const InteractionPage = ({ id, setCompleted }) => {
           className="btn-back"
           to={"/place/" + placeObj.id}
           label="Go Back"
+          title="Go Back"
         />
         <span className="signpost">{interactionObj.text}</span>
       </div>

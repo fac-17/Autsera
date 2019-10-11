@@ -10,6 +10,7 @@ const IntaractionCircle = ({ interaction, isCompleted, isUnlocked }) => (
     }
   >
     <RouterLink
+      title={interaction.text}
       label={interaction.text}
       to={"/interaction/" + interaction.id}
     />

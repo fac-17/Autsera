@@ -12,6 +12,7 @@ const PlaceCircle = ({ place, completed }) => {
       }
     >
       <RouterLink
+        title={place.text}
         icon={place.icon}
         label={place.text}
         to={"/place/" + place.id}
