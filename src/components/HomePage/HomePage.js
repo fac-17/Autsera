@@ -4,7 +4,7 @@ import RouterLink from "../reusable/RouterLink";
 import HelperAvatar from "../reusable/HelperAvatar";
 import "./homepage.scss";
 
-const HomePage = ({ startFunction, setCompleted }) => {
+const HomePage = ({ history, setCompleted }) => {
   return (
     <div className="background-home">
       {/* <RouterLink className="btn-help" to="/help" label="?" /> */}
