@@ -19,42 +19,37 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route exact path="/"
-            render={({ history }) => (
-              <HomePage history={history} setCompleted={setCompleted}/>
-            )}
-          />
-          <Route exact path="/help" component={HelpPage} />
-          <Route
-            exact
-            path="/map"
-            render={() => (
-              <MapPage completed={completed} setCompleted={setCompleted} />
-            )}
-          />
-          <Route
-            path="/place/:id"
-            render={({ match }) => (
-              <PlacePage
-                id={Number(match.params.id)}
-                completed={completed}
-                setCompleted={setCompleted}
-              />
-            )}
-          />
-          <Route
-            path="/interaction/:id"
-            render={({ match }) => (
-              <InteractionPage
-                id={Number(match.params.id)}
-                setCompleted={setCompleted}
-              />
-            )}
-          />
-          <Route path="*" component={FourOFour} />
-        </Switch>
-
+        <Route exact path="/"
+          render={({ history }) => (
+            <HomePage history={history} setCompleted={setCompleted}/>
+          )}
+        />
+        <Route path="/help" component={HelpPage} />
+        <Route
+          path="/map"
+          render={() => (
+            <MapPage completed={completed} setCompleted={setCompleted} />
+          )}
+        />
+        <Route
+          path="/place/:id"
+          render={({ match }) => (
+            <PlacePage
+              id={Number(match.params.id)}
+              completed={completed}
+              setCompleted={setCompleted}
+            />
+          )}
+        />
+        <Route
+          path="/interaction/:id"
+          render={({ match }) => (
+            <InteractionPage
+              id={Number(match.params.id)}
+              setCompleted={setCompleted}
+            />
+          )}
+        />
       </Router>
     </div>
   );
