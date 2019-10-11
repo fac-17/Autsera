@@ -4,13 +4,17 @@ import RouterLink from "../reusable/RouterLink";
 import HelperAvatar from "../reusable/HelperAvatar";
 import "./homepage.scss";
 
-const HomePage = ({ startFunction }) => {
+const HomePage = ({ startFunction, setCompleted }) => {
   return (
     <div className="background-home">
       {/* <RouterLink className="btn-help" to="/help" label="?" /> */}
       <div className="container-home">
         <img className="img-logo" src="./img/Autsera.png" alt="Autsera Logo" />
-        <RouterLink className="btn-start" to="/map" label="Start Playing" />
+        <RouterLink className="btn-start" to="/map" label="Continue Playing" />
+        <button onClick={() => {
+          setCompleted([]);
+          history.push("/map");
+        }} >New Game</button>
       </div>
       <HelperAvatar
         speechText={
