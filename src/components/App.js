@@ -21,8 +21,9 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/help" component={HelpPage} />
+          <Route exact path="/help" component={HelpPage} />
           <Route
+            exact
             path="/map"
             render={() => (
               <MapPage completed={completed} setCompleted={setCompleted} />
