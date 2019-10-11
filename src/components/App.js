@@ -17,7 +17,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/"
+          render={({ history }) => (
+            <HomePage history={history} setCompleted={setCompleted}/>
+          )}
+        />
         <Route path="/help" component={HelpPage} />
         <Route
           path="/map"
