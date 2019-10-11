@@ -97,7 +97,7 @@ const InteractionPage = ({ id, setCompleted }) => {
                 setSpeechText(answer.response);
               }}
             >
-              {answer.text} {selectedAnswers.includes(answer.id) ? " + " : ""}
+              {answer.text}
             </button>
           </li>
         ))}
