@@ -75,7 +75,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       </div>
       <ul>
         <li className="grid-center">
-          <img src="/img/Interaction.png" className="interaction-image" />
+          <img src={interactionObj.image} className="interaction-image" />
         </li>
         {interactionObj.answers.map(answer => (
           <li key={answer.id}>
