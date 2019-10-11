@@ -73,8 +73,10 @@ const InteractionPage = ({ id, setCompleted }) => {
         />
         <span className="signpost">{interactionObj.text}</span>
       </div>
-      <img src="/img/Interaction.png" className="interaction-image" />
       <ul>
+        <li className="grid-center">
+          <img src="/img/Interaction.png" className="interaction-image" />
+        </li>
         {interactionObj.answers.map(answer => (
           <li key={answer.id}>
             <button
