@@ -73,6 +73,8 @@ const InteractionPage = ({ id, setCompleted }) => {
         />
         <span className="signpost">{interactionObj.text}</span>
       </div>
+      <h2 className="interaction-question">{interactionObj.question[0]}</h2>
+      <h3 className="interaction-instruction">{interactionObj.question[1]}</h3>
       <ul>
         <li className="grid-center">
           <img src={interactionObj.image} className="interaction-image" />

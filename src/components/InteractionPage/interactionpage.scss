@@ -1,5 +1,5 @@
 ul {
-  margin: 5% auto;
+  margin: 2% auto;
   padding: 0 !important;
   height: 40vh;
   width: 90vw;
@@ -10,6 +10,22 @@ ul {
 li {
   list-style-type: none;
   justify-self: center;
+}
+
+.interaction-question {
+  text-align: center;
+  font-family: "Amatic SC", cursive;
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin: 2% 0 0 0;
+}
+
+.interaction-instruction {
+  text-align: center;
+  font-family: "Amatic SC", cursive;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin: 0;
 }
 
 .btn-answer {
