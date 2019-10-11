@@ -15,7 +15,7 @@ const HomePage = ({ history, setCompleted }) => {
         <button onClick={() => {
           setCompleted([]);
           history.push("/map");
-        }} >New game</button>
+        }} >New Game</button>
       </div>
       <HelperAvatar
         speechText={

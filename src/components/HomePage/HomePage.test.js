@@ -9,8 +9,10 @@ test("The HomePage should render", () => {
 
 test("The HomePage should include the StartButton", () => {
   const { getByText } = render(<Router><HomePage /></Router>);
-  getByText("Start Playing");
+  getByText("Continue Playing");
+  getByText("New Game");
 })
+
 
 
 
