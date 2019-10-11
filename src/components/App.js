@@ -20,7 +20,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/" render={({ history }) => (
+            <HomePage history={history} setCompleted={setCompleted}/>
+            )}
+          />
           <Route exact path="/help" component={HelpPage} />
           <Route
             exact
