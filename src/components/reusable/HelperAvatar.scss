@@ -1,22 +1,70 @@
 .helper-avatar-container {
-  width: 100vw;
-  height: 20vh;
-  position: relative;
-  .helper-avatar {
-    position: absolute;
-    right: 50px;
-    width: 100px;
-    height: 100px;
-    background-color: violet;
-  }
-  .speech-box {
-    position: absolute;
-    background-color: white;
-    right: 200px;
-    height: 100px;
-    width: auto;
-    border: 2px solid black;
-    display: flex;
-    align-items: center;
-  }
+  position: absolute;
+  right: 15px;
+  top: 529px;
+}
+
+.helper-avatar {
+  height: 320px;
+}
+
+.speech-box {
+  background: linear-gradient(
+    to bottom,
+    #fef5b1 0%,
+    #fdec6e 20%,
+    #fcde09 80%,
+    #e1c503 100%
+  );
+  border: solid 2px white;
+  border-radius: 2em;
+  position: absolute;
+  right: 220px;
+  top: 127px;
+  min-width: 25rem;
+  align-items: center;
+  padding: 3%;
+}
+
+.speech-box p {
+  text-align: center;
+  margin: 0;
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  color: #0a2e27;
+  font-size: 1.5rem;
+}
+
+.speech-box:after,
+.speech-box:before {
+  content: " ";
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 3em;
+  width: 0;
+}
+
+.speech-box:after {
+  background: #69dfc7;
+  border: solid white;
+  border-radius: 0 2.6em 1.6em 0;
+  border-width: 0 0 2px 0;
+  height: 1.6em;
+  left: 100.2%;
+  top: 66%;
+  margin: -2.3em 0 0 -1px;
+  width: 0.8em;
+}
+
+.speech-box:before {
+  background: #fde74c;
+  border: solid white;
+  border-radius: 0 1.6em 1.6em 0;
+  border-width: 0px 3px 2px 0;
+  height: 1em;
+  top: 80%;
+  left: 100.2%;
+  margin: -1.8em 0 0 -1px;
+  width: 0.8em;
 }

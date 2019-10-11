@@ -1,28 +1,109 @@
-.App {
+// ____________________________COLORS____________________________
+
+$turqouise: #69dfc7;
+$blue: #3c91e6;
+$yellow: #fde74c;
+$orange: #f69a5d;
+$purple: #8f8aef;
+$green: #7dd764;
+
+// ____________________________FONTS____________________________
+
+$speeches: "Coming Soon", cursive;
+$buttons: "Fredoka One", cursive;
+$titles: "Amatic SC", cursive;
+$answers: "Montserrat", sans-serif;
+
+// ____________________________Basics____________________________
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// ____________________________Layout____________________________
+
+.hud {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2%;
+}
+
+// ____________________________Text, Links____________________________
+
+a {
+  text-decoration: none;
+}
+
+// ____________________________Buttons & Signposts____________________________
+
+@mixin buttons($bg-color, $shadow-color) {
+  border: 3px solid #fff;
+  background: $bg-color;
+  box-shadow: 0 -2px 0 3px $shadow-color inset, 0 5px 5px rgba(65, 8, 8, 0.17),
+    0 15px rgba(255, 255, 255, 0.25) inset;
+  display: inline-block;
+  color: #f8feff;
   text-align: center;
+  font-family: "Fredoka One";
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
+.btn-help {
+  @include buttons(#fce01a, #f1d403);
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+  line-height: 3.7rem;
+  font-size: 3rem;
+  margin: 2% 0 0 90%;
 }
 
-.App-header {
-  background-color:pink;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  p {
-    background-color: black;
-    .x {
-      color:blue;
-    }
-  }
+.btn-start {
+  @include buttons(#f4863d, #f2721d);
+  border-radius: 20px;
+  height: 3rem;
+  width: 15rem;
+  line-height: 2.5rem;
+  font-size: 1.4rem;
 }
 
-.App-link {
-  color: #09d3ac;
+.btn-back {
+  @include buttons(#8f8aef, #726ceb);
+  border-radius: 20px;
+  height: 3rem;
+  width: 9rem;
+  line-height: 2.5rem;
+  font-size: 1.4rem;
+  margin: 2%;
+  justify-self: start;
+}
+
+@mixin signpost {
+  display: inline-block;
+
+  color: #f8feff;
+  text-align: center;
+  font-family: "Fredoka One";
+  background: #5bdcc2;
+  border: 3px solid #25ac91;
+  border-radius: 10px;
+  box-shadow: 0 -2px 0 3px #3fd6b7 inset, 0 2px 2px rgba(241, 78, 61, 0.17),
+    0 10px rgba(255, 255, 255, 0.25) inset;
+  cursor: pointer;
+}
+
+.signpost {
+  @include signpost;
+  min-height: 3rem;
+  line-height: 2rem;
+  font-size: 1.4rem;
+  padding: 1% 5%;
+  margin: 2%;
 }

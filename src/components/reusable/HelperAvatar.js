@@ -27,15 +27,20 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
   return (
     <div className="helper-avatar-container">
       <img
+        src="./SVG/Hippo.svg"
         className="helper-avatar"
         alt="helper-avatar"
         onClick={toggleshowHint}
       ></img>
       {displaySomething && speechText && !showHint ? (
-        <div className="speech-box">{speechText}</div>
+        <div className="speech-box">
+          <p>{speechText}</p>
+        </div>
       ) : null}
       {displaySomething && helpText && showHint ? (
-        <div className="speech-box">{helpText}</div>
+        <div className="speech-box">
+          <p>{helpText}</p>
+        </div>
       ) : null}
     </div>
   );

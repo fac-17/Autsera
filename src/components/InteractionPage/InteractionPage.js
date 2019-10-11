@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
+import "./interactionpage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
 
 const InteractionPage = ({ id, setCompleted }) => {
@@ -38,9 +39,8 @@ const InteractionPage = ({ id, setCompleted }) => {
     );
     if (hint) {
       setHelpText(hint.text);
-    }
-    else {
-      setHelpText("")
+    } else {
+      setHelpText("");
     }
     // console.log({ unAnsweredCorrectIds });
     // all answers are correctly guessed
@@ -54,19 +54,34 @@ const InteractionPage = ({ id, setCompleted }) => {
       );
     }
   }, [selectedAnswers]);
+
+  const style = {
+    backgroundImage: `url(/SVG/${placeObj.text}.svg)`,
+    minHeight: "100vh",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
+  };
+
   return (
-    <div
-      className="interaction-background"
-      style={{ backgroundImage: `url(/img/${interactionObj.image})` }}
-    >
-      <h2>{interactionObj.text}</h2>
+    <div className="interaction-background" style={style}>
+      <div className="hud">
+        <RouterLink
+          className="btn-back"
+          to={"/place/" + placeObj.id}
+          label="Go Back"
+        />
+        <span className="signpost">{interactionObj.text}</span>
+      </div>
+      <img src="/img/Interaction.png" className="interaction-image" />
       <ul>
         {interactionObj.answers.map(answer => (
           <li key={answer.id}>
-            {" "}
             <button
               className={
-                selectedAnswers.includes(answer.id) ? "selected" : "option"
+                selectedAnswers.includes(answer.id)
+                  ? "btn-answer selected"
+                  : "btn-answer option"
               }
               onClick={() => {
                 if (answer.correct && !selectedAnswers.includes(answer.id)) {
@@ -74,7 +89,7 @@ const InteractionPage = ({ id, setCompleted }) => {
                 } else {
                 }
                 // console.log(answer.response);
-                setAnswerClickCount(click=>click+1);
+                setAnswerClickCount(click => click + 1);
                 setSpeechText(answer.response);
               }}
             >
@@ -83,7 +98,6 @@ const InteractionPage = ({ id, setCompleted }) => {
           </li>
         ))}
       </ul>
-      <RouterLink to={"/place/" + placeObj.id} label="Go Back" />
       <HelperAvatar
         speechText={speechText}
         helpText={helpText}

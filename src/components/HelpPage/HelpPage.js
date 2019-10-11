@@ -1,12 +1,14 @@
 import React from "react";
 import RouterLink from "../reusable/RouterLink";
+import "./helppage.scss";
+import HelperAvatar from "../reusable/HelperAvatar";
 
 const HelpPage = props => {
   return (
-    <>
-      <h2>This is the HEEELP! page</h2>
-      <RouterLink to="/" label="Back" />
-    </>
+    <div className="background-help">
+      <RouterLink className="btn-back" to="/" label="< Go Back" />
+      <HelperAvatar speechText="Hi, welcome to Autsera" timeOut={1000} />
+    </div>
   );
 };
 

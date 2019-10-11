@@ -9,16 +9,9 @@ test("The HomePage should render", () => {
 
 test("The HomePage should include the StartButton", () => {
   const { getByText } = render(<Router><HomePage /></Router>);
-  getByText("START PLAYING!");
+  getByText("Start Playing");
 })
 
-test("The StartButton on HomePage uses function passed to HomePage",()=>{
-  const startFunction=jest.fn();
-  const { getByText } = render(<Router><HomePage startFunction={startFunction}/></Router>);
-  const button=getByText("START PLAYING!");
-  fireEvent.click(button);
-  expect(startFunction).toHaveBeenCalledTimes(1);
-})
 
 
 
