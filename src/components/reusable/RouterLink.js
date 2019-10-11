@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const RouterLink = ({ to, label, className }) => {
+const RouterLink = ({ to, label, className, icon }) => {
   return (
     <div className="router-link">
       <Link className={className} to={to}>
-        {label}
+        <p>{label}</p>
+        {icon ? <img src={icon} alt="icon" className="icon-image" /> : null}
       </Link>
     </div>
   );

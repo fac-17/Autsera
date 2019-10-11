@@ -3,6 +3,7 @@ export default {
     {
       id: 0,
       text: "Playground",
+      icon: "/SVG/Places/Playground_icon.svg",
       requiredStars: 0,
       image: "playground.png",
       coordinates: [23, 12],

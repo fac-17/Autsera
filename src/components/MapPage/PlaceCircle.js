@@ -11,7 +11,11 @@ const PlaceCircle = ({ place, completed }) => {
         (completed.length >= place.requiredStars ? "unlocked" : "locked")
       }
     >
-      <RouterLink label={place.text} to={"/place/" + place.id}></RouterLink>
+      <RouterLink
+        icon={place.icon}
+        label={place.text}
+        to={"/place/" + place.id}
+      ></RouterLink>
       <Stars {...countStarsInPlace(place.id, completed)} />
     </div>
   );

@@ -34,17 +34,17 @@ html {
   padding: 2%;
 }
 
-.stars {
-  display: flex;
-  justify-content: space-between;
-}
-
 // ____________________________Text, Links____________________________
 
 a {
   text-decoration: none;
 }
 
+// ____________________________images____________________________
+
+.icon-image {
+  width: 180px;
+}
 // ____________________________Buttons & Signposts____________________________
 
 @mixin buttons($bg-color, $shadow-color) {
@@ -90,6 +90,12 @@ a {
   margin: 2%;
   justify-self: start;
   cursor: pointer;
+}
+
+.btn-back p,
+.btn-start p,
+.btn-help p {
+  margin: 0;
 }
 
 @mixin signpost {
