@@ -8,14 +8,15 @@ import HelperAvatar from "../reusable/HelperAvatar";
 import "./placepage.scss";
 
 const PlacePage = ({ id, completed }) => {
+  const [icon, setIcon] = useState("");
   const placeData = data.places.find(place => place.id === id);
 
   const style = {
-    backgroundImage: `url(/img/${placeData.image})`,
+    backgroundImage: `url(${icon})`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover"
+    backgroundSize: "cover",
   };
 
   const [speechText, setspeechText] = useState("");
@@ -26,6 +27,9 @@ const PlacePage = ({ id, completed }) => {
         ? `Welcome to ${placeData.text}, there are ${max} stars to collect here`
         : `Keep going, you're doing great!`;
     setspeechText(newMessage);
+    import(`../../assets${placeData.image}`).then(file =>
+      setIcon(file.default)
+    );
   }, [completed]);
 
   return (

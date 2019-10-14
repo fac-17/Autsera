@@ -6,7 +6,6 @@ import "./PlaceCircle.scss";
 const PlaceCircle = ({ place, completed }) => {
   const [icon, setIcon] = useState("");
   useEffect(() => {
-    console.log("place icon", place.icon);
     import(`../../assets${place.icon}`).then(file => {
       setIcon(file.default);
     });

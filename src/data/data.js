@@ -5,7 +5,7 @@ export default {
       text: "Playground",
       icon: "/SVG/Playground_icon.svg",
       requiredStars: 0,
-      image: "playground.png",
+      image: "/img/playground.png",
       coordinates: [23, 12],
       interactions: [
         {
@@ -148,7 +148,7 @@ export default {
       text: "The Old Cementary",
       requiredStars: 2,
       icon: "/SVG/Playground_icon.svg",
-      image: "cemetary.png",
+      image: "/img/playground.png",
       coordinates: ["73", "56"],
       interactions: [
         {

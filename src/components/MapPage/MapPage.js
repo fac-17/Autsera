@@ -6,7 +6,7 @@ import findNextLevel from "../../utils/findNextLevel";
 import PlaceCircle from "./PlaceCircle";
 import HelperAvatar from "../reusable/HelperAvatar";
 import findTotalStars from "../../utils/findTotalStars";
-
+import mapImg from "../../assets/img/map.png";
 const MapPage = ({ completed }) => {
   const [message, setMessage] = useState("");
   useEffect(() => {
@@ -21,7 +21,12 @@ const MapPage = ({ completed }) => {
   }, [completed]);
 
   return (
-    <div className="map-background">
+    <div
+      className="map-background"
+      style={{
+        backgroundImage: `url(${mapImg})`,
+      }}
+    >
       <div className="hud">
         <RouterLink className="btn-back" to="/" label="Go Back" />
         <span className="signpost">AUTSERA LAND</span>
