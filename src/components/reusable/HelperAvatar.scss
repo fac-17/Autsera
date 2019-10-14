@@ -1,13 +1,12 @@
 .helper-avatar-container {
   position: absolute;
   right: 15px;
-  bottom:-85px;
+  bottom: -85px;
 }
 
 .helper-avatar {
   height: 320px;
 }
-
 .speech-box {
   background: linear-gradient(
     to bottom,
@@ -24,15 +23,15 @@
   min-width: 25rem;
   align-items: center;
   padding: 3%;
-}
-
-.speech-box div {
-  text-align: center;
-  margin: 0;
-  font-family: "Amatic SC", cursive;
-  font-weight: bold;
-  color: #0a2e27;
-  font-size: 1.5rem;
+  div,
+  p {
+    text-align: center;
+    margin: 0;
+    font-family: "Amatic SC", cursive;
+    font-weight: bold;
+    color: #0a2e27;
+    font-size: 1.5rem;
+  }
 }
 
 .speech-box:after,
@@ -49,11 +48,11 @@
   background: #69dfc7;
   border: solid white;
   border-radius: 0 2.6em 1.6em 0;
-  border-width: 0 0 2px 0;
-  height: 1.6em;
-  left: 100.2%;
-  top: 66%;
-  margin: -2.3em 0 0 -1px;
+  border-width: 0 0 2px 2px;
+  height: 0.65em;
+  left: 100.1%;
+  top: 55%;
+  margin: -0.62em 0 0 -1.5px;
   width: 0.8em;
 }
 
@@ -61,10 +60,10 @@
   background: #fde74c;
   border: solid white;
   border-radius: 0 1.6em 1.6em 0;
-  border-width: 0px 3px 2px 0;
+  border-width: 0px 3px 2px 0px;
   height: 1em;
   top: 80%;
-  left: 100.2%;
-  margin: -1.8em 0 0 -1px;
+  left: 100.1%;
+  margin: -1.3em 0 0 -1px;
   width: 0.8em;
 }
