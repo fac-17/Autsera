@@ -11,9 +11,14 @@
     background-color: #f69a5d;
     border-radius: 10px;
   }
-  &.locked p {
-    background-color: #8f8aef;
-    border-radius: 10px;
+
+  &.locked {
+    pointer-events: none;
+    touch-action: none;
+    p {
+      background-color: #8f8aef;
+      border-radius: 10px;
+    }
   }
 }
 
