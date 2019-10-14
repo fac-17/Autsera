@@ -13,7 +13,7 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
     return () => clearTimeout(timer);
   }, [setdisplaySomething, showHint, clickCount, speechText, answerClickCount]);
 
-  // if new speeText is passed then stop showing hint and show text instead
+  // if new speechText is passed then stop showing hint and show text instead
   React.useEffect(() => {
     setshowHint(false);
   }, [speechText]);
@@ -27,11 +27,7 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
   return (
     <div className="helper-avatar-container">
       <img
-<<<<<<< HEAD
         src={helperImg}
-=======
-        src="/SVG/Hippo.svg"
->>>>>>> master
         className="helper-avatar"
         alt="helper-avatar"
         onClick={toggleshowHint}
