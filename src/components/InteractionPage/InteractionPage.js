@@ -19,8 +19,6 @@ const InteractionPage = ({ id, setCompleted }) => {
     return foundInteraction ? foundInteraction : interactionObj;
   }, {});
 
-  let shuffledAnswers = interactionObj.answers;
-
   let addStar = (id, array) => {
     setStarSpeech(
       <div className="star-popup">
@@ -34,9 +32,11 @@ const InteractionPage = ({ id, setCompleted }) => {
     return array.concat(id);
   };
 
+  let shuffledAnswers = interactionObj.answers;
+
   useEffect(() => {
     let shuffleArray = array => {
-      var currentIndex = array.length,
+      let currentIndex = array.length,
         temporaryValue,
         randomIndex;
       while (0 !== currentIndex) {
