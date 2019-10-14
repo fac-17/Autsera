@@ -3,13 +3,13 @@ import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
 import "./interactionpage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
-
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [helpText, setHelpText] = useState(null);
   const [speechText, setSpeechText] = useState(null);
   const [answerClickCount, setAnswerClickCount] = React.useState(0);
   const [image, setImage] = React.useState("");
+  const [background, setBackground] = React.useState("");
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
       interaction => interaction.id === id
@@ -53,13 +53,17 @@ const InteractionPage = ({ id, setCompleted }) => {
         completed.includes(id) ? completed : completed.concat(id)
       );
     }
+  }, [selectedAnswers]);
+  useEffect(() => {
     import(`../../assets${interactionObj.image}`).then(file =>
       setImage(file.default)
     );
-  }, [selectedAnswers]);
-
+    import(`../../assets/SVG/${placeObj.text}.svg`).then(file =>
+      setBackground(file.default)
+    );
+  }, []);
   const style = {
-    backgroundImage: `url(/SVG/${placeObj.text}.svg)`,
+    backgroundImage: `url(${background})`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
