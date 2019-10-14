@@ -27,10 +27,13 @@ const PlacePage = ({ id, completed }) => {
         ? `Welcome to ${placeData.text}, there are ${max} stars to collect here`
         : `Keep going, you're doing great!`;
     setspeechText(newMessage);
+  }, [completed]);
+
+  useEffect(() => {
     import(`../../assets${placeData.image}`).then(file =>
       setImage(file.default)
     );
-  }, [completed]);
+  });
 
   return (
     <div style={style}>
