@@ -63,3 +63,15 @@ li {
   border: 5px solid #f69a5d;
   height: 40vh;
 }
+
+.star-popup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 37%;
+  margin: auto;
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
