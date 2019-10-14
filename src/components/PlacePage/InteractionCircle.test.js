@@ -69,11 +69,11 @@ test("if it has the name of the interaction", () => {
 });
 
 test("if it has the link of the interaction", () => {
-  const { getByText } = render(
+  const { getByTitle } = render(
     <Router>
       <InteractionCircle interaction={example} />
     </Router>
   );
-  const link = getByText(example.text);
+  const link = getByTitle(example.text);
   expect(link.href).toMatch(new RegExp("/interaction/" + example.id));
 });

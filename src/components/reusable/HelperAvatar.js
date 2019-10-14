@@ -27,7 +27,11 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
   return (
     <div className="helper-avatar-container">
       <img
+<<<<<<< HEAD
         src={helperImg}
+=======
+        src="/SVG/Hippo.svg"
+>>>>>>> master
         className="helper-avatar"
         alt="helper-avatar"
         onClick={toggleshowHint}

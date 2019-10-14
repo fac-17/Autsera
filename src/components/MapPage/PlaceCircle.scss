@@ -1,16 +1,29 @@
 .place-circle {
   height: 20vh;
   width: 20vw;
-  border-radius: 50%;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  &.unlocked {
-    border: 20px solid #f69a5d;
+  pointer: cursor;
+  &.unlocked p {
+    background-color: #f69a5d;
+    border-radius: 10px;
   }
-  &.locked {
-    border: 20px solid #8f8aef;
+  &.locked p {
+    background-color: #8f8aef;
+    border-radius: 10px;
   }
+}
+
+.place-circle p {
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 2%;
+  color: #04121f;
+  background-color: #f69a5d;
+  border-radius: 10px;
+  padding: 2%;
 }
