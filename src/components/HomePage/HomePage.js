@@ -12,7 +12,7 @@ const HomePage = ({ history, setCompleted ,completed}) => {
         <img className="img-logo" src="./img/Autsera.png" alt="Autsera Logo" />
         {completed.length?<RouterLink className="btn-start" to="/map" label="Continue Playing" />:null}
         
-        <button onClick={() => {
+        <button  className="btn-newstart" onClick={() => {
           setCompleted([]);
           history.push("/map");
         }} >New Game</button>
