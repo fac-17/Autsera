@@ -9,7 +9,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   const [helpText, setHelpText] = useState(null);
   const [speechText, setSpeechText] = useState(null);
   const [answerClickCount, setAnswerClickCount] = React.useState(0);
-
+  const [image, setImage] = React.useState("");
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
       interaction => interaction.id === id
@@ -53,6 +53,9 @@ const InteractionPage = ({ id, setCompleted }) => {
         completed.includes(id) ? completed : completed.concat(id)
       );
     }
+    import(`../../assets${interactionObj.image}`).then(file =>
+      setImage(file.default)
+    );
   }, [selectedAnswers]);
 
   const style = {
@@ -60,7 +63,7 @@ const InteractionPage = ({ id, setCompleted }) => {
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover"
+    backgroundSize: "cover",
   };
 
   return (
@@ -78,7 +81,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       <h3 className="interaction-instruction">{interactionObj.question[1]}</h3>
       <ul>
         <li className="grid-center">
-          <img src={interactionObj.image} className="interaction-image" />
+          <img src={image} className="interaction-image" />
         </li>
         {interactionObj.answers.map(answer => (
           <li key={answer.id}>
