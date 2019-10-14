@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACf,gBAAgB,EAAE,kBAAkB;EACpC,UAAU,EAAE,KAAK;EACjB,mBAAmB,EAAE,MAAM;EAC3B,iBAAiB,EAAE,SAAS;EAC5B,eAAe,EAAE,KAAK;CACvB",
+    "sources": [
+        "helppage.scss"
+    ],
+    "names": [],
+    "file": "helppage.css"
+}

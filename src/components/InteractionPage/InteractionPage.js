@@ -3,12 +3,14 @@ import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
 import "./interactionpage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
+import { findByLabelText } from "@testing-library/dom";
 
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [helpText, setHelpText] = useState(null);
   const [speechText, setSpeechText] = useState(null);
   const [answerClickCount, setAnswerClickCount] = React.useState(0);
+  const [starSpeech, setStarSpeech] = useState(null);
 
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
@@ -18,6 +20,19 @@ const InteractionPage = ({ id, setCompleted }) => {
   }, {});
 
   let shuffledAnswers = interactionObj.answers;
+
+  let addStar = (id, array) => {
+    setStarSpeech(
+      <div className="star-popup">
+        <svg viewBox="0 0 51 48" fill={"#fde74c"} stroke="black" width="60px">
+          <title>{"Full Star"}</title>
+          <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z" />
+        </svg>
+        <span>Well done, you have gained a star</span>
+      </div>
+    );
+    return array.concat(id);
+  };
 
   useEffect(() => {
     let shuffleArray = array => {
@@ -69,7 +84,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       // TODO instead of below it should trigger some animation like star popping up
       // setSpeechText("Well done!");
       setCompleted(completed =>
-        completed.includes(id) ? completed : completed.concat(id)
+        completed.includes(id) ? completed : addStar(id, completed)
       );
     }
   }, [selectedAnswers]);
@@ -122,6 +137,7 @@ const InteractionPage = ({ id, setCompleted }) => {
           </li>
         ))}
       </ul>
+      {starSpeech}
       <HelperAvatar
         speechText={speechText}
         helpText={helpText}

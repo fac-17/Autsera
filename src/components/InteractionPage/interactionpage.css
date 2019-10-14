@@ -3,13 +3,16 @@ ul {
   padding: 0 !important;
   height: 40vh;
   width: 90vw;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
 }
 
 li {
   list-style-type: none;
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .interaction-question {
@@ -31,8 +34,8 @@ li {
 .btn-answer {
   border: 3px solid #f69a5d;
   background: #feee7e;
-  box-shadow: 0 5px 5px rgba(65, 8, 8, 0.17),
-    0 15px rgba(255, 255, 255, 0.25) inset;
+  -webkit-box-shadow: 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+          box-shadow: 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
   display: inline-block;
   color: #0a2e27;
   text-align: center;
@@ -53,8 +56,10 @@ li {
 }
 
 .grid-center {
-  grid-column-start: 2;
-  grid-row-start: 1;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
   grid-row-end: 5;
 }
 
@@ -65,9 +70,15 @@ li {
 }
 
 .star-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 37%;
   margin: auto;
   font-family: "Amatic SC", cursive;
@@ -75,3 +86,4 @@ li {
   text-align: center;
   font-weight: 700;
 }
+/*# sourceMappingURL=interactionpage.css.map */

@@ -1,0 +1,110 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  outline: none;
+}
+
+.hud {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  padding: 2%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon-image {
+  width: 180px;
+}
+
+.btn-help {
+  border: 3px solid #fff;
+  background: #fce01a;
+  -webkit-box-shadow: 0 -2px 0 3px #f1d403 inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+          box-shadow: 0 -2px 0 3px #f1d403 inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  display: inline-block;
+  color: #f8feff;
+  text-align: center;
+  font-family: "Fredoka One";
+  text-decoration: none;
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+  line-height: 3.7rem;
+  font-size: 3rem;
+  margin: 2% 0 0 90%;
+  cursor: pointer;
+}
+
+.btn-start {
+  border: 3px solid #fff;
+  background: #f4863d;
+  -webkit-box-shadow: 0 -2px 0 3px #f2721d inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+          box-shadow: 0 -2px 0 3px #f2721d inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  display: inline-block;
+  color: #f8feff;
+  text-align: center;
+  font-family: "Fredoka One";
+  text-decoration: none;
+  border-radius: 20px;
+  height: 3rem;
+  width: 15rem;
+  line-height: 2.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.btn-back {
+  border: 3px solid #fff;
+  background: #8f8aef;
+  -webkit-box-shadow: 0 -2px 0 3px #726ceb inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+          box-shadow: 0 -2px 0 3px #726ceb inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  display: inline-block;
+  color: #f8feff;
+  text-align: center;
+  font-family: "Fredoka One";
+  text-decoration: none;
+  border-radius: 20px;
+  height: 3rem;
+  width: 9rem;
+  line-height: 2.5rem;
+  font-size: 1.4rem;
+  margin: 2%;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  cursor: pointer;
+}
+
+.btn-back p,
+.btn-start p,
+.btn-help p {
+  margin: 0;
+}
+
+.signpost {
+  display: inline-block;
+  color: #f8feff;
+  text-align: center;
+  font-family: "Fredoka One";
+  background: #5bdcc2;
+  border: 3px solid #25ac91;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 -2px 0 3px #3fd6b7 inset, 0 2px 2px rgba(241, 78, 61, 0.17), 0 10px rgba(255, 255, 255, 0.25) inset;
+          box-shadow: 0 -2px 0 3px #3fd6b7 inset, 0 2px 2px rgba(241, 78, 61, 0.17), 0 10px rgba(255, 255, 255, 0.25) inset;
+  min-height: 3rem;
+  line-height: 2rem;
+  font-size: 1.4rem;
+  padding: 1% 5%;
+  margin: 2%;
+}
+/*# sourceMappingURL=App.css.map */
