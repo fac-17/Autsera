@@ -26,11 +26,11 @@ test("if placeCircle renders the text of the place correctly", () => {
 });
 
 test("if placeCircle renders the right link", () => {
-  const { getByText } = render(
+  const { getByTitle } = render(
     <Router>
       <PlaceCircle place={testPlace} completed={completed} />
     </Router>
   );
-  const placeLink = getByText(testPlace.text);
+  const placeLink = getByTitle(testPlace.text);
   expect(placeLink.href).toMatch(new RegExp("/place/" + testPlace.id));
 });

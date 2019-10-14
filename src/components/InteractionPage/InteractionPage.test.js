@@ -47,12 +47,12 @@ test("Selecting an answer changes the class to 'selected'", () => {
 });
 
 test("Test if there is a back button with correct link'", () => {
-  const { getByText } = render(
+  const { getByTitle } = render(
     <Router>
       <InteractionPage id={1} />
     </Router>
   );
-  const backButton = getByText("Go Back");
+  const backButton = getByTitle("Go Back");
   expect(backButton.href).toMatch(/\/place\/0$/);
 });
 

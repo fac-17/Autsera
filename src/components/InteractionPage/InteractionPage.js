@@ -70,11 +70,16 @@ const InteractionPage = ({ id, setCompleted }) => {
           className="btn-back"
           to={"/place/" + placeObj.id}
           label="Go Back"
+          title="Go Back"
         />
         <span className="signpost">{interactionObj.text}</span>
       </div>
-      <img src="/img/Interaction.png" className="interaction-image" />
+      <h2 className="interaction-question">{interactionObj.question[0]}</h2>
+      <h3 className="interaction-instruction">{interactionObj.question[1]}</h3>
       <ul>
+        <li className="grid-center">
+          <img src={interactionObj.image} className="interaction-image" />
+        </li>
         {interactionObj.answers.map(answer => (
           <li key={answer.id}>
             <button
@@ -93,7 +98,7 @@ const InteractionPage = ({ id, setCompleted }) => {
                 setSpeechText(answer.response);
               }}
             >
-              {answer.text} {selectedAnswers.includes(answer.id) ? " + " : ""}
+              {answer.text}
             </button>
           </li>
         ))}
