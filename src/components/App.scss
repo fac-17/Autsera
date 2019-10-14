@@ -103,6 +103,14 @@ a {
   margin: 0;
 }
 
+.btn-back:active,
+.btn-start:active,
+.btn-help:active {
+  filter: brightness(120%);
+  transform: scale(0.95);
+}
+
+
 @mixin signpost {
   display: inline-block;
   color: #f8feff;
