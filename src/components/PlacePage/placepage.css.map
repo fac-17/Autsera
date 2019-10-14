@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACf,YAAY,EAAE,GAAG;EACjB,KAAK,EAAE,GAAG;CACX;;AAED,AAAA,MAAM,CAAC;EACL,UAAU,EAAE,GAAG;EACf,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;CAC/B",
-    "sources": [
-        "placepage.scss"
-    ],
-    "names": [],
-    "file": "placepage.css"
-}

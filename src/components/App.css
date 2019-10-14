@@ -11,6 +11,10 @@ html {
   outline: none;
 }
 
+body {
+  margin: 0;
+}
+
 .hud {
   display: -ms-grid;
   display: grid;
