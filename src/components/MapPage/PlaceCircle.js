@@ -3,13 +3,11 @@ import RouterLink from "../reusable/RouterLink";
 import Stars from "../reusable/Stars";
 import { countStarsInPlace } from "../../utils/starsCounting";
 import "./PlaceCircle.scss";
+import p1 from "../../assets/SVG/Playground_icon.svg"
+const icons={"/SVG/Playground_icon.svg":p1}
 const PlaceCircle = ({ place, completed }) => {
-  const [icon, setIcon] = useState("");
-  useEffect(() => {
-    import(`../../assets${place.icon}`).then(file => {
-      setIcon(file.default);
-    });
-  });
+ 
+ 
   return (
     <div
       className={
@@ -19,7 +17,7 @@ const PlaceCircle = ({ place, completed }) => {
     >
       <RouterLink
         title={place.text}
-        icon={icon}
+        icon={icons[place.icon]}
         label={place.text}
         to={"/place/" + place.id}
       ></RouterLink>

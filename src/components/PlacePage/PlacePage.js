@@ -6,13 +6,13 @@ import Stars from "../reusable/Stars";
 import { countStarsInPlace } from "../../utils/starsCounting";
 import HelperAvatar from "../reusable/HelperAvatar";
 import "./placepage.scss";
-
+import p1 from "../../assets/img/playground.png"
+const images={"/img/playground.png":p1}
 const PlacePage = ({ id, completed }) => {
-  const [image, setImage] = useState("");
   const placeData = data.places.find(place => place.id === id);
 
   const style = {
-    backgroundImage: `url(${image})`,
+    backgroundImage: `url(${images[placeData.image]})`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -29,11 +29,7 @@ const PlacePage = ({ id, completed }) => {
     setspeechText(newMessage);
   }, [completed]);
 
-  useEffect(() => {
-    import(`../../assets${placeData.image}`).then(file =>
-      setImage(file.default)
-    );
-  });
+ 
 
   return (
     <div style={style}>

@@ -3,13 +3,23 @@ import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
 import "./interactionpage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
+import background1 from "../../assets/SVG/Playground.svg";
+import image1 from "../../assets/img/interactions/01_LeonieAndReuben.png";
+import image2 from "../../assets/img/interactions/02_Jan.png";
+import image3 from "../../assets/img/interactions/03_Victor.png";
+const backgrounds = { Playground: background1 };
+const images = {
+  "/img/interactions/01_LeonieAndReuben.png": image1,
+  "/img/interactions/02_Jan.png": image2,
+  "/img/interactions/03_Victor.png": image3
+};
+
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [helpText, setHelpText] = useState(null);
   const [speechText, setSpeechText] = useState(null);
   const [answerClickCount, setAnswerClickCount] = React.useState(0);
-  const [image, setImage] = React.useState("");
-  const [background, setBackground] = React.useState("");
+
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
       interaction => interaction.id === id
@@ -54,20 +64,13 @@ const InteractionPage = ({ id, setCompleted }) => {
       );
     }
   }, [selectedAnswers]);
-  useEffect(() => {
-    import(`../../assets${interactionObj.image}`).then(file =>
-      setImage(file.default)
-    );
-    import(`../../assets/SVG/${placeObj.text}.svg`).then(file =>
-      setBackground(file.default)
-    );
-  }, []);
+
   const style = {
-    backgroundImage: `url(${background})`,
+    backgroundImage: `url(${backgrounds[placeObj.text]})`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    backgroundSize: "cover"
   };
 
   return (
@@ -85,7 +88,10 @@ const InteractionPage = ({ id, setCompleted }) => {
       <h3 className="interaction-instruction">{interactionObj.question[1]}</h3>
       <ul>
         <li className="grid-center">
-          <img src={image} className="interaction-image" />
+          <img
+            src={images[interactionObj.image]}
+            className="interaction-image"
+          />
         </li>
         {interactionObj.answers.map(answer => (
           <li key={answer.id}>
