@@ -48,7 +48,7 @@ a {
 // ____________________________images____________________________
 
 .icon-image {
-  width: 180px;
+  width: 140px;
 }
 // ____________________________Buttons & Signposts____________________________
 
@@ -85,14 +85,14 @@ a {
   cursor: pointer;
 }
 .btn-newstart {
-  @include buttons( #8f8aef, #605ad7);
+  @include buttons(#8f8aef, #605ad7);
   border-radius: 20px;
   height: 3rem;
   width: 15rem;
   line-height: 2.5rem;
   font-size: 1.4rem;
   cursor: pointer;
-  margin-top:1rem;
+  margin-top: 1rem;
 }
 
 .btn-back {
