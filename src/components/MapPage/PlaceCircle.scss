@@ -8,11 +8,15 @@
   justify-content: center;
   pointer: cursor;
   &.unlocked p {
-    background-color: #f69a5d;
+    background: #f69a5d;
+    box-shadow: 0 -2px 0 3px #e8894a inset, 0 5px 5px rgba(65, 8, 8, 0.17),
+      0 15px rgba(255, 255, 255, 0.25) inset;
     border-radius: 10px;
   }
   &.locked p {
-    background-color: #8f8aef;
+    background: #8f8aef;
+    box-shadow: 0 -2px 0 3px #6f69eb inset, 0 5px 5px rgba(65, 8, 8, 0.17),
+      0 15px rgba(255, 255, 255, 0.25) inset;
     border-radius: 10px;
   }
 }
