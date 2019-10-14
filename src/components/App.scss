@@ -29,6 +29,7 @@ html {
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 // ____________________________Layout____________________________
@@ -120,7 +121,6 @@ a {
   filter: brightness(120%);
   transform: scale(0.95);
 }
-
 
 @mixin signpost {
   display: inline-block;
