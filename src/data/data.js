@@ -183,7 +183,7 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/01_LeonieAndReuben.png",
-          coordinates: [10, 10],
+          coordinates: [50, 50],
           radius: 12,
           answers: [
             {
