@@ -19,6 +19,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   const [helpText, setHelpText] = useState(null);
   const [speechText, setSpeechText] = useState(null);
   const [answerClickCount, setAnswerClickCount] = React.useState(0);
+  const [starSpeech, setStarSpeech] = useState(null);
 
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
@@ -26,6 +27,38 @@ const InteractionPage = ({ id, setCompleted }) => {
     );
     return foundInteraction ? foundInteraction : interactionObj;
   }, {});
+
+  let addStar = (id, array) => {
+    setStarSpeech(
+      <div className="star-popup">
+        <svg viewBox="0 0 51 48" fill={"#fde74c"} stroke="black" width="60px">
+          <title>{"Full Star"}</title>
+          <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z" />
+        </svg>
+        <span>Well done, you have gained a star</span>
+      </div>
+    );
+    return array.concat(id);
+  };
+
+  let shuffledAnswers = interactionObj.answers;
+
+  useEffect(() => {
+    let shuffleArray = array => {
+      let currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
+      while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+      return array;
+    };
+    shuffledAnswers = shuffleArray(interactionObj.answers);
+  }, [interactionObj.answers]);
 
   let placeObj = data.places.find(place =>
     place.interactions.includes(interactionObj)
@@ -60,7 +93,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       // TODO instead of below it should trigger some animation like star popping up
       // setSpeechText("Well done!");
       setCompleted(completed =>
-        completed.includes(id) ? completed : completed.concat(id)
+        completed.includes(id) ? completed : addStar(id, completed)
       );
     }
   }, [selectedAnswers]);
@@ -93,7 +126,7 @@ const InteractionPage = ({ id, setCompleted }) => {
             className="interaction-image"
           />
         </li>
-        {interactionObj.answers.map(answer => (
+        {shuffledAnswers.map(answer => (
           <li key={answer.id}>
             <button
               className={
@@ -116,6 +149,7 @@ const InteractionPage = ({ id, setCompleted }) => {
           </li>
         ))}
       </ul>
+      {starSpeech}
       <HelperAvatar
         speechText={speechText}
         helpText={helpText}
