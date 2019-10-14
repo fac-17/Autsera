@@ -4,8 +4,15 @@ import Stars from "../reusable/Stars";
 import { countStarsInPlace } from "../../utils/starsCounting";
 import "./PlaceCircle.scss";
 const PlaceCircle = ({ place, completed }) => {
+  let positionStyle = {
+    position: "absolute",
+    top: place.coordinates[0] + "%",
+    right: place.coordinates[1] + "%"
+  };
+
   return (
     <div
+      style={positionStyle}
       className={
         "place-circle " +
         (completed.length >= place.requiredStars ? "unlocked" : "locked")

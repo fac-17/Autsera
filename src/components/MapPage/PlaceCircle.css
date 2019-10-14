@@ -1,0 +1,66 @@
+.place-circle {
+  height: 20vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer: cursor;
+}
+
+.place-circle.unlocked p {
+  background: #f69a5d;
+  -webkit-box-shadow: 0 -2px 0 3px #e8894a inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+          box-shadow: 0 -2px 0 3px #e8894a inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  border-radius: 10px;
+  min-width: 15vw;
+}
+
+.place-circle.locked {
+  pointer-events: none;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+.place-circle.locked p {
+  background: #8f8aef;
+  -webkit-box-shadow: 0 -2px 0 3px #6f69eb inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+          box-shadow: 0 -2px 0 3px #6f69eb inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  border-radius: 10px;
+  min-width: 15vw;
+  border-radius: 10px;
+}
+
+.place-circle p {
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 2%;
+  color: #04121f;
+  background-color: #f69a5d;
+  border-radius: 10px;
+  padding: 3%;
+}
+
+.router-link a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=PlaceCircle.css.map */

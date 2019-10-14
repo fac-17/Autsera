@@ -13,13 +13,13 @@ const MapPage = ({ completed }) => {
     let next = findNextLevel(completed);
     let newMessage =
       completed.length === 0
-      ? "Welcome to Autsera Land"
-      : next.requiredStars
-      ? `You're doing great, you only need ${next.requiredStars -
-          completed.length} more stars to unlock ${next.text}`
-      : completed.length === findTotalStars()
-      ? "Congratulations, you have completed the game!"
-      : "Congratulations, you have unlocked every level in the game!";
+        ? "Welcome to Autsera Land"
+        : next.requiredStars
+        ? `You're doing great, you only need ${next.requiredStars -
+            completed.length} more stars to unlock ${next.text}`
+        : completed.length === findTotalStars()
+        ? "Congratulations, you have completed the game!"
+        : "Congratulations, you have unlocked every level in the game!";
     setMessage(newMessage);
   }, [completed]);
 
