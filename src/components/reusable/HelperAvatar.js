@@ -34,7 +34,7 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
       ></img>
       {displaySomething && speechText && !showHint ? (
         <div className="speech-box">
-          <p>{speechText}</p>
+          <div>{speechText}</div>
         </div>
       ) : null}
       {displaySomething && helpText && showHint ? (
