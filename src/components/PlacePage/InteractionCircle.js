@@ -11,7 +11,7 @@ const IntaractionCircle = ({ interaction, isCompleted, isUnlocked }) => {
   return (
     <div
       style={interactionStyle}
-      className={
+      className={"interaction-circle " +
         (isCompleted ? "completed" : "not-completed") +
         " " +
         (isUnlocked ? "unlocked" : "locked")

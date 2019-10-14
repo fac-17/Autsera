@@ -1,3 +1,35 @@
+
+.interaction-circle {
+  margin: 0 auto;
+  display: flex;
+  cursor: pointer;
+  padding: 5px;
+  &.unlocked p {
+    background-color: #f69a5d;
+    border-radius: 10px;
+  }
+  &.locked p {
+    background-color: #8f8aef;
+    border-radius: 10px;
+  }
+
+}
+
+.interaction-circle:active {
+  transform: scale(75%);
+}
+
+.interaction-circle p {
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 2%;
+  color: #04121f;
+  background-color: #f69a5d;
+  border-radius: 10px;
+  padding: 2%;
+}
+
 .stars-container {
   justify-self: end;
   width: 45%;
