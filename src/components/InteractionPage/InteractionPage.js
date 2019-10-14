@@ -17,6 +17,25 @@ const InteractionPage = ({ id, setCompleted }) => {
     return foundInteraction ? foundInteraction : interactionObj;
   }, {});
 
+  let shuffledAnswers = interactionObj.answers;
+
+  useEffect(() => {
+    let shuffleArray = array => {
+      var currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
+      while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+      return array;
+    };
+    shuffledAnswers = shuffleArray(interactionObj.answers);
+  }, [interactionObj.answers]);
+
   let placeObj = data.places.find(place =>
     place.interactions.includes(interactionObj)
   );
@@ -80,7 +99,7 @@ const InteractionPage = ({ id, setCompleted }) => {
         <li className="grid-center">
           <img src={interactionObj.image} className="interaction-image" />
         </li>
-        {interactionObj.answers.map(answer => (
+        {shuffledAnswers.map(answer => (
           <li key={answer.id}>
             <button
               className={
