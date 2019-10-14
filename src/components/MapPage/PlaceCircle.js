@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import RouterLink from "../reusable/RouterLink";
 import Stars from "../reusable/Stars";
 import { countStarsInPlace } from "../../utils/starsCounting";
 import "./PlaceCircle.scss";
 const PlaceCircle = ({ place, completed }) => {
+  const [icon, setIcon] = useState("");
+  useEffect(() => {
+    console.log("place icon", place.icon);
+    import(`../../assets${place.icon}`).then(file => {
+      setIcon(file.default);
+    });
+  });
   return (
     <div
       className={
@@ -13,7 +20,7 @@ const PlaceCircle = ({ place, completed }) => {
     >
       <RouterLink
         title={place.text}
-        icon={place.icon}
+        icon={icon}
         label={place.text}
         to={"/place/" + place.id}
       ></RouterLink>
