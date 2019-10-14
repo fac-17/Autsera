@@ -3,18 +3,26 @@ import StartButton from "../reusable/StartButton";
 import RouterLink from "../reusable/RouterLink";
 import HelperAvatar from "../reusable/HelperAvatar";
 import "./homepage.scss";
-
+import autseraImg from "../../assets/img/Autsera.png";
+import backgroundHome from "../../assets/SVG/Background_Home.svg";
 const HomePage = ({ history, setCompleted }) => {
   return (
-    <div className="background-home">
+    <div
+      className="background-home"
+      style={{ backgroundImage: `url(${backgroundHome})` }}
+    >
       {/* <RouterLink className="btn-help" to="/help" label="?" /> */}
       <div className="container-home">
-        <img className="img-logo" src="./img/Autsera.png" alt="Autsera Logo" />
+        <img className="img-logo" src={autseraImg} alt="Autsera Logo" />
         <RouterLink className="btn-start" to="/map" label="Continue Playing" />
-        <button onClick={() => {
-          setCompleted([]);
-          history.push("/map");
-        }} >New Game</button>
+        <button
+          onClick={() => {
+            setCompleted([]);
+            history.push("/map");
+          }}
+        >
+          New Game
+        </button>
       </div>
       <HelperAvatar
         speechText={

@@ -1,6 +1,6 @@
 import React from "react";
 import "./HelperAvatar.scss";
-
+import helperImg from "../../assets/SVG/Hippo.svg";
 const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
   let [displaySomething, setdisplaySomething] = React.useState(true);
   let [showHint, setshowHint] = React.useState(false);
@@ -27,7 +27,7 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
   return (
     <div className="helper-avatar-container">
       <img
-        src="./SVG/Hippo.svg"
+        src={helperImg}
         className="helper-avatar"
         alt="helper-avatar"
         onClick={toggleshowHint}
