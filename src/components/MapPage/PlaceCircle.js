@@ -9,7 +9,7 @@ const PlaceCircle = ({ place, completed, setMessage }) => {
   let positionStyle = {
     position: "absolute",
     top: place.coordinates[0] + "%",
-    right: place.coordinates[1] + "%",
+    right: place.coordinates[1] + "%"
   };
   useEffect(() => {
     setIsUnlocked(completed.length >= place.requiredStars);
@@ -36,6 +36,7 @@ const PlaceCircle = ({ place, completed, setMessage }) => {
         />
       ) : null}
       <RouterLink
+        imageWidth={place.width}
         title={place.text}
         icon={place.icon}
         label={place.text}
