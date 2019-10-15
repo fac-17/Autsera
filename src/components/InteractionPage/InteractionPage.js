@@ -11,6 +11,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   const [speechText, setSpeechText] = useState(null);
   const [answerClickCount, setAnswerClickCount] = React.useState(0);
   const [starSpeech, setStarSpeech] = useState(null);
+  const [isCompleted,setIsCompleted] =useState(false)
 
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
@@ -26,7 +27,7 @@ const InteractionPage = ({ id, setCompleted }) => {
           <title>{"Full Star"}</title>
           <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z" />
         </svg>
-        <span>Well done, you have gained a star</span>
+        <span>You have gained a star</span>
       </div>
     );
     return array.concat(id);
@@ -87,6 +88,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       setCompleted(completed =>
         completed.includes(id) ? completed : addStar(id, completed)
       );
+      setIsCompleted(true);
     }
   }, [selectedAnswers]);
 
@@ -138,6 +140,7 @@ const InteractionPage = ({ id, setCompleted }) => {
           </li>
         ))}
       </ul>
+      {isCompleted?<div className="star-popup"><span></span><span>Well done, you completed this puzzle!</span><span></span></div>:null}
       {starSpeech}
       <HelperAvatar
         speechText={speechText}
