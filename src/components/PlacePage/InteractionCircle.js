@@ -2,7 +2,6 @@ import React from "react";
 import RouterLink from "../reusable/RouterLink";
 
 const InteractionCircle = ({ interaction, isCompleted, isUnlocked, setspeechText, completed }) => {
-  console.log(interaction.text, "completed ", completed.length, "required", interaction.requiredStars, isUnlocked);
   let interactionStyle = {
     position: "absolute",
     top: interaction.coordinates[0] + "%",
