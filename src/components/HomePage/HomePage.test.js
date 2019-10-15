@@ -11,17 +11,7 @@ test("The HomePage should render", () => {
   );
 });
 
-test("The HomePage should include the Buttons", () => {
-  const { getByText } = render(
-    <Router>
-      <HomePage completed={[1]} />
-    </Router>
-  );
-  getByText("Continue Playing");
-  getByText("New Game");
-});
-
-test("The HomePage should not include Continue buttons", () => {
+test("The HomePage doesn't include 'Continue' button for a new user", () => {
   const { getByText, queryByText } = render(
     <Router>
       <HomePage completed={[]} />
@@ -31,5 +21,12 @@ test("The HomePage should not include Continue buttons", () => {
   getByText("New Game");
 });
 
-// should have 'more info' button
-// should display the avatar
+test("The HomePage includes both Buttons if the user has unlocked at least one level", () => {
+  const { getByText } = render(
+    <Router>
+      <HomePage completed={[1]} />
+    </Router>
+  );
+  getByText("Continue Playing");
+  getByText("New Game");
+});

@@ -60,7 +60,5 @@ test("Locked places render with locked class", () => {
     } else {
       expect(button.className).toBe("place-circle locked")
     }
-
   })
-
 })
