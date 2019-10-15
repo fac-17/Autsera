@@ -65,15 +65,13 @@ test("Locked places render with locked class", () => {
 
 test("Click on locked place has no effect", () => {
   const completedOne = [];
-  const { getByText, container, debug } = render(
+  const firstLocked = data.places.find(el => el.requiredStars > completedOne.length);
+  const { getByText, getByAltText, container, debug } = render(
     <Router>
       <MapPage completed={completedOne} />
     </Router>
   );
 
-  const lockedButton = container.querySelectorAll(".locked")[0]; // Selects first locked Place
-  const lockedLink = lockedButton.querySelector(".router-link"); // Selects link to that place
-  fireEvent.click(lockedLink); // Simulates Click on locked place
+  fireEvent.click(getByText(firstLocked.text)); // Simulates Click on locked place
   getByText("AUTSERA LAND"); // Checks if user still on the map page
-
 })
