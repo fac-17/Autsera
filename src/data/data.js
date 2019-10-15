@@ -6,18 +6,19 @@ export default {
       icon: "/SVG/Places/Playground_icon.svg",
       requiredStars: 0,
       image: "Playground.png",
-      coordinates: [44, 70],
+      width: "200px",
+      coordinates: [42, 70],
       interactions: [
         {
           id: 1,
-          text: "Leonie and Reuben playing on the swing",
+          text: "Kids on the swing",
           question: [
             "Can you tell what Leonie and Reuben are feeling?",
             "Select all the matching words"
           ],
           image: "/img/interactions/Slide_happy",
-
-          coordinates: [20, 10],
+          coordinates: [20, 66],
+          width: "225px",
           radius: 12,
           requiredStars: 0,
           answers: [
@@ -43,7 +44,7 @@ export default {
               id: 5,
               text: "Crying",
               correct: false,
-              response: "Look again? Focus on their eyes",
+              response: "Look again? Focus on their eyes"
             },
             {
               id: 6,
@@ -74,14 +75,14 @@ export default {
             {
               id: 10,
               text: "Look at their faces, are they smiling?",
-              answers: [4, 5],
+              answers: [4, 5]
             },
             {
               id: 11,
               text: "Look if they are having fun?",
-              answers: [2, 3],
-            },
-          ],
+              answers: [2, 3]
+            }
+          ]
         },
         {
           id: 12,
@@ -91,8 +92,8 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Fight_ball",
-
-          coordinates: [80, 60],
+          width: "190px",
+          coordinates: [60, 47],
           radius: 8,
           requiredStars: 1,
           answers: [
@@ -137,7 +138,8 @@ export default {
               text: "Sleepy",
               correct: false,
               response: "Look again?"
-            } ,{
+            },
+            {
               id: 92,
               text: "Kind",
               correct: false,
@@ -148,9 +150,9 @@ export default {
             {
               id: 15,
               text: "Look at his face, are they smiling?",
-              answers: [9, 10],
-            },
-          ],
+              answers: [9, 10]
+            }
+          ]
         },
         {
           id: 16,
@@ -160,7 +162,8 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Slide",
-          coordinates: ["12", "33"],
+          width: "260px",
+          coordinates: ["39", "8"],
           radius: "33",
           requiredStars: 2,
           answers: [
@@ -234,7 +237,8 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Boys_ball",
-          coordinates: ["20", "80"],
+          width: "160",
+          coordinates: ["29", "39"],
           radius: "33",
           requiredStars: 3,
           answers: [
@@ -308,7 +312,8 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Boys_ball",
-          coordinates: ["50", "50"],
+          width: "160px",
+          coordinates: ["50", "80"],
           radius: "33",
           requiredStars: 3,
           answers: [
@@ -365,24 +370,25 @@ export default {
             {
               id: 21,
               text: "Look at the names of them",
-              answers: [25, 26],
+              answers: [25, 26]
             },
             {
               id: 22,
               text: "Least bad of them",
-              answers: [27, 28],
-            },
-          ],
-        },
-      ],
+              answers: [27, 28]
+            }
+          ]
+        }
+      ]
     },
     {
       id: 23,
       text: "School",
       requiredStars: 2,
       icon: "/SVG/Places/School_icon.svg",
-      image: "-TODO-.png",
-      coordinates: [18, 46],
+      image: "School.png",
+      coordinates: [16, 46],
+      width: "170px",
       interactions: [
         {
           id: 24,
@@ -391,8 +397,9 @@ export default {
             "The teacher asked a question.",
             "Select all that matches this situation"
           ],
-          image: "/img/interactions/-TODO-",
-          coordinates: [50, 50],
+          image: "/img/interactions/Classroom",
+          width: "252px",
+          coordinates: [62, 53],
           radius: 12,
           answers: [
             {
@@ -424,138 +431,137 @@ export default {
             {
               id: 29,
               text: "Look at their faces, are they smiling?",
-              answers: [16, 17],
+              answers: [16, 17]
             },
             {
               id: 30,
               text: "Look if they are having fun?",
-              answers: [14, 15],
-            },
+              answers: [14, 15]
+            }
           ],
           requiredStars: 0
         },
         {
           id: 31,
-          text: "Martha and Tony at the blackboard",
-          image: "/img/interactions/-TODO-",
+          text: "At the blackboard",
+          image: "/img/interactions/Blackboard",
           question: [
             "Can you tell what the kids are feeling?",
             "Select all the matching emotions"
           ],
-          coordinates: ["20", "30"],
+          coordinates: ["30", "51"],
+          width: "225px",
           radius: "12",
           answers: [
             {
               id: 32,
               text: "Tony does not know the answer",
               correct: true,
-              response: "Correct! ",
+              response: "Correct! "
             },
             {
               id: 33,
               text: "Martha is excited",
               correct: true,
-              response: "Correct!",
-            }, {
+              response: "Correct!"
+            },
+            {
               id: 100,
               text: "Martha knows the answer",
               correct: true,
-              response: "Correct!",
+              response: "Correct!"
             },
-             {
+            {
               id: 102,
               text: "Martha doesn't know the answer",
               correct: false,
-              response: "Look again!",
+              response: "Look again!"
             },
             {
               id: 103,
               text: "Tony knows the answer",
               correct: false,
-              response: "Look again",
+              response: "Look again"
             },
             {
               id: 104,
               text: "Tony does not need any maths practice",
               correct: false,
-              response: "Look again!",
+              response: "Look again!"
             },
             {
               id: 105,
               text: "Martha needs a lot of maths practice",
               correct: false,
-              response: "Look again",
-            },
+              response: "Look again"
+            }
           ],
           hints: [
             {
               id: 34,
               text: "Look at his face, are they smiling?",
-              answers: [21, 22],
-            },
+              answers: [21, 22]
+            }
           ],
-          requiredStars: 1,
+          requiredStars: 1
         },
         {
           id: 106,
           text: "Girls laughing",
-          image: "/img/interactions/-TODO-",
-          question: [
-            "The three girls are...?",
-            "Select all matches"
-          ],
-          coordinates: ["70", "40"],
+          image: "/img/interactions/Bullying",
+          question: ["The three girls are...?", "Select all matches"],
+          width: "230px",
+          coordinates: ["67", "22"],
           radius: "12",
           answers: [
             {
               id: 107,
               text: "making fun of the girl",
               correct: true,
-              response: "Correct! ",
+              response: "Correct! "
             },
             {
               id: 108,
               text: "cruel",
               correct: true,
-              response: "Correct!",
-            }, {
+              response: "Correct!"
+            },
+            {
               id: 109,
               text: "mean",
               correct: true,
-              response: "Correct!",
+              response: "Correct!"
             },
-             {
+            {
               id: 110,
               text: "nice",
               correct: false,
-              response: "Look again!",
+              response: "Look again!"
             },
             {
               id: 111,
               text: "polite",
               correct: false,
-              response: "Look again",
+              response: "Look again"
             },
             {
               id: 112,
               text: "kind",
               correct: false,
-              response: "Look again!",
+              response: "Look again!"
             },
             {
               id: 113,
               text: "caring",
               correct: false,
-              response: "Look again",
-            },
+              response: "Look again"
+            }
           ],
-          hints: [
-            
-          ],
-          requiredStars: 2,
-        },
-      ],
-    },
+          hints: [],
+          requiredStars: 2
+        }
+      ]
+    }
     // {
     //   id: 35,
     //   text: "Market",
@@ -692,6 +698,6 @@ export default {
     // }
   ],
   meta: {
-    sequence: 73,
-  },
+    sequence: 73
+  }
 };
