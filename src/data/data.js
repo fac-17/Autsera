@@ -16,6 +16,7 @@ export default {
             "Select all the matching words"
           ],
           image: "/img/interactions/Slide_happy",
+
           coordinates: [20, 10],
           radius: 12,
           requiredStars: 0,
@@ -42,7 +43,7 @@ export default {
               id: 5,
               text: "Crying",
               correct: false,
-              response: "Look again? Focus on their eyes"
+              response: "Look again? Focus on their eyes",
             },
             {
               id: 6,
@@ -73,14 +74,14 @@ export default {
             {
               id: 10,
               text: "Look at their faces, are they smiling?",
-              answers: [4, 5]
+              answers: [4, 5],
             },
             {
               id: 11,
               text: "Look if they are having fun?",
-              answers: [2, 3]
-            }
-          ]
+              answers: [2, 3],
+            },
+          ],
         },
         {
           id: 12,
@@ -90,6 +91,7 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Fight_ball",
+
           coordinates: [80, 60],
           radius: 8,
           requiredStars: 1,
@@ -146,9 +148,9 @@ export default {
             {
               id: 15,
               text: "Look at his face, are they smiling?",
-              answers: [9, 10]
-            }
-          ]
+              answers: [9, 10],
+            },
+          ],
         },
         {
           id: 16,
@@ -160,7 +162,7 @@ export default {
           image: "/img/interactions/Slide",
           coordinates: ["12", "33"],
           radius: "33",
-          requiredStars: "2",
+          requiredStars: 2,
           answers: [
             {
               id: 17,
@@ -363,16 +365,16 @@ export default {
             {
               id: 21,
               text: "Look at the names of them",
-              answers: [25, 26]
+              answers: [25, 26],
             },
             {
               id: 22,
               text: "Least bad of them",
-              answers: [27, 28]
-            }
-          ]
-        }
-      ]
+              answers: [27, 28],
+            },
+          ],
+        },
+      ],
     },
     {
       id: 23,
@@ -422,13 +424,13 @@ export default {
             {
               id: 29,
               text: "Look at their faces, are they smiling?",
-              answers: [16, 17]
+              answers: [16, 17],
             },
             {
               id: 30,
               text: "Look if they are having fun?",
-              answers: [14, 15]
-            }
+              answers: [14, 15],
+            },
           ],
           requiredStars: 1
         },
@@ -447,25 +449,25 @@ export default {
               id: 32,
               text: "bored",
               correct: true,
-              response: "Correct! They look bored"
+              response: "Correct! They look bored",
             },
             {
               id: 33,
               text: "excited",
               correct: false,
-              response: "Look again, are is he smiling?"
-            }
+              response: "Look again, are is he smiling?",
+            },
           ],
           hints: [
             {
               id: 34,
               text: "Look at his face, are they smiling?",
-              answers: [21, 22]
-            }
+              answers: [21, 22],
+            },
           ],
-          requiredStars: "0"
-        }
-      ]
+          requiredStars: 4,
+        },
+      ],
     },
     {
       id: 35,
@@ -478,128 +480,119 @@ export default {
         {
           id: 36,
           text: "Francesca and Martha reading",
-          question: [
-            "Can you tell what Francesca and Martha are feeling?",
-            "Select all the matching words"
-          ],
+          question: ["Can you tell what Francesca and Martha are feeling?", "Select all the matching words"],
           image: "/img/interactions/01_LeonieAndReuben.png",
           coordinates: [20, 10],
           radius: 12,
-          requiredStars: 0,
+          requiredStars: 5,
           answers: [
             {
               id: 37,
               text: "happy",
               correct: true,
-              response: "Correct! They look like they are happy"
+              response: "Correct! They look like they are happy",
             },
             {
               id: 38,
               text: "sad",
               correct: false,
-              response: "Look again! Do they look like they are having fun?"
+              response: "Look again! Do they look like they are having fun?",
             },
             {
               id: 39,
               text: "upset",
               correct: false,
-              response: "Think again! Look closely on their mouthes"
+              response: "Think again! Look closely on their mouthes",
             },
             {
               id: 40,
               text: "angry",
               correct: false,
-              response: "Look again, are they smiling?"
-            }
+              response: "Look again, are they smiling?",
+            },
           ],
           hints: [
             {
               id: 41,
               text: "Look at their faces, are they smiling?",
-              answers: [4, 5]
+              answers: [4, 5],
             },
             {
               id: 42,
               text: "Look if they are having fun?",
-              answers: [2, 3]
-            }
-          ]
+              answers: [2, 3],
+            },
+          ],
         },
         {
           id: 43,
           text: "Jan is crying",
-          question: [
-            "Can you tell what Jan is feeling?",
-            "Select all the matching emotions"
-          ],
+          question: ["Can you tell what Jan is feeling?", "Select all the matching emotions"],
           image: "/img/interactions/02_Jan.png",
           coordinates: [80, 60],
           radius: 8,
-          requiredStars: 1,
+          requiredStars: 6,
           answers: [
             {
               id: 44,
               text: "upset",
               correct: true,
-              response: "Correct! He looks upset"
+              response: "Correct! He looks upset",
             },
             {
               id: 45,
               text: "happy",
               correct: false,
-              response: "Look again, are is he smiling?"
-            }
+              response: "Look again, are is he smiling?",
+            },
           ],
           hints: [
             {
               id: 46,
               text: "Look at his face, are they smiling?",
-              answers: [9, 10]
-            }
-          ]
+              answers: [9, 10],
+            },
+          ],
         },
         {
           id: 47,
           text: "Victor playing",
-          question: [
-            "Can you tell how Victor is feeling?",
-            "Select all the matching emotions"
-          ],
+          question: ["Can you tell how Victor is feeling?", "Select all the matching emotions"],
           image: "/img/interactions/03_Victor.png",
           coordinates: ["12", "33"],
           radius: "33",
-          requiredStars: "2",
+          requiredStars: 7,
           answers: [
             {
               id: 48,
               text: "good",
               correct: true,
-              response: "Good!"
+              response: "Good!",
             },
             {
               id: 49,
               text: "bad",
               correct: false,
-              response: "Not Good!"
+              response: "Not Good!",
             },
             {
               id: 50,
               text: "so so",
               correct: false,
-              response: "Hmmm"
+              response: "Hmmm",
             },
             {
               id: 51,
               text: "okeyish",
               correct: true,
-              response: "We'll let that pass"
-            }
+              response: "We'll let that pass",
+            },
           ],
           hints: [
             {
               id: 52,
               text: "Look at the names of them",
-              answers: [25, 26]
+              answers: [25, 26],
             },
             {
               id: 53,
@@ -612,6 +605,6 @@ export default {
     }
   ],
   meta: {
-    sequence: 73
-  }
+    sequence: 73,
+  },
 };
