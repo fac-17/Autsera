@@ -8,7 +8,7 @@ const testPlace = data.places[0];
 //sample completed interactions array
 const completed = [1, 8, 13];
 
-test("if placeCircle renders when given a place", () => {
+test("placeCircle renders when given a place", () => {
   render(
     <Router>
       <PlaceCircle place={testPlace} completed={completed} />
@@ -16,7 +16,7 @@ test("if placeCircle renders when given a place", () => {
   );
 });
 
-test("if placeCircle renders the text of the place correctly", () => {
+test("placeCircle renders the text of the place correctly", () => {
   const { getByText } = render(
     <Router>
       <PlaceCircle place={testPlace} completed={completed} />
@@ -25,7 +25,7 @@ test("if placeCircle renders the text of the place correctly", () => {
   getByText(testPlace.text);
 });
 
-test("if placeCircle renders the right link", () => {
+test("placeCircle renders with the right link", () => {
   const { getByTitle } = render(
     <Router>
       <PlaceCircle place={testPlace} completed={completed} />
