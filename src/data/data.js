@@ -5,7 +5,7 @@ export default {
       text: "Playground",
       icon: "/SVG/Places/Playground_icon.svg",
       requiredStars: 0,
-      image: "playground.png",
+      image: "Playground.png",
       coordinates: [44, 70],
       interactions: [
         {

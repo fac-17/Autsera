@@ -3,6 +3,7 @@ import RouterLink from "../reusable/RouterLink";
 import Stars from "../reusable/Stars";
 import { countStarsInPlace } from "../../utils/starsCounting";
 import "./PlaceCircle.scss";
+
 const PlaceCircle = ({ place, completed }) => {
   let positionStyle = {
     position: "absolute",
@@ -18,6 +19,7 @@ const PlaceCircle = ({ place, completed }) => {
         (completed.length >= place.requiredStars ? "unlocked" : "locked")
       }
     >
+      {completed.length < place.requiredStars ? <img style={{position:"absolute", opacity:0.7}} src="/SVG/question.svg" /> : null}
       <RouterLink
         title={place.text}
         icon={place.icon}
