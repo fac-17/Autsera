@@ -11,8 +11,13 @@ export default {
         {
           id: 1,
           text: "Leonie and Reuben fighting",
-          question: ["Can you tell what Susi & Lisa are feeling?", "Select all the matching words"],
-          image: "/img/interactions/01_LeonieAndReuben.png",
+
+          question: [
+            "Can you tell what Susi & Lisa are feeling?",
+            "Select all the matching words"
+          ],
+          image: "/img/interactions/Slide_happy",
+
           coordinates: [20, 10],
           radius: 12,
           requiredStars: 0,
@@ -82,8 +87,13 @@ export default {
         {
           id: 12,
           text: "Jan is crying",
-          question: ["Can you tell what Jan is feeling?", "Select all the matching emotions"],
-          image: "/img/interactions/02_Jan.png",
+
+          question: [
+            "Can you tell what Jan is feeling?",
+            "Select all the matching emotions"
+          ],
+          image: "/img/interactions/Fight_ball",
+
           coordinates: [80, 60],
           radius: 8,
           requiredStars: 1,
@@ -112,8 +122,11 @@ export default {
         {
           id: 16,
           text: "Victor playing",
-          question: ["Can you tell how Victor is feeling?", "Select all the matching emotions"],
-          image: "/img/interactions/03_Victor.png",
+          question: [
+            "Can you tell how Victor is feeling?",
+            "Select all the matching emotions"
+          ],
+          image: "/img/interactions/Slide",
           coordinates: ["12", "33"],
           radius: "33",
           requiredStars: 2,

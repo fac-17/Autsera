@@ -14,6 +14,10 @@ const InteractionCircle = ({ interaction, isCompleted, isUnlocked, setspeechText
         ${interaction.requiredStars - completed.length} more stars to unlock it!`
       );
   };
+
+
+  let icon = interaction.image + ".svg";
+
   return (
     <div
       style={interactionStyle}
@@ -25,14 +29,24 @@ const InteractionCircle = ({ interaction, isCompleted, isUnlocked, setspeechText
       }
       onClick={changeMessageIfLocked}
     >
-      {!isUnlocked ? <img style={{ position: "absolute", opacity: 0.7, top: "-50%" }} src="/SVG/question.svg" /> : null}
+
+      {!isUnlocked ? (
+        <img
+          style={{ position: "absolute", opacity: 0.7, top: "-50%" }}
+          src="/SVG/question.svg"
+        />
+      ) : null}
       <RouterLink
         title={interaction.text}
         label={interaction.text}
-        to={isUnlocked ? "/interaction/" + interaction.id : "#"}
+        icon={icon}
+        to={"/interaction/" + interaction.id}
+
       />
     </div>
   );
 };
 
-export default InteractionCircle;
+
+export default IntaractionCircle;
+

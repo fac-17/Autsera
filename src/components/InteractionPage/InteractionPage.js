@@ -33,6 +33,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   };
 
   let shuffledAnswers = interactionObj.answers;
+  let image = interactionObj.image + ".png";
 
   useEffect(() => {
     let shuffleArray = array => {
@@ -112,7 +113,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       <h3 className="interaction-instruction">{interactionObj.question[1]}</h3>
       <ul>
         <li className="grid-center">
-          <img src={interactionObj.image} className="interaction-image" />
+          <img src={image} className="interaction-image" />
         </li>
         {shuffledAnswers.map(answer => (
           <li key={answer.id}>
