@@ -32,8 +32,8 @@ test("When both speechText and helpText are passed in , the helper component rep
   expect(() => getByText(speechText)).toThrow();
   getByText(helpText);
 });
-test(`when both speechText and helpText are passed in,
-the helper component replaces the speechText with the helpText when clicked, 
+test(`When both speechText and helpText are passed in,
+the helper component replaces the speechText with the helpText when clicked,
 and keeps the helpText visible when clicked again.`, () => {
   const { getByAltText, getByText } = render(
     <HelperAvatar helpText={helpText} speechText={speechText} />
