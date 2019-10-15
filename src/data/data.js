@@ -10,9 +10,9 @@ export default {
       interactions: [
         {
           id: 1,
-          text: "Leonie and Reuben fighting",
+          text: "Leonie and Reuben playing on the swing",
           question: [
-            "Can you tell what Susi & Lisa are feeling?",
+            "Can you tell what Leonie and Reuben are feeling?",
             "Select all the matching words"
           ],
           image: "/img/interactions/01_LeonieAndReuben.png",
@@ -22,51 +22,51 @@ export default {
           answers: [
             {
               id: 2,
-              text: "they are fighting",
+              text: "Happy",
               correct: true,
-              response: "Correct! They look like they are fighting"
+              response: "Correct! They look like they are happy"
             },
             {
               id: 3,
-              text: "playing",
+              text: "Sad",
               correct: false,
-              response: "Look again! Do they look like they are having fun?"
+              response: "Look again! Do they look like they are sad?"
             },
             {
               id: 4,
-              text: "upset",
+              text: "Pleased",
               correct: true,
-              response: "Correct! They look upset"
+              response: "Correct! They look pleased"
             },
             {
               id: 5,
-              text: "amazed",
+              text: "Crying",
               correct: false,
               response: "Look again? Focus on their eyes"
             },
             {
               id: 6,
-              text: "thrilled",
+              text: "Gloomy",
               correct: false,
-              response: "Look again, are they excited?"
+              response: "Look again, are they sad?"
             },
             {
               id: 7,
-              text: "surprised",
+              text: "Angry",
               correct: false,
-              response: "Look again, are their eyes wide opened?"
+              response: "Look again, are their angry?"
             },
             {
               id: 8,
-              text: "tired",
+              text: "Fighting",
               correct: false,
-              response: "Look again, do they have small eyes?"
+              response: "Look again, are they fighting?"
             },
             {
               id: 9,
-              text: "bored",
-              correct: false,
-              response: "Look again, focus on their eyes."
+              text: "Cheerful",
+              correct: true,
+              response: "Correct, they are cheerful"
             }
           ],
           hints: [
@@ -84,9 +84,9 @@ export default {
         },
         {
           id: 12,
-          text: "Jan is crying",
+          text: "Robert and Katie",
           question: [
-            "Can you tell what Jan is feeling?",
+            "What can you say about this situation?",
             "Select all the matching emotions"
           ],
           image: "/img/interactions/02_Jan.png",
@@ -96,15 +96,39 @@ export default {
           answers: [
             {
               id: 13,
-              text: "upset",
+              text: "Angry",
               correct: true,
-              response: "Correct! He looks upset"
+              response: "Correct! They look angry"
             },
             {
               id: 14,
-              text: "happy",
+              text: "Having fun",
               correct: false,
-              response: "Look again, are is he smiling?"
+              response: "Look again, are they smiling?"
+            },
+            {
+              id: 74,
+              text: "Annoyed",
+              correct: true,
+              response: "Correct! They look annoyed"
+            },
+            {
+              id: 75,
+              text: "Surprised",
+              correct: false,
+              response: "Look again, are they surprised?"
+            },
+            {
+              id: 76,
+              text: "Physical",
+              correct: true,
+              response: "Correct!"
+            },
+            {
+              id: 77,
+              text: "Friendly",
+              correct: false,
+              response: "Look again, are they friendly with each other?"
             }
           ],
           hints: [
@@ -117,7 +141,7 @@ export default {
         },
         {
           id: 16,
-          text: "Victor playing",
+          text: "Victor on the swing",
           question: [
             "Can you tell how Victor is feeling?",
             "Select all the matching emotions"
@@ -129,27 +153,124 @@ export default {
           answers: [
             {
               id: 17,
-              text: "good",
+              text: "Scared",
               correct: true,
-              response: "Good!"
+              response: "Correct!"
             },
             {
               id: 18,
-              text: "bad",
+              text: "Calm",
               correct: false,
-              response: "Not Good!"
+              response: "Look again!"
             },
             {
               id: 19,
-              text: "so so",
+              text: "Resting",
               correct: false,
-              response: "Hmmm"
+              response: "Look again!"
             },
             {
               id: 20,
-              text: "okeyish",
+              text: "Frightened",
               correct: true,
-              response: "We'll let that pass"
+              response: "Yes, he looks frightened."
+            },
+            {
+              id: 78,
+              text: "Angry",
+              correct: false,
+              response: "Does he look angry?"
+            },
+            {
+              id: 79,
+              text: "Excited",
+              correct: true,
+              response: "Correct!"
+            },
+            {
+              id: 80,
+              text: "Aggresive",
+              correct: false,
+              response: "Does he look aggresive?"
+            },
+            {
+              id: 81,
+              text: "Surprised",
+              correct: false,
+              response: "Look again!"
+            }
+          ],
+          hints: [
+            {
+              id: 21,
+              text: "Look at the names of them",
+              answers: [25, 26]
+            },
+            {
+              id: 22,
+              text: "Least bad of them",
+              answers: [27, 28]
+            }
+          ]
+        },
+        {
+          id: 82,
+          text: "Jack",
+          question: [
+            "Can you tell how Jack is feeling?",
+            "Select all the matching emotions"
+          ],
+          image: "/img/interactions/03_Victor.png",
+          coordinates: ["80", "0"],
+          radius: "33",
+          requiredStars: "2",
+          answers: [
+            {
+              id: 83,
+              text: "Wounded",
+              correct: true,
+              response: "Correct! He is wounded."
+            },
+            {
+              id: 84,
+              text: "Hurt",
+              correct: true,
+              response: "That's correct!"
+            },
+            {
+              id: 85,
+              text: "In pain",
+              correct: true,
+              response: "Yes, he looks like he is in pain!"
+            },
+            {
+              id: 86,
+              text: "Happy",
+              correct: false,
+              response: "Look again."
+            },
+            {
+              id: 87,
+              text: "Amazed",
+              correct: false,
+              response: "Does he look amazed?"
+            },
+            {
+              id: 88,
+              text: "Glad",
+              correct: false,
+              response: "Look again."
+            },
+            {
+              id: 89,
+              text: "Cruel",
+              correct: false,
+              response: "Does he look cruel?"
+            },{
+              id: 90,
+              text: "Aggresive",
+              correct: false,
+              response: "Look again?"
             }
           ],
           hints: [
@@ -169,7 +290,7 @@ export default {
     },
     {
       id: 23,
-      text: "Pool",
+      text: "School",
       requiredStars: 2,
       icon: "/SVG/Places/Pool_icon.svg",
       image: "cemetary.png",
@@ -177,10 +298,10 @@ export default {
       interactions: [
         {
           id: 24,
-          text: "Splashing",
+          text: "In the classroom",
           question: [
-            "Can you tell what the kids are feeling?",
-            "Select all the matching emotions"
+            "The teacher asked a question.",
+            "Select all that matches this situation"
           ],
           image: "/img/interactions/01_LeonieAndReuben.png",
           coordinates: [50, 50],
@@ -188,27 +309,27 @@ export default {
           answers: [
             {
               id: 25,
-              text: "they are fighting",
+              text: "Not all kids know the answer",
               correct: true,
-              response: "Correct! They look like they are fighting"
+              response: "Correct!"
             },
             {
               id: 26,
-              text: "playing",
-              correct: false,
-              response: "Look again! Do they look like they are having fun?"
+              text: "Some kids are still thinking",
+              correct: true,
+              response: "Correct!"
             },
             {
               id: 27,
-              text: "upset",
-              correct: true,
-              response: "Correct! They look upset"
+              text: "All kids know the answer",
+              correct: false,
+              response: "Look again."
             },
             {
               id: 28,
-              text: "happy",
+              text: "All kids do not know the answer",
               correct: false,
-              response: "Look again, are they smiling?"
+              response: "Look again.?"
             }
           ],
           hints: [
@@ -223,7 +344,7 @@ export default {
               answers: [14, 15]
             }
           ],
-          requiredStars: "1"
+          requiredStars: 1
         },
         {
           id: 31,
