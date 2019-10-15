@@ -8,14 +8,14 @@ import HelperAvatar from "../reusable/HelperAvatar";
 import "./placepage.scss";
 
 const PlacePage = ({ id, completed }) => {
-  const placeData = data.places.find(place => place.id === id);
+  const placeData = data.places.find((place) => place.id === id);
 
   const style = {
     backgroundImage: `url(/img/${placeData.image})`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover"
+    backgroundSize: "cover",
   };
 
   const [speechText, setspeechText] = useState("");
@@ -38,12 +38,14 @@ const PlacePage = ({ id, completed }) => {
         </span>
       </div>
 
-      {placeData.interactions.map(interaction => (
+      {placeData.interactions.map((interaction) => (
         <InteractionCircle
           key={interaction.id}
-          isUnlocked={has >= interaction.requiredStars}
+          isUnlocked={completed.length >= interaction.requiredStars}
           interaction={interaction}
           isCompleted={completed.includes(interaction.id)}
+          setspeechText={setspeechText}
+          completed={completed}
         />
       ))}
       <HelperAvatar speechText={speechText} timeOut={5000} />
