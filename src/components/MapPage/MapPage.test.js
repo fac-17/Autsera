@@ -60,7 +60,18 @@ test("Locked places render with locked class", () => {
     } else {
       expect(button.className).toBe("place-circle locked")
     }
-
   })
+})
 
+test("Click on locked place has no effect", () => {
+  const completedOne = [];
+  const firstLocked = data.places.find(el => el.requiredStars > completedOne.length);
+  const { getByText, getByAltText, container, debug } = render(
+    <Router>
+      <MapPage completed={completedOne} />
+    </Router>
+  );
+
+  fireEvent.click(getByText(firstLocked.text)); // Simulates Click on locked place
+  getByText("AUTSERA LAND"); // Checks if user still on the map page
 })
