@@ -29,7 +29,7 @@ test("User journey from initial App render", () => { // Relies on hard-coded dum
       fireEvent.click(getByText(answer.text))
     }
   })
-  getByText("Well done, you have gained a star"); // Checks congratulatory message comes up after selecting all correct answers
+  getByText("You have gained a star"); // Checks congratulatory message comes up after selecting all correct answers
 
   fireEvent.click(getByText("Go Back"));
   expect(container.querySelectorAll(".unlocked").length).toBe(currentlyUnlocked + 1); // Checks one additional interaction is now available in the place
