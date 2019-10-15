@@ -48,5 +48,5 @@ const InteractionCircle = ({ interaction, isCompleted, isUnlocked, setspeechText
 };
 
 
-export default IntaractionCircle;
+export default InteractionCircle;
 
