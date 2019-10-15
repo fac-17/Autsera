@@ -13,6 +13,11 @@
     border-radius: 10px;
     min-width: 15vw;
   }
+  &.unlocked.completed p{
+    background: #fde74c;
+    box-shadow: 0 -2px 0 3px #f3d80d inset, 0 5px 5px rgba(65, 8, 8, 0.17),
+      0 15px rgba(255, 255, 255, 0.25) inset;
+  }
 
   &.locked {
     // pointer-events: none;
