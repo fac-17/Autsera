@@ -15,7 +15,7 @@ export default {
             "Can you tell what Leonie and Reuben are feeling?",
             "Select all the matching words"
           ],
-          image: "/img/interactions/01_LeonieAndReuben.png",
+          image: "/img/interactions/Slide_happy",
           coordinates: [20, 10],
           radius: 12,
           requiredStars: 0,
@@ -89,7 +89,7 @@ export default {
             "What can you say about this situation?",
             "Select all the matching emotions"
           ],
-          image: "/img/interactions/02_Jan.png",
+          image: "/img/interactions/Fight_ball",
           coordinates: [80, 60],
           radius: 8,
           requiredStars: 1,
@@ -146,7 +146,7 @@ export default {
             "Can you tell how Victor is feeling?",
             "Select all the matching emotions"
           ],
-          image: "/img/interactions/03_Victor.png",
+          image: "/img/interactions/Slide",
           coordinates: ["12", "33"],
           radius: "33",
           requiredStars: "2",

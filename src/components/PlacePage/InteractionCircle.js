@@ -8,24 +8,32 @@ const IntaractionCircle = ({ interaction, isCompleted, isUnlocked }) => {
     right: interaction.coordinates[1] + "%"
   };
 
+  let icon = interaction.image + ".svg";
+
   return (
     <div
       style={interactionStyle}
-      className={"interaction-circle " +
+      className={
+        "interaction-circle " +
         (isCompleted ? "completed" : "not-completed") +
         " " +
         (isUnlocked ? "unlocked" : "locked")
       }
     >
-       {!isUnlocked ? <img style={{position:"absolute", opacity:0.7, top:"-50%"}} src="/SVG/question.svg" /> : null}
+      {!isUnlocked ? (
+        <img
+          style={{ position: "absolute", opacity: 0.7, top: "-50%" }}
+          src="/SVG/question.svg"
+        />
+      ) : null}
       <RouterLink
         title={interaction.text}
         label={interaction.text}
+        icon={icon}
         to={"/interaction/" + interaction.id}
       />
     </div>
   );
-
-}
+};
 
 export default IntaractionCircle;
