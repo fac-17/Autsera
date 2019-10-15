@@ -129,6 +129,17 @@ export default {
               text: "Friendly",
               correct: false,
               response: "Look again, are they friendly with each other?"
+            },
+            {
+              id: 91,
+              text: "Sleepy",
+              correct: false,
+              response: "Look again?"
+            } ,{
+              id: 92,
+              text: "Kind",
+              correct: false,
+              response: "Look again?"
             }
           ],
           hints: [
@@ -220,8 +231,8 @@ export default {
             "Can you tell how Jack is feeling?",
             "Select all the matching emotions"
           ],
-          image: "/img/interactions/03_Victor.png",
-          coordinates: ["80", "0"],
+          image: "/img/interactions/Boys_ball",
+          coordinates: ["20", "80"],
           radius: "33",
           requiredStars: "2",
           answers: [
@@ -266,7 +277,82 @@ export default {
               text: "Cruel",
               correct: false,
               response: "Does he look cruel?"
-            },{
+            },
+            {
+              id: 90,
+              text: "Aggresive",
+              correct: false,
+              response: "Look again?"
+            }
+          ],
+          hints: [
+            {
+              id: 21,
+              text: "Look at the names of them",
+              answers: [25, 26]
+            },
+            {
+              id: 22,
+              text: "Least bad of them",
+              answers: [27, 28]
+            }
+          ]
+        },
+        {
+          id: 93,
+          text: "Paul",
+          question: [
+            "Can you tell what Paul is feeling?",
+            "Select all the matching emotions"
+          ],
+          image: "/img/interactions/Boys_ball",
+          coordinates: ["50", "50"],
+          radius: "33",
+          requiredStars: "2",
+          answers: [
+            {
+              id: 94,
+              text: "Is sad",
+              correct: true,
+              response: "Correct! He is sad."
+            },
+            {
+              id: 95,
+              text: "Wants to join in play",
+              correct: true,
+              response: "That's correct!"
+            },
+            {
+              id: 96,
+              text: "Can ask the boys to join in",
+              correct: true,
+              response: "Yes, he can!"
+            },
+            {
+              id: 97,
+              text: "Paul does not like football",
+              correct: false,
+              response: "Look again."
+            },
+            {
+              id: 98,
+              text: "Paul likes to be on his own",
+              correct: false,
+              response: "Does he look amazed?"
+            },
+            {
+              id: 99,
+              text: "Paul has to wait until the boys ask him to join",
+              correct: false,
+              response: "Look again."
+            },
+            {
+              id: 89,
+              text: "Cruel",
+              correct: false,
+              response: "Does he look cruel?"
+            },
+            {
               id: 90,
               text: "Aggresive",
               correct: false,
@@ -292,8 +378,8 @@ export default {
       id: 23,
       text: "School",
       requiredStars: 2,
-      icon: "/SVG/Places/Pool_icon.svg",
-      image: "cemetary.png",
+      icon: "/SVG/Places/School_icon.svg",
+      image: "-TODO-.png",
       coordinates: [18, 46],
       interactions: [
         {
@@ -303,7 +389,7 @@ export default {
             "The teacher asked a question.",
             "Select all that matches this situation"
           ],
-          image: "/img/interactions/01_LeonieAndReuben.png",
+          image: "/img/interactions/-TODO-",
           coordinates: [50, 50],
           radius: 12,
           answers: [
@@ -348,8 +434,8 @@ export default {
         },
         {
           id: 31,
-          text: "Water sport",
-          image: "/img/interactions/01_LeonieAndReuben.png",
+          text: "-TODO-",
+          image: "/img/interactions/-TODO-",
           question: [
             "Can you tell what the kids are feeling?",
             "Select all the matching emotions"
@@ -383,10 +469,10 @@ export default {
     },
     {
       id: 35,
-      text: "School",
-      icon: "/SVG/Places/School_icon.svg",
+      text: "Market",
+      icon: "/SVG/Places/-TODO-",
       requiredStars: 5,
-      image: "school.png",
+      image: "s-TODO-",
       coordinates: [46, 30],
       interactions: [
         {
@@ -517,149 +603,6 @@ export default {
             },
             {
               id: 53,
-              text: "Least bad of them",
-              answers: [27, 28]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: 54,
-      text: "Library",
-      icon: "/SVG/Places/Library_icon.svg",
-      requiredStars: 7,
-      image: "school.png",
-      coordinates: [15, 6],
-      interactions: [
-        {
-          id: 55,
-          text: "Francesca and Martha reading",
-          question: [
-            "Can you tell what Francesca and Martha are feeling?",
-            "Select all the matching words"
-          ],
-          image: "/img/interactions/01_LeonieAndReuben.png",
-          coordinates: [20, 10],
-          radius: 12,
-          requiredStars: 0,
-          answers: [
-            {
-              id: 56,
-              text: "happy",
-              correct: true,
-              response: "Correct! They look like they are happy"
-            },
-            {
-              id: 57,
-              text: "sad",
-              correct: false,
-              response: "Look again! Do they look like they are having fun?"
-            },
-            {
-              id: 58,
-              text: "upset",
-              correct: false,
-              response: "Think again! Look closely on their mouthes"
-            },
-            {
-              id: 59,
-              text: "angry",
-              correct: false,
-              response: "Look again, are they smiling?"
-            }
-          ],
-          hints: [
-            {
-              id: 60,
-              text: "Look at their faces, are they smiling?",
-              answers: [4, 5]
-            },
-            {
-              id: 61,
-              text: "Look if they are having fun?",
-              answers: [2, 3]
-            }
-          ]
-        },
-        {
-          id: 62,
-          text: "Jan is crying",
-          question: [
-            "Can you tell what Jan is feeling?",
-            "Select all the matching emotions"
-          ],
-          image: "/img/interactions/02_Jan.png",
-          coordinates: [80, 60],
-          radius: 8,
-          requiredStars: 1,
-          answers: [
-            {
-              id: 63,
-              text: "upset",
-              correct: true,
-              response: "Correct! He looks upset"
-            },
-            {
-              id: 64,
-              text: "happy",
-              correct: false,
-              response: "Look again, are is he smiling?"
-            }
-          ],
-          hints: [
-            {
-              id: 65,
-              text: "Look at his face, are they smiling?",
-              answers: [9, 10]
-            }
-          ]
-        },
-        {
-          id: 66,
-          text: "Victor playing",
-          question: [
-            "Can you tell how Victor is feeling?",
-            "Select all the matching emotions"
-          ],
-          image: "/img/interactions/03_Victor.png",
-          coordinates: ["12", "33"],
-          radius: "33",
-          requiredStars: "2",
-          answers: [
-            {
-              id: 67,
-              text: "good",
-              correct: true,
-              response: "Good!"
-            },
-            {
-              id: 68,
-              text: "bad",
-              correct: false,
-              response: "Not Good!"
-            },
-            {
-              id: 69,
-              text: "so so",
-              correct: false,
-              response: "Hmmm"
-            },
-            {
-              id: 70,
-              text: "okeyish",
-              correct: true,
-              response: "We'll let that pass"
-            }
-          ],
-          hints: [
-            {
-              id: 71,
-              text: "Look at the names of them",
-              answers: [25, 26]
-            },
-            {
-              id: 72,
               text: "Least bad of them",
               answers: [27, 28]
             }
