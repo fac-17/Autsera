@@ -15,8 +15,8 @@
   }
 
   &.locked {
-    pointer-events: none;
-    touch-action: none;
+    // pointer-events: none;
+    // touch-action: none;
     p {
       background: #8f8aef;
       box-shadow: 0 -2px 0 3px #6f69eb inset, 0 5px 5px rgba(65, 8, 8, 0.17),
