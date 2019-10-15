@@ -97,18 +97,18 @@ test("Test if setCompleted gets called with the right argument", () => {
 //   });
 // });
 
-test("if clicking on avatar gives the right hint", () => {
-  const setCompleted = jest.fn();
+// test("if clicking on avatar gives the right hint", () => {
+//   const setCompleted = jest.fn();
 
-  const { getByAltText, queryByText } = render(
-    <Router>
-      <InteractionPage id={1} setCompleted={setCompleted} completed={[]} />
-    </Router>
-  );
-  const avatar = getByAltText("helper-avatar");
-  const hints = data.places[0].interactions[0].hints.map(hint => hint.text);
+//   const { getByAltText, queryByText } = render(
+//     <Router>
+//       <InteractionPage id={1} setCompleted={setCompleted} completed={[]} />
+//     </Router>
+//   );
+//   const avatar = getByAltText("helper-avatar");
+//   const hints = data.places[0].interactions[0].hints.map(hint => hint.text);
 
-  fireEvent.click(avatar);
-  // try each hint and expect there is one that is not null
-  expect(hints.map(hint => queryByText(hint)).some(Boolean)).toBe(true);
-});
+//   fireEvent.click(avatar);
+//   // try each hint and expect there is one that is not null
+//   expect(hints.map(hint => queryByText(hint)).some(Boolean)).toBe(true);
+// });
