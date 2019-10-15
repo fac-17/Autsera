@@ -8,12 +8,12 @@ describe("countStarsInPlace", () => {
   });
   it("returns an object with has and max that have correct answers", () => {
     const stars = countStarsInPlace(0, [1, 24]);
-    expect(stars.max).toBe(3);
+    expect(stars.max).toBe(5);
     expect(stars.has).toBe(1);
   });
   it("returns an object with has and max that have correct answers with none completed", () => {
     const stars = countStarsInPlace(23, [1, 24]);
-    expect(stars.max).toBe(2);
+    expect(stars.max).toBe(3);
     expect(stars.has).toBe(1);
   });
 });

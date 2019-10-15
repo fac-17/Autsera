@@ -32,7 +32,7 @@ const InteractionCircle = ({ interaction, isCompleted, isUnlocked, setspeechText
 
       {!isUnlocked ? (
         <img
-          style={{ position: "absolute", opacity: 0.7, top: "-50%" }}
+          style={{ position: "absolute", opacity: 0.7 }}
           src="/SVG/question.svg"
         />
       ) : null}
