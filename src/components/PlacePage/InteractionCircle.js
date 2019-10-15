@@ -1,5 +1,6 @@
 import React from "react";
 import RouterLink from "../reusable/RouterLink";
+import Stars from "../reusable/Stars";
 
 const InteractionCircle = ({
   interaction,
@@ -39,6 +40,7 @@ const InteractionCircle = ({
       }
       onClick={changeMessageIfLocked}
     >
+      {isCompleted ? <Stars has={1} max={1} /> : null}
       {!isUnlocked ? (
         <img
           style={{ position: "absolute", opacity: 0.7 }}
