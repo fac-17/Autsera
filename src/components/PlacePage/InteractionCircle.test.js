@@ -51,7 +51,7 @@ const example = {
   ]
 };
 
-test("if it renders the InteractionCircle", () => {
+test("The InteractionCircle renders", () => {
   render(
     <Router>
       <InteractionCircle interaction={example} />
@@ -59,7 +59,7 @@ test("if it renders the InteractionCircle", () => {
   );
 });
 
-test("if it has the name of the interaction", () => {
+test("InteractionCircle includes the name of the interaction", () => {
   const { getByText } = render(
     <Router>
       <InteractionCircle interaction={example} />
@@ -68,7 +68,7 @@ test("if it has the name of the interaction", () => {
   getByText(example.text);
 });
 
-test("if it has the link of the interaction", () => {
+test("InteractionCircle includes the link to the interaction", () => {
   const { getByTitle } = render(
     <Router>
       <InteractionCircle interaction={example} />

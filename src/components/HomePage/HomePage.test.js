@@ -3,7 +3,7 @@ import { render, fireEvent } from "@testing-library/react";
 import HomePage from "./HomePage";
 import { BrowserRouter as Router } from "react-router-dom";
 
-test("The HomePage should render", () => {
+test("The HomePage renders", () => {
   render(
     <Router>
       <HomePage completed={[]} />
@@ -11,7 +11,7 @@ test("The HomePage should render", () => {
   );
 });
 
-test("The HomePage doesn't include 'Continue' button for a new user", () => {
+test("The HomePage doesn't include a 'Continue' button for new users", () => {
   const { getByText, queryByText } = render(
     <Router>
       <HomePage completed={[]} />

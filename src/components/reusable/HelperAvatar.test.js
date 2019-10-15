@@ -3,15 +3,15 @@ import { render, fireEvent, act } from "@testing-library/react";
 import HelperAvatar from "./HelperAvatar";
 const helpText = "Look again, are they smiling?";
 const speechText = "Hi i'm a hippo";
-test("The helper component renders with the right text", () => {
+test("Helper renders with the right text", () => {
   const { getByText } = render(<HelperAvatar speechText={speechText} />);
   getByText(speechText);
 });
-test("The image of the helper appears when there is no speech provided", () => {
+test("Helper image appears when there is no speech provided", () => {
   const { getByAltText } = render(<HelperAvatar />);
   getByAltText("helper-avatar");
 });
-test("The helper component shows the helpText when clicked", () => {
+test("Helper component shows the helpText when clicked", () => {
   const { getByAltText, getByText } = render(
     <HelperAvatar helpText={helpText} />
   );
@@ -19,7 +19,7 @@ test("The helper component shows the helpText when clicked", () => {
   fireEvent.click(avatar);
   getByText(helpText);
 });
-test("When both speechText and helpText are passed in , the helper component replaces the speechText with the helpText when clicked", () => {
+test("if speechText and helpText both passed in -> helpText replaces speechText when helper is clicked", () => {
   const { getByAltText, getByText } = render(
     <HelperAvatar helpText={helpText} speechText={speechText} />
   );
@@ -32,9 +32,7 @@ test("When both speechText and helpText are passed in , the helper component rep
   expect(() => getByText(speechText)).toThrow();
   getByText(helpText);
 });
-test(`When both speechText and helpText are passed in,
-the helper component replaces the speechText with the helpText when clicked,
-and keeps the helpText visible when clicked again.`, () => {
+test(`if speechText and helpText both passed in -> helpText stays visible after multiple clicks`, () => {
   const { getByAltText, getByText } = render(
     <HelperAvatar helpText={helpText} speechText={speechText} />
   );
