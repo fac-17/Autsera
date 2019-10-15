@@ -236,7 +236,7 @@ export default {
           image: "/img/interactions/Boys_ball",
           coordinates: ["20", "80"],
           radius: "33",
-          requiredStars: "2",
+          requiredStars: 3,
           answers: [
             {
               id: 83,
@@ -310,7 +310,7 @@ export default {
           image: "/img/interactions/Boys_ball",
           coordinates: ["50", "50"],
           radius: "33",
-          requiredStars: "2",
+          requiredStars: 3,
           answers: [
             {
               id: 94,
@@ -432,11 +432,11 @@ export default {
               answers: [14, 15],
             },
           ],
-          requiredStars: 1
+          requiredStars: 0
         },
         {
           id: 31,
-          text: "-TODO-",
+          text: "Martha and Tony at the blackboard",
           image: "/img/interactions/-TODO-",
           question: [
             "Can you tell what the kids are feeling?",
@@ -447,15 +447,44 @@ export default {
           answers: [
             {
               id: 32,
-              text: "bored",
+              text: "Tony does not know the answer",
               correct: true,
-              response: "Correct! They look bored",
+              response: "Correct! ",
             },
             {
               id: 33,
-              text: "excited",
+              text: "Martha is excited",
+              correct: true,
+              response: "Correct!",
+            }, {
+              id: 100,
+              text: "Martha knows the answer",
+              correct: true,
+              response: "Correct!",
+            },
+             {
+              id: 102,
+              text: "Martha doesn't know the answer",
               correct: false,
-              response: "Look again, are is he smiling?",
+              response: "Look again!",
+            },
+            {
+              id: 103,
+              text: "Tony knows the answer",
+              correct: false,
+              response: "Look again",
+            },
+            {
+              id: 104,
+              text: "Tony does not need any maths practice",
+              correct: false,
+              response: "Look again!",
+            },
+            {
+              id: 105,
+              text: "Martha needs a lot of maths practice",
+              correct: false,
+              response: "Look again",
             },
           ],
           hints: [
@@ -465,144 +494,202 @@ export default {
               answers: [21, 22],
             },
           ],
-          requiredStars: 4,
+          requiredStars: 1,
+        },
+        {
+          id: 106,
+          text: "Girls laughing",
+          image: "/img/interactions/-TODO-",
+          question: [
+            "The three girls are...?",
+            "Select all matches"
+          ],
+          coordinates: ["70", "40"],
+          radius: "12",
+          answers: [
+            {
+              id: 107,
+              text: "making fun of the girl",
+              correct: true,
+              response: "Correct! ",
+            },
+            {
+              id: 108,
+              text: "cruel",
+              correct: true,
+              response: "Correct!",
+            }, {
+              id: 109,
+              text: "mean",
+              correct: true,
+              response: "Correct!",
+            },
+             {
+              id: 110,
+              text: "nice",
+              correct: false,
+              response: "Look again!",
+            },
+            {
+              id: 111,
+              text: "polite",
+              correct: false,
+              response: "Look again",
+            },
+            {
+              id: 112,
+              text: "kind",
+              correct: false,
+              response: "Look again!",
+            },
+            {
+              id: 113,
+              text: "caring",
+              correct: false,
+              response: "Look again",
+            },
+          ],
+          hints: [
+            
+          ],
+          requiredStars: 2,
         },
       ],
     },
-    {
-      id: 35,
-      text: "Market",
-      icon: "/SVG/Places/-TODO-",
-      requiredStars: 5,
-      image: "s-TODO-",
-      coordinates: [46, 30],
-      interactions: [
-        {
-          id: 36,
-          text: "Francesca and Martha reading",
-          question: ["Can you tell what Francesca and Martha are feeling?", "Select all the matching words"],
-          image: "/img/interactions/01_LeonieAndReuben.png",
-          coordinates: [20, 10],
-          radius: 12,
-          requiredStars: 5,
-          answers: [
-            {
-              id: 37,
-              text: "happy",
-              correct: true,
-              response: "Correct! They look like they are happy",
-            },
-            {
-              id: 38,
-              text: "sad",
-              correct: false,
-              response: "Look again! Do they look like they are having fun?",
-            },
-            {
-              id: 39,
-              text: "upset",
-              correct: false,
-              response: "Think again! Look closely on their mouthes",
-            },
-            {
-              id: 40,
-              text: "angry",
-              correct: false,
-              response: "Look again, are they smiling?",
-            },
-          ],
-          hints: [
-            {
-              id: 41,
-              text: "Look at their faces, are they smiling?",
-              answers: [4, 5],
-            },
-            {
-              id: 42,
-              text: "Look if they are having fun?",
-              answers: [2, 3],
-            },
-          ],
-        },
-        {
-          id: 43,
-          text: "Jan is crying",
-          question: ["Can you tell what Jan is feeling?", "Select all the matching emotions"],
-          image: "/img/interactions/02_Jan.png",
-          coordinates: [80, 60],
-          radius: 8,
-          requiredStars: 6,
-          answers: [
-            {
-              id: 44,
-              text: "upset",
-              correct: true,
-              response: "Correct! He looks upset",
-            },
-            {
-              id: 45,
-              text: "happy",
-              correct: false,
-              response: "Look again, are is he smiling?",
-            },
-          ],
-          hints: [
-            {
-              id: 46,
-              text: "Look at his face, are they smiling?",
-              answers: [9, 10],
-            },
-          ],
-        },
-        {
-          id: 47,
-          text: "Victor playing",
-          question: ["Can you tell how Victor is feeling?", "Select all the matching emotions"],
-          image: "/img/interactions/03_Victor.png",
-          coordinates: ["12", "33"],
-          radius: "33",
-          requiredStars: 7,
-          answers: [
-            {
-              id: 48,
-              text: "good",
-              correct: true,
-              response: "Good!",
-            },
-            {
-              id: 49,
-              text: "bad",
-              correct: false,
-              response: "Not Good!",
-            },
-            {
-              id: 50,
-              text: "so so",
-              correct: false,
-              response: "Hmmm",
-            },
-            {
-              id: 51,
-              text: "okeyish",
-              correct: true,
-              response: "We'll let that pass",
-            },
-          ],
-          hints: [
-            {
-              id: 52,
-              text: "Look at the names of them",
-              answers: [25, 26],
-            },
-            {
-              id: 53,
-              text: "Least bad of them",
-              answers: [27, 28]
-            }
-          ]
-        }
-      ]
-    }
+    // {
+    //   id: 35,
+    //   text: "Market",
+    //   icon: "/SVG/Places/-TODO-",
+    //   requiredStars: 5,
+    //   image: "s-TODO-",
+    //   coordinates: [46, 30],
+    //   interactions: [
+    //     {
+    //       id: 36,
+    //       text: "Francesca and Martha reading",
+    //       question: ["Can you tell what Francesca and Martha are feeling?", "Select all the matching words"],
+    //       image: "/img/interactions/01_LeonieAndReuben.png",
+    //       coordinates: [20, 10],
+    //       radius: 12,
+    //       requiredStars: 5,
+    //       answers: [
+    //         {
+    //           id: 37,
+    //           text: "happy",
+    //           correct: true,
+    //           response: "Correct! They look like they are happy",
+    //         },
+    //         {
+    //           id: 38,
+    //           text: "sad",
+    //           correct: false,
+    //           response: "Look again! Do they look like they are having fun?",
+    //         },
+    //         {
+    //           id: 39,
+    //           text: "upset",
+    //           correct: false,
+    //           response: "Think again! Look closely on their mouthes",
+    //         },
+    //         {
+    //           id: 40,
+    //           text: "angry",
+    //           correct: false,
+    //           response: "Look again, are they smiling?",
+    //         },
+    //       ],
+    //       hints: [
+    //         {
+    //           id: 41,
+    //           text: "Look at their faces, are they smiling?",
+    //           answers: [4, 5],
+    //         },
+    //         {
+    //           id: 42,
+    //           text: "Look if they are having fun?",
+    //           answers: [2, 3],
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       id: 43,
+    //       text: "Jan is crying",
+    //       question: ["Can you tell what Jan is feeling?", "Select all the matching emotions"],
+    //       image: "/img/interactions/02_Jan.png",
+    //       coordinates: [80, 60],
+    //       radius: 8,
+    //       requiredStars: 6,
+    //       answers: [
+    //         {
+    //           id: 44,
+    //           text: "upset",
+    //           correct: true,
+    //           response: "Correct! He looks upset",
+    //         },
+    //         {
+    //           id: 45,
+    //           text: "happy",
+    //           correct: false,
+    //           response: "Look again, are is he smiling?",
+    //         },
+    //       ],
+    //       hints: [
+    //         {
+    //           id: 46,
+    //           text: "Look at his face, are they smiling?",
+    //           answers: [9, 10],
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       id: 47,
+    //       text: "Victor playing",
+    //       question: ["Can you tell how Victor is feeling?", "Select all the matching emotions"],
+    //       image: "/img/interactions/03_Victor.png",
+    //       coordinates: ["12", "33"],
+    //       radius: "33",
+    //       requiredStars: 7,
+    //       answers: [
+    //         {
+    //           id: 48,
+    //           text: "good",
+    //           correct: true,
+    //           response: "Good!",
+    //         },
+    //         {
+    //           id: 49,
+    //           text: "bad",
+    //           correct: false,
+    //           response: "Not Good!",
+    //         },
+    //         {
+    //           id: 50,
+    //           text: "so so",
+    //           correct: false,
+    //           response: "Hmmm",
+    //         },
+    //         {
+    //           id: 51,
+    //           text: "okeyish",
+    //           correct: true,
+    //           response: "We'll let that pass",
+    //         },
+    //       ],
+    //       hints: [
+    //         {
+    //           id: 52,
+    //           text: "Look at the names of them",
+    //           answers: [25, 26],
+    //         },
+    //         {
+    //           id: 53,
+    //           text: "Least bad of them",
+    //           answers: [27, 28]
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // }
   ],
   meta: {
     sequence: 73,
