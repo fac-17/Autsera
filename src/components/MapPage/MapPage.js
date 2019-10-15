@@ -31,7 +31,12 @@ const MapPage = ({ completed }) => {
       </div>
 
       {data.places.map(place => (
-        <PlaceCircle key={place.id} place={place} completed={completed} />
+        <PlaceCircle
+          key={place.id}
+          place={place}
+          completed={completed}
+          setMessage={setMessage}
+        />
       ))}
 
       <HelperAvatar speechText={message} timeOut={100000} />
