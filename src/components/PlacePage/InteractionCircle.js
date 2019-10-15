@@ -17,6 +17,7 @@ const IntaractionCircle = ({ interaction, isCompleted, isUnlocked }) => {
         (isUnlocked ? "unlocked" : "locked")
       }
     >
+       {!isUnlocked ? <img style={{position:"absolute", opacity:0.7, top:"-50%"}} src="/SVG/question.svg" /> : null}
       <RouterLink
         title={interaction.text}
         label={interaction.text}
