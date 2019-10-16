@@ -566,7 +566,7 @@ export default {
       id: 35,
       text: "Airport",
       icon: "/img/places_icons/Airport_icon.svg",
-      requiredStars: 0,
+      requiredStars: 5,
       image: "/places_backgrounds/Airport.png",
       coordinates: [49, 28],
       width: "220px",
