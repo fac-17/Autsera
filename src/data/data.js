@@ -75,12 +75,17 @@ export default {
             {
               id: 10,
               text: "Look at their faces, are they smiling?",
-              answers: [4, 5]
+              answers: [2, 3]
             },
             {
               id: 11,
               text: "Look if they are having fun?",
-              answers: [2, 3]
+              answers: [8, 4]
+            },
+            {
+              id: 11,
+              text: "Look if they are having fun?",
+              answers: [9, 7]
             }
           ]
         },
