@@ -44,7 +44,7 @@ const InteractionCircle = ({
       {!isUnlocked ? (
         <img
           style={{ position: "absolute", opacity: 0.7 }}
-          src="/SVG/question.svg"
+          src="/img/question.svg"
         />
       ) : null}
       <RouterLink

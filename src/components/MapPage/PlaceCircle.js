@@ -32,7 +32,7 @@ const PlaceCircle = ({ place, completed, setMessage }) => {
         <img
           alt="locked-question-mark"
           style={{ position: "absolute", opacity: 0.7 }}
-          src="/SVG/question.svg"
+          src="/img/question.svg"
         />
       ) : null}
       <RouterLink
