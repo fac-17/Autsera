@@ -18,20 +18,14 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
     setshowHint(false);
   }, [speechText]);
 
-  let toggleshowHint = e => {
+  let toggleshowHint = (e) => {
     setdisplaySomething(true);
     setshowHint(true);
-    setclickCount(clickCount => clickCount + 1);
+    setclickCount((clickCount) => clickCount + 1);
   };
 
   return (
     <div className="helper-avatar-container">
-      <img
-        src={helperImg}
-        className="helper-avatar"
-        alt="helper-avatar"
-        onClick={toggleshowHint}
-      ></img>
       {displaySomething && speechText && !showHint ? (
         <div className="speech-box">
           <div>{speechText}</div>
@@ -42,6 +36,7 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
           <p>{helpText}</p>
         </div>
       ) : null}
+      <img src={helperImg} className="helper-avatar" alt="helper-avatar" onClick={toggleshowHint}></img>
     </div>
   );
 };

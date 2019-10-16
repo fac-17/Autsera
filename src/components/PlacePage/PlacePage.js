@@ -8,7 +8,9 @@ import HelperAvatar from "../reusable/HelperAvatar";
 import "./placepage.scss";
 import place1 from "../../assets/img/places_backgrounds/Playground.png";
 import place2 from "../../assets/img/places_backgrounds/School.png";
-const images={Playground:place1,School:place2};
+import place3 from "../../assets/img/places_backgrounds/Airport.png";
+
+const images={Playground:place1,School:place2,Airport:place3};
 const PlacePage = ({ id, completed }) => {
   const placeData = data.places.find((place) => place.id === id);
 

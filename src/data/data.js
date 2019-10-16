@@ -75,12 +75,17 @@ export default {
             {
               id: 10,
               text: "Look at their faces, are they smiling?",
-              answers: [4, 5]
+              answers: [2, 3]
             },
             {
               id: 11,
               text: "Look if they are having fun?",
-              answers: [2, 3]
+              answers: [8, 4]
+            },
+            {
+              id: 11,
+              text: "Look if they are having fun?",
+              answers: [9, 7]
             }
           ]
         },
@@ -311,9 +316,9 @@ export default {
             "Can you tell what Paul is feeling?",
             "Select all the matching emotions"
           ],
-          image: "/img/interactions/Boys_ball",
-          width: "160px",
-          coordinates: ["50", "80"],
+          image: "/img/interactions/Isolation",
+          width: "190px",
+          coordinates: ["50", "75"],
           radius: "33",
           requiredStars: 3,
           answers: [
@@ -561,141 +566,205 @@ export default {
           requiredStars: 2
         }
       ]
+    },
+    {
+      id: 35,
+      text: "Airport",
+      icon: "/img/places_icons/Airport_icon.svg",
+      requiredStars: 5,
+      image: "/places_backgrounds/Airport.png",
+      coordinates: [49, 28],
+      width: "220px",
+      interactions: [
+        {
+          id: 36,
+          text: "Emmanuel and Georgia",
+          question: [
+            "What is the situation?",
+            "Select all the matching words"
+          ],
+          image: "/img/interactions/Running",
+          coordinates: [45, 31],
+          width: "190px",
+          radius: 12,
+          requiredStars: 0,
+          answers: [
+            {
+              id: 37,
+              text: "They are late for their flight",
+              correct: true,
+              response: "Correct! They look like they are late."
+            },
+            {
+              id: 38,
+              text: "They are running to the flight gate",
+              correct: true,
+              response: "Correct!"
+            },
+            {
+              id: 39,
+              text: "The flight gate will close soon",
+              correct: true,
+              response: "Correct!"
+            },
+            {
+              id: 40,
+              text: "They arrived early to the airport",
+              correct: false,
+              response: "Look again!"
+            },
+            {
+              id: 141,
+              text: "They are waiting at the flight gate",
+              correct: false,
+              response: "Look again!"
+            },
+            {
+              id: 142,
+              text: "Their flight gate is not open yet",
+              correct: false,
+              response: "Look again!"
+            }
+          ],
+          hints: [
+            {
+              id: 41,
+              text: "Look at their faces, are they smiling?",
+              answers: [4, 5]
+            },
+            {
+              id: 42,
+              text: "Look if they are having fun?",
+              answers: [2, 3]
+            }
+          ]
+        },
+        {
+          id: 43,
+          text: "Francesca and Andy hugging",
+          question: [
+            "What is the situation here?",
+            "Select all the matching emotions"
+          ],
+          image: "/img/interactions/Hugging",
+          coordinates: [71, 57],
+          width: "8vw",
+          radius: 8,
+          requiredStars: 1,
+          answers: [
+            {
+              id: 44,
+              text: "Only one of them will travel",
+              correct: true,
+              response: "Correct! Only one will travel"
+            },
+            {
+              id: 45,
+              text: "They will miss each other",
+              correct: true,
+              response: "Correct!"
+            },
+            {
+              id: 143,
+              text: "They are at the airport",
+              correct: true,
+              response: "Correct!"
+            },
+            {
+              id: 144,
+              text: "They are travelling together",
+              correct: false,
+              response: "Look again!"
+            },
+            {
+              id: 145,
+              text: "One of them is waiting for his train",
+              correct: false,
+              response: "Look again!"
+            }
+            ,
+            {
+              id: 146,
+              text: "They have just met for the first time",
+              correct: false,
+              response: "Look again!"
+            }
+          ],
+          hints: [
+            {
+              id: 46,
+              text: "Look at his face, are they smiling?",
+              answers: [9, 10]
+            }
+          ]
+        },
+        {
+          id: 47,
+          text: "Gigi and Christine talking",
+          question: [
+            "Can you tell how Victor is feeling?",
+            "Select all the matching emotions"
+          ],
+          image: "/img/interactions/Talking",
+          coordinates: ["13", "43"],
+          width: "15vw",
+          radius: "33",
+          requiredStars: 2,
+          answers: [
+            {
+              id: 48,
+              text: "They are friends",
+              correct: true,
+              response: "Good!"
+            },
+            {
+              id: 49,
+              text: "They are travelling together",
+              correct: true,
+              response: "Correct!"
+            },
+            {
+              id: 50,
+              text: "They are waiting for their flight",
+              correct: true,
+              response: "Correct"
+            },
+            {
+              id: 51,
+              text: "They do not know each other",
+              correct: false,
+              response: "Look again"
+            },
+            {
+              id: 148,
+              text: "They are watching a movie",
+              correct: false,
+              response: "Look again"
+            },
+            {
+              id: 149,
+              text: "They are in a train station",
+              correct: false,
+              response: "Look again"
+            }
+            
+
+          ],
+          hints: [
+            {
+              id: 52,
+              text: "Look at the names of them",
+              answers: [25, 26]
+            },
+            {
+              id: 53,
+              text: "Least bad of them",
+              answers: [27, 28]
+            }
+          ]
+        }
+      ]
     }
-    // {
-    //   id: 35,
-    //   text: "Market",
-    //   icon: "/SVG/Places/-TODO-",
-    //   requiredStars: 5,
-    //   image: "s-TODO-",
-    //   coordinates: [46, 30],
-    //   interactions: [
-    //     {
-    //       id: 36,
-    //       text: "Francesca and Martha reading",
-    //       question: ["Can you tell what Francesca and Martha are feeling?", "Select all the matching words"],
-    //       image: "/img/interactions/01_LeonieAndReuben.png",
-    //       coordinates: [20, 10],
-    //       radius: 12,
-    //       requiredStars: 5,
-    //       answers: [
-    //         {
-    //           id: 37,
-    //           text: "happy",
-    //           correct: true,
-    //           response: "Correct! They look like they are happy",
-    //         },
-    //         {
-    //           id: 38,
-    //           text: "sad",
-    //           correct: false,
-    //           response: "Look again! Do they look like they are having fun?",
-    //         },
-    //         {
-    //           id: 39,
-    //           text: "upset",
-    //           correct: false,
-    //           response: "Think again! Look closely on their mouthes",
-    //         },
-    //         {
-    //           id: 40,
-    //           text: "angry",
-    //           correct: false,
-    //           response: "Look again, are they smiling?",
-    //         },
-    //       ],
-    //       hints: [
-    //         {
-    //           id: 41,
-    //           text: "Look at their faces, are they smiling?",
-    //           answers: [4, 5],
-    //         },
-    //         {
-    //           id: 42,
-    //           text: "Look if they are having fun?",
-    //           answers: [2, 3],
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       id: 43,
-    //       text: "Jan is crying",
-    //       question: ["Can you tell what Jan is feeling?", "Select all the matching emotions"],
-    //       image: "/img/interactions/02_Jan.png",
-    //       coordinates: [80, 60],
-    //       radius: 8,
-    //       requiredStars: 6,
-    //       answers: [
-    //         {
-    //           id: 44,
-    //           text: "upset",
-    //           correct: true,
-    //           response: "Correct! He looks upset",
-    //         },
-    //         {
-    //           id: 45,
-    //           text: "happy",
-    //           correct: false,
-    //           response: "Look again, are is he smiling?",
-    //         },
-    //       ],
-    //       hints: [
-    //         {
-    //           id: 46,
-    //           text: "Look at his face, are they smiling?",
-    //           answers: [9, 10],
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       id: 47,
-    //       text: "Victor playing",
-    //       question: ["Can you tell how Victor is feeling?", "Select all the matching emotions"],
-    //       image: "/img/interactions/03_Victor.png",
-    //       coordinates: ["12", "33"],
-    //       radius: "33",
-    //       requiredStars: 7,
-    //       answers: [
-    //         {
-    //           id: 48,
-    //           text: "good",
-    //           correct: true,
-    //           response: "Good!",
-    //         },
-    //         {
-    //           id: 49,
-    //           text: "bad",
-    //           correct: false,
-    //           response: "Not Good!",
-    //         },
-    //         {
-    //           id: 50,
-    //           text: "so so",
-    //           correct: false,
-    //           response: "Hmmm",
-    //         },
-    //         {
-    //           id: 51,
-    //           text: "okeyish",
-    //           correct: true,
-    //           response: "We'll let that pass",
-    //         },
-    //       ],
-    //       hints: [
-    //         {
-    //           id: 52,
-    //           text: "Look at the names of them",
-    //           answers: [25, 26],
-    //         },
-    //         {
-    //           id: 53,
-    //           text: "Least bad of them",
-    //           answers: [27, 28]
-    //         }
-    //       ]
-    //     }
-    //   ]
-    // }
   ],
   meta: {
     sequence: 73

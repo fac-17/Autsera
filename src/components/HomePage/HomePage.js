@@ -5,7 +5,7 @@ import "./homepage.scss";
 import autseraImg from "../../assets/img/Autsera.png";
 import backgroundHome from "../../assets/img/Background_Home.svg";
 
-const HomePage = ({ history, setCompleted ,completed}) => {
+const HomePage = ({ history, setCompleted, completed }) => {
   return (
     <div
       className="background-home"
@@ -22,12 +22,7 @@ const HomePage = ({ history, setCompleted ,completed}) => {
         }} >New Game</button>
       </div>
       <HelperAvatar
-        speechText={
-          <RouterLink
-            to="/help"
-            label="Hi, welcome to Autsera. Click here if you need help"
-          />
-        }
+        speechText={<RouterLink to="/help" label="Hi, welcome to Autsera. Click here if you need help" />}
         timeOut={3600000}
       />
     </div>

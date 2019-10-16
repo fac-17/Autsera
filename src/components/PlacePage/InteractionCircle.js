@@ -11,7 +11,10 @@ import icon4 from "../../assets/img/interactions/Bullying.svg";
 import icon5 from "../../assets/img/interactions/Classroom.svg";
 import icon6 from "../../assets/img/interactions/Slide.svg";
 import icon7 from "../../assets/img/interactions/Fight_ball.svg";
-
+import icon8 from "../../assets/img/interactions/Hugging.svg";
+import icon9 from "../../assets/img/interactions/Running.svg";
+import icon10 from "../../assets/img/interactions/Isolation.svg";
+import icon11 from "../../assets/img/interactions/Talking.svg";
 
 const icons = {
   "/img/interactions/Slide_happy": icon1,
@@ -21,6 +24,10 @@ const icons = {
   "/img/interactions/Classroom": icon5,
  "/img/interactions/Slide": icon6,
  "/img/interactions/Fight_ball": icon7,
+ "/img/interactions/Hugging": icon8,
+ "/img/interactions/Running": icon9,
+ "/img/interactions/Isolation": icon10,
+ "/img/interactions/Talking": icon11,
 
 };
 const InteractionCircle = ({
