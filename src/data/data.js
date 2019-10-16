@@ -3,9 +3,9 @@ export default {
     {
       id: 0,
       text: "Playground",
-      icon: "/SVG/Playground_icon.svg",
+      icon: "/img/places_icons/Playground_icon.svg",
       requiredStars: 0,
-      image: "Playground.png",
+      image: "/places_backgrounds/Playground.png",
       width: "200px",
       coordinates: [42, 70],
       interactions: [
@@ -385,8 +385,8 @@ export default {
       id: 23,
       text: "School",
       requiredStars: 2,
-      icon: "/SVG/Places/School_icon.svg",
-      image: "School.png",
+      icon: "/img/places_icons/School_icon.svg",
+      image: "/places_backgrounds/School.png",
       coordinates: [16, 46],
       width: "170px",
       interactions: [
@@ -399,7 +399,7 @@ export default {
           ],
           image: "/img/interactions/Classroom",
           width: "252px",
-          coordinates: [62, 53],
+          coordinates: [64, 53],
           radius: 12,
           answers: [
             {
@@ -449,7 +449,7 @@ export default {
             "Can you tell what the kids are feeling?",
             "Select all the matching emotions",
           ],
-          coordinates: ["30", "51"],
+          coordinates: ["31", "51"],
           width: "225px",
           radius: "12",
           answers: [
@@ -511,7 +511,7 @@ export default {
           image: "/img/interactions/Bullying",
           question: ["The three girls are...?", "Select all matches"],
           width: "230px",
-          coordinates: ["67", "22"],
+          coordinates: ["69", "22"],
           radius: "12",
           answers: [
             {
