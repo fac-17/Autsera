@@ -15,7 +15,7 @@ const MapPage = ({ completed }) => {
     if (completed.length === 0) {
       newMessage = "Welcome to Autsera Land";
     } else if (next.requiredStars) {
-      newMessage = `You're doing great, you only need ${next.requiredStars - completed.length} more stars to unlock ${next.text}`;
+      newMessage = `You're doing great, you only need ${next.requiredStars - completed.length} more stars to unlock the ${next.text}`;
     } else if (completed.length === findTotalStars()) {
       newMessage = "Congratulations, you have completed the game!";
     } else {
