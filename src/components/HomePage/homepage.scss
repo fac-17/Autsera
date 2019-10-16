@@ -4,16 +4,18 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container-home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 25%;
 }
 
 .img-logo {
-  width: 60%;
+  width: 60vw;
   padding-bottom: 1%;
 }
