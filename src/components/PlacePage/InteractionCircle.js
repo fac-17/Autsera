@@ -11,8 +11,8 @@ const InteractionCircle = ({
 }) => {
   let interactionStyle = {
     position: "absolute",
-    top: interaction.coordinates[0] + "%",
-    right: interaction.coordinates[1] + "%"
+    top: interaction.coordinates[0] + "vh",
+    right: interaction.coordinates[1] + "vw"
   };
 
   let imageStyle = {
@@ -44,7 +44,7 @@ const InteractionCircle = ({
       {!isUnlocked ? (
         <img
           style={{ position: "absolute", opacity: 0.7 }}
-          src="/SVG/question.svg"
+          src="/img/question.svg"
         />
       ) : null}
       <RouterLink
