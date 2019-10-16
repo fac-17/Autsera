@@ -28,23 +28,22 @@ const InteractionCircle = ({
   isCompleted,
   isUnlocked,
   setspeechText,
-  completed
+  localStarsAchieved
 }) => {
   let interactionStyle = {
     position: "absolute",
     top: interaction.coordinates[0] + "vh",
-    right: interaction.coordinates[1] + "vw"
+    right: interaction.coordinates[1] + "vw",
   };
 
   let imageStyle = {
-    width: interaction.width
+    width: interaction.width,
   };
   const changeMessageIfLocked = () => {
     if (!isUnlocked)
       setspeechText(
         `This Interaction is locked, but you only need 
-        ${interaction.requiredStars -
-          completed.length} more stars to unlock it!`
+        ${interaction.requiredStars - localStarsAchieved} more stars to unlock it!`
       );
   };
 

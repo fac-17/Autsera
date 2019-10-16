@@ -3,7 +3,7 @@ import RouterLink from "../reusable/RouterLink";
 import HelperAvatar from "../reusable/HelperAvatar";
 import "./homepage.scss";
 import autseraImg from "../../assets/img/Autsera.png";
-import backgroundHome from "../../assets/SVG/Background_Home.svg";
+import backgroundHome from "../../assets/img/Background_Home.svg";
 
 const HomePage = ({ history, setCompleted ,completed}) => {
   return (

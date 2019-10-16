@@ -45,11 +45,11 @@ const PlacePage = ({ id, completed }) => {
       {placeData.interactions.map((interaction) => (
         <InteractionCircle
           key={interaction.id}
-          isUnlocked={completed.length >= interaction.requiredStars}
+          isUnlocked={has >= interaction.requiredStars}
           interaction={interaction}
           isCompleted={completed.includes(interaction.id)}
           setspeechText={setspeechText}
-          completed={completed}
+          localStarsAchieved={has}
         />
       ))}
       <HelperAvatar speechText={speechText} timeOut={5000} />
