@@ -66,13 +66,16 @@ li {
 .star-popup {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 37%;
+  justify-content: center;
+  width: 40vw;
   margin: auto;
   font-family: "Amatic SC", cursive;
   font-size: 2rem;
   text-align: center;
   font-weight: 700;
+  svg {
+    margin: 0 2vw;
+  }
 }
 
 @media only screen and (max-height: 600px) {
@@ -86,5 +89,12 @@ li {
   .btn-answer {
     margin: 1vh 0;
     padding: 0.3rem 0;
+  }
+  .star-popup {
+    font-size: 1rem;
+    svg {
+      height: 6vh;
+      width: 6vh;
+    }
   }
 }
