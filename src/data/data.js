@@ -400,7 +400,7 @@ export default {
           text: "In the classroom",
           question: [
             "The teacher asked a question.",
-            "Select all that matches this situation"
+            "Select all descriptions matching this situation"
           ],
           image: "/img/interactions/Classroom",
           width: "23vw",
@@ -452,7 +452,7 @@ export default {
           image: "/img/interactions/Blackboard",
           question: [
             "Can you tell what the kids are feeling?",
-            "Select all the matching emotions"
+            "Select all the matching answers"
           ],
           coordinates: ["30", "51"],
           width: "18vw",
@@ -579,7 +579,10 @@ export default {
         {
           id: 36,
           text: "Emmanuel & Georgia",
-          question: ["What is the situation?", "Select all the matching words"],
+          question: [
+            "What is happening here?",
+            "Select all the matching answers"
+          ],
           image: "/img/interactions/Running",
           coordinates: [44, 37],
           width: "18vw",
@@ -641,11 +644,11 @@ export default {
           text: "Francesca & Andy",
           question: [
             "What is the situation here?",
-            "Select all the matching emotions"
+            "Select all the matching answers"
           ],
           image: "/img/interactions/Hugging",
-          coordinates: [75, 60],
-          width: "6vw",
+          coordinates: [74, 58],
+          width: "12vw",
           radius: 8,
           requiredStars: 1,
           answers: [
@@ -697,13 +700,10 @@ export default {
         {
           id: 47,
           text: "Gigi & Christine",
-          question: [
-            "Can you tell how Victor is feeling?",
-            "Select all the matching emotions"
-          ],
+          question: ["The girls are...?", "Select all the matching answers"],
           image: "/img/interactions/Talking",
-          coordinates: [15, 46],
-          width: "15vw",
+          coordinates: [14, 43],
+          width: "28vw",
           radius: "33",
           requiredStars: 2,
           answers: [
