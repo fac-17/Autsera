@@ -79,7 +79,10 @@ test("Test if setCompleted gets called with the right argument", () => {
   });
 
   expect(setCompleted).toBeCalledTimes(1);
+  getByText("Continue");
 });
+
+
 
 // test("if clicking on answer gives the right response from avatar", () => {
 //   const answers = data.places[0].interactions[0].answers;

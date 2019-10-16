@@ -13,7 +13,11 @@ function App() {
   );
 
   useEffect(() => {
-    localStorage.setItem("completed", JSON.stringify(completed));
+    try {
+      localStorage.setItem("completed", JSON.stringify(completed));
+    } catch (error) {
+      console.error(error);
+    }
   }, [completed]);
 
   return (

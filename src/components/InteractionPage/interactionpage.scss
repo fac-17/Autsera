@@ -67,9 +67,10 @@ li {
 .star-popup {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 37%;
   margin: auto;
+  margin-top: -5px;
   font-family: "Amatic SC", cursive;
   font-size: 2rem;
   text-align: center;

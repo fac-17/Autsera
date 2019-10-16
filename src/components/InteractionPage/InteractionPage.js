@@ -27,7 +27,7 @@ const InteractionPage = ({ id, setCompleted }) => {
           <title>{"Full Star"}</title>
           <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z" />
         </svg>
-        <span>You have gained a star</span>
+        <span>You have gained a star.</span>
       </div>
     );
     return array.concat(id);
@@ -143,11 +143,17 @@ const InteractionPage = ({ id, setCompleted }) => {
       {isCompleted ? (
         <div className="star-popup">
           <span></span>
-          <span>Well done, you completed this puzzle!</span>
-          <span></span>
+          <span>Well done!</span>
+          <RouterLink
+            className="btn-back completed-back"
+            to={"/place/" + placeObj.id}
+            label="Continue"
+            title="Continue"
+          />
         </div>
       ) : null}
       {starSpeech}
+
       <HelperAvatar
         speechText={speechText}
         helpText={helpText}
