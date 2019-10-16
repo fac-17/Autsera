@@ -2,10 +2,10 @@ import React from "react";
 import RouterLink from "../reusable/RouterLink";
 import "./helppage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
-
-const HelpPage = props => {
+import background from "../../assets/img/interactions_backgrounds/Town.svg";
+const HelpPage = () => {
   return (
-    <div className="background-help">
+    <div className="background-help" style={{backgroundImage:`url(${background})`}}>
       <RouterLink className="btn-back" to="/" label="Go Back" />
       <HelperAvatar speechText="Hi, welcome to Autsera" timeOut={1000} />
     </div>

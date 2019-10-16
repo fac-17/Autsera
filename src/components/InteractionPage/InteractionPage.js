@@ -4,17 +4,31 @@ import data from "../../data/data";
 import "./interactionpage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
 
-import background1 from "../../assets/SVG/Playground.svg";
+import background1 from "../../assets/img/interactions_backgrounds/Playground.svg";
+import background2 from "../../assets/img/interactions_backgrounds/School.svg";
 
-import image1 from "../../assets/img/interactions/01_LeonieAndReuben.png";
-import image2 from "../../assets/img/interactions/02_Jan.png";
-import image3 from "../../assets/img/interactions/03_Victor.png";
-const backgrounds = { Playground: background1 };
+
+import image1 from "../../assets/img/interactions/Blackboard.png";
+import image2 from "../../assets/img/interactions/Boys_ball.png";
+import image3 from "../../assets/img/interactions/Bullying.png";
+import image4 from "../../assets/img/interactions/Slide_happy.png";
+import image5 from "../../assets/img/interactions/Classroom.png";
+import image6 from "../../assets/img/interactions/Slide.png";
+import image7 from "../../assets/img/interactions/Fight_ball.png";
 const images = {
-  "/img/interactions/01_LeonieAndReuben.png": image1,
-  "/img/interactions/02_Jan.png": image2,
-  "/img/interactions/03_Victor.png": image3
+  "/img/interactions/Blackboard": image1,
+  "/img/interactions/Boys_ball": image2,
+  "/img/interactions/Bullying": image3,
+  "/img/interactions/Slide_happy": image4,
+  "/img/interactions/Classroom": image5,
+  "/img/interactions/Slide": image6,
+  "/img/interactions/Fight_ball": image7
 };
+
+const backgrounds={
+  Playground:background1,
+  School:background2
+}
 
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
@@ -104,7 +118,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   }, [selectedAnswers]);
 
   const style = {
-    backgroundImage: `url(/img/interactions_backgrounds/${placeObj.text}.svg)`,
+    backgroundImage: `url(${backgrounds[placeObj.text]})`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",

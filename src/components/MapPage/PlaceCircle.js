@@ -3,8 +3,13 @@ import RouterLink from "../reusable/RouterLink";
 import Stars from "../reusable/Stars";
 import { countStarsInPlace } from "../../utils/starsCounting";
 import "./PlaceCircle.scss";
-import p1 from "../../assets/SVG/Playground_icon.svg"
-const icons={"/SVG/Playground_icon.svg":p1}
+import place1 from "../../assets/img/places_icons/Playground_icon.svg";
+import place2 from "../../assets/img/places_icons/School_icon.svg";
+import question from "../../assets/img/question.svg";
+const icons = {
+  "/img/places_icons/Playground_icon.svg": place1,
+  "/img/places_icons/School_icon.svg": place2
+};
 const PlaceCircle = ({ place, completed, setMessage }) => {
   const [isUnlocked, setIsUnlocked] = React.useState(false);
   let positionStyle = {
@@ -33,7 +38,7 @@ const PlaceCircle = ({ place, completed, setMessage }) => {
         <img
           alt="locked-question-mark"
           style={{ position: "absolute", opacity: 0.7 }}
-          src="/img/question.svg"
+          src={question}
         />
       ) : null}
       <RouterLink

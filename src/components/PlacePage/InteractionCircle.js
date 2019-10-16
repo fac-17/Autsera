@@ -2,6 +2,27 @@ import React from "react";
 import RouterLink from "../reusable/RouterLink";
 import Stars from "../reusable/Stars";
 
+import question from "../../assets/img/question.svg"
+
+import icon1 from "../../assets/img/interactions/Slide_happy.svg";
+import icon2 from "../../assets/img/interactions/Blackboard.svg";
+import icon3 from "../../assets/img/interactions/Boys_ball.svg";
+import icon4 from "../../assets/img/interactions/Bullying.svg";
+import icon5 from "../../assets/img/interactions/Classroom.svg";
+import icon6 from "../../assets/img/interactions/Slide.svg";
+import icon7 from "../../assets/img/interactions/Fight_ball.svg";
+
+
+const icons = {
+  "/img/interactions/Slide_happy": icon1,
+  "/img/interactions/Blackboard": icon2,
+  "/img/interactions/Boys_ball": icon3,
+  "/img/interactions/Bullying": icon4,
+  "/img/interactions/Classroom": icon5,
+ "/img/interactions/Slide": icon6,
+ "/img/interactions/Fight_ball": icon7,
+
+};
 const InteractionCircle = ({
   interaction,
   isCompleted,
@@ -27,7 +48,7 @@ const InteractionCircle = ({
       );
   };
 
-  let icon = interaction.image + ".svg";
+  let icon = icons[interaction.image];
 
   return (
     <div
@@ -44,7 +65,7 @@ const InteractionCircle = ({
       {!isUnlocked ? (
         <img
           style={{ position: "absolute", opacity: 0.7 }}
-          src="/img/question.svg"
+          src={question}
         />
       ) : null}
       <RouterLink

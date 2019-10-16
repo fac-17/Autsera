@@ -6,13 +6,14 @@ import Stars from "../reusable/Stars";
 import { countStarsInPlace } from "../../utils/starsCounting";
 import HelperAvatar from "../reusable/HelperAvatar";
 import "./placepage.scss";
-import p1 from "../../assets/img/playground.png"
-const images={"/img/playground.png":p1}
+import place1 from "../../assets/img/places_backgrounds/Playground.png";
+import place2 from "../../assets/img/places_backgrounds/School.png";
+const images={Playground:place1,School:place2};
 const PlacePage = ({ id, completed }) => {
   const placeData = data.places.find((place) => place.id === id);
 
   const style = {
-    backgroundImage: `url(${images[placeData.image]})`,
+    backgroundImage: `url(${images[placeData.text]})`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
