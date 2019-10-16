@@ -392,7 +392,7 @@ export default {
       requiredStars: 2,
       icon: "/img/places_icons/School_icon.svg",
       image: "/places_backgrounds/School.png",
-      coordinates: [16, 44],
+      coordinates: [13, 44],
       width: "15vw",
       interactions: [
         {
@@ -644,7 +644,7 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Hugging",
-          coordinates: [73, 60],
+          coordinates: [75, 60],
           width: "6vw",
           radius: 8,
           requiredStars: 1,
