@@ -6,19 +6,19 @@ export default {
       icon: "/img/places_icons/Playground_icon.svg",
       requiredStars: 0,
       image: "/places_backgrounds/Playground.png",
-      width: "200px",
-      coordinates: [42, 70],
+      width: "20vw",
+      coordinates: [42, 69],
       interactions: [
         {
           id: 1,
-          text: "Kids on the swing",
+          text: "Leonie & Jan",
           question: [
-            "Can you tell what Leonie and Reuben are feeling?",
+            "Can you tell what Leonie and Jan are feeling?",
             "Select all the matching words"
           ],
           image: "/img/interactions/Slide_happy",
           coordinates: [20, 66],
-          width: "225px",
+          width: "25vw",
           radius: 12,
           requiredStars: 0,
           answers: [
@@ -91,14 +91,14 @@ export default {
         },
         {
           id: 12,
-          text: "Robert and Katie",
+          text: "Reuben & Christina",
           question: [
             "What can you say about this situation?",
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Fight_ball",
-          width: "190px",
-          coordinates: [60, 47],
+          width: "18vw",
+          coordinates: [60, 42],
           radius: 8,
           requiredStars: 1,
           answers: [
@@ -161,13 +161,13 @@ export default {
         },
         {
           id: 16,
-          text: "Victor on the swing",
+          text: "Victor",
           question: [
             "Can you tell how Victor is feeling?",
             "Select all the matching emotions",
           ],
           image: "/img/interactions/Slide",
-          width: "260px",
+          width: "25vw",
           coordinates: ["39", "8"],
           radius: "33",
           requiredStars: 2,
@@ -236,14 +236,14 @@ export default {
         },
         {
           id: 82,
-          text: "Jack",
+          text: "Oli & Jack",
           question: [
             "Can you tell how Jack is feeling?",
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Boys_ball",
-          width: "160",
-          coordinates: ["29", "39"],
+          width: "18vw",
+          coordinates: ["29", "35"],
           radius: "33",
           requiredStars: 3,
           answers: [
@@ -311,13 +311,13 @@ export default {
         },
         {
           id: 93,
-          text: "Paul",
+          text: "Gregor",
           question: [
-            "Can you tell what Paul is feeling?",
+            "Can you tell what Gregor is feeling?",
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Isolation",
-          width: "190px",
+          width: "20vw",
           coordinates: ["50", "75"],
           radius: "33",
           requiredStars: 3,
@@ -392,19 +392,19 @@ export default {
       requiredStars: 2,
       icon: "/img/places_icons/School_icon.svg",
       image: "/places_backgrounds/School.png",
-      coordinates: [16, 46],
-      width: "170px",
+      coordinates: [13, 44],
+      width: "15vw",
       interactions: [
         {
           id: 24,
           text: "In the classroom",
           question: [
             "The teacher asked a question.",
-            "Select all that matches this situation"
+            "Select all descriptions matching this situation"
           ],
           image: "/img/interactions/Classroom",
-          width: "252px",
-          coordinates: [64, 53],
+          width: "23vw",
+          coordinates: [62, 53],
           radius: 12,
           answers: [
             {
@@ -452,10 +452,10 @@ export default {
           image: "/img/interactions/Blackboard",
           question: [
             "Can you tell what the kids are feeling?",
-            "Select all the matching emotions",
+            "Select all the matching answers"
           ],
-          coordinates: ["31", "51"],
-          width: "225px",
+          coordinates: ["30", "51"],
+          width: "18vw",
           radius: "12",
           answers: [
             {
@@ -512,11 +512,11 @@ export default {
         },
         {
           id: 106,
-          text: "Girls laughing",
+          text: "Outside school",
           image: "/img/interactions/Bullying",
           question: ["The three girls are...?", "Select all matches"],
-          width: "230px",
-          coordinates: ["69", "22"],
+          width: "18vw",
+          coordinates: ["69", "24"],
           radius: "12",
           answers: [
             {
@@ -573,19 +573,19 @@ export default {
       icon: "/img/places_icons/Airport_icon.svg",
       requiredStars: 5,
       image: "/places_backgrounds/Airport.png",
-      coordinates: [49, 28],
-      width: "220px",
+      coordinates: [48, 27],
+      width: "25vw",
       interactions: [
         {
           id: 36,
-          text: "Emmanuel and Georgia",
+          text: "Emmanuel & Georgia",
           question: [
-            "What is the situation?",
-            "Select all the matching words"
+            "What is happening here?",
+            "Select all the matching answers"
           ],
           image: "/img/interactions/Running",
-          coordinates: [45, 31],
-          width: "190px",
+          coordinates: [44, 37],
+          width: "18vw",
           radius: 12,
           requiredStars: 0,
           answers: [
@@ -641,14 +641,14 @@ export default {
         },
         {
           id: 43,
-          text: "Francesca and Andy hugging",
+          text: "Francesca & Andy",
           question: [
             "What is the situation here?",
-            "Select all the matching emotions"
+            "Select all the matching answers"
           ],
           image: "/img/interactions/Hugging",
-          coordinates: [71, 57],
-          width: "8vw",
+          coordinates: [74, 58],
+          width: "12vw",
           radius: 8,
           requiredStars: 1,
           answers: [
@@ -681,8 +681,7 @@ export default {
               text: "One of them is waiting for his train",
               correct: false,
               response: "Look again!"
-            }
-            ,
+            },
             {
               id: 146,
               text: "They have just met for the first time",
@@ -700,14 +699,11 @@ export default {
         },
         {
           id: 47,
-          text: "Gigi and Christine talking",
-          question: [
-            "Can you tell how Victor is feeling?",
-            "Select all the matching emotions"
-          ],
+          text: "Gigi & Christine",
+          question: ["The girls are...?", "Select all the matching answers"],
           image: "/img/interactions/Talking",
-          coordinates: ["13", "43"],
-          width: "15vw",
+          coordinates: [14, 43],
+          width: "28vw",
           radius: "33",
           requiredStars: 2,
           answers: [
@@ -747,8 +743,6 @@ export default {
               correct: false,
               response: "Look again"
             }
-            
-
           ],
           hints: [
             {

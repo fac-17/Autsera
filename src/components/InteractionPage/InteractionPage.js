@@ -6,7 +6,7 @@ import HelperAvatar from "../reusable/HelperAvatar";
 
 import background1 from "../../assets/img/interactions_backgrounds/Playground.svg";
 import background2 from "../../assets/img/interactions_backgrounds/School.svg";
-
+import background3 from "../../assets/img/interactions_backgrounds/Airport.svg";
 
 import image1 from "../../assets/img/interactions/Blackboard.png";
 import image2 from "../../assets/img/interactions/Boys_ball.png";
@@ -35,7 +35,8 @@ const images = {
 
 const backgrounds={
   Playground:background1,
-  School:background2
+  School:background2,
+  Airport:background3
 }
 
 const InteractionPage = ({ id, setCompleted }) => {
