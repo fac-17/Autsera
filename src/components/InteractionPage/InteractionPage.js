@@ -78,13 +78,10 @@ const InteractionPage = ({ id, setCompleted }) => {
     } else {
       setHelpText("");
     }
-    // console.log({ unAnsweredCorrectIds });
     // all answers are correctly guessed
     if (
       correctAnswersIds.every(correctId => selectedAnswers.includes(correctId))
     ) {
-      // TODO instead of below it should trigger some animation like star popping up
-      // setSpeechText("Well done!");
       setCompleted(completed =>
         completed.includes(id) ? completed : addStar(id, completed)
       );
@@ -130,7 +127,6 @@ const InteractionPage = ({ id, setCompleted }) => {
                   setSelectedAnswers([...selectedAnswers, answer.id]);
                 } else {
                 }
-                // console.log(answer.response);
                 setAnswerClickCount(click => click + 1);
                 setSpeechText(answer.response);
               }}
