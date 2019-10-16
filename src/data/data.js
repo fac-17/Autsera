@@ -566,14 +566,14 @@ export default {
       id: 35,
       text: "Airport",
       icon: "/img/places_icons/Airport_icon.svg",
-      requiredStars: 8,
+      requiredStars: 5,
       image: "/places_backgrounds/Airport.png",
       coordinates: [49, 28],
       width: "220px",
       interactions: [
         {
           id: 36,
-          text: "Emmanuel and Christine running",
+          text: "Emmanuel and Georgia running",
           question: [
             "Can you tell what Francesca and Martha are feeling?",
             "Select all the matching words"
@@ -658,13 +658,14 @@ export default {
         },
         {
           id: 47,
-          text: "Girls talking",
+          text: "Gigi and Christine talking",
           question: [
             "Can you tell how Victor is feeling?",
             "Select all the matching emotions"
           ],
-          image: "/img/interactions/03_Victor.png",
-          coordinates: ["12", "33"],
+          image: "/img/interactions/Talking",
+          coordinates: ["13", "43"],
+          width: "15vw",
           radius: "33",
           requiredStars: 7,
           answers: [
