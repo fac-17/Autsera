@@ -2,28 +2,21 @@ import React from "react";
 import RouterLink from "../reusable/RouterLink";
 import Stars from "../reusable/Stars";
 
-const InteractionCircle = ({
-  interaction,
-  isCompleted,
-  isUnlocked,
-  setspeechText,
-  completed
-}) => {
+const InteractionCircle = ({ interaction, isCompleted, isUnlocked, setspeechText, localStarsAchieved }) => {
   let interactionStyle = {
     position: "absolute",
-    top: interaction.coordinates[0] + "%",
-    right: interaction.coordinates[1] + "%"
+    top: interaction.coordinates[0] + "vh",
+    right: interaction.coordinates[1] + "vw",
   };
 
   let imageStyle = {
-    width: interaction.width
+    width: interaction.width,
   };
   const changeMessageIfLocked = () => {
     if (!isUnlocked)
       setspeechText(
         `This Interaction is locked, but you only need 
-        ${interaction.requiredStars -
-          completed.length} more stars to unlock it!`
+        ${interaction.requiredStars - localStarsAchieved} more stars to unlock it!`
       );
   };
 
@@ -41,12 +34,7 @@ const InteractionCircle = ({
       onClick={changeMessageIfLocked}
     >
       {isCompleted ? <Stars has={1} max={1} /> : null}
-      {!isUnlocked ? (
-        <img
-          style={{ position: "absolute", opacity: 0.7 }}
-          src="/SVG/question.svg"
-        />
-      ) : null}
+      {!isUnlocked ? <img style={{ position: "absolute", opacity: 0.7 }} src="/img/question.svg" /> : null}
       <RouterLink
         imageWidth={interaction.width}
         title={interaction.text}
