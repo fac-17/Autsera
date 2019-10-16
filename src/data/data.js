@@ -573,40 +573,52 @@ export default {
       interactions: [
         {
           id: 36,
-          text: "Emmanuel and Georgia running",
+          text: "Emmanuel and Georgia",
           question: [
-            "Can you tell what Francesca and Martha are feeling?",
+            "What is the situation?",
             "Select all the matching words"
           ],
           image: "/img/interactions/Running",
           coordinates: [45, 31],
           width: "190px",
           radius: 12,
-          requiredStars: 5,
+          requiredStars: 0,
           answers: [
             {
               id: 37,
-              text: "happy",
+              text: "They are late for their flight",
               correct: true,
-              response: "Correct! They look like they are happy"
+              response: "Correct! They look like they are late."
             },
             {
               id: 38,
-              text: "sad",
-              correct: false,
-              response: "Look again! Do they look like they are having fun?"
+              text: "They are running to the flight gate",
+              correct: true,
+              response: "Correct!"
             },
             {
               id: 39,
-              text: "upset",
-              correct: false,
-              response: "Think again! Look closely on their mouthes"
+              text: "The flight gate will close soon",
+              correct: true,
+              response: "Correct!"
             },
             {
               id: 40,
-              text: "angry",
+              text: "They arrived early to the airport",
               correct: false,
-              response: "Look again, are they smiling?"
+              response: "Look again!"
+            },
+            {
+              id: 141,
+              text: "They are waiting at the flight gate",
+              correct: false,
+              response: "Look again!"
+            },
+            {
+              id: 142,
+              text: "Their flight gate is not open yet",
+              correct: false,
+              response: "Look again!"
             }
           ],
           hints: [
@@ -626,26 +638,51 @@ export default {
           id: 43,
           text: "Francesca and Andy hugging",
           question: [
-            "Can you tell what Jan is feeling?",
+            "What is the situation here?",
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Hugging",
           coordinates: [71, 57],
           width: "8vw",
           radius: 8,
-          requiredStars: 6,
+          requiredStars: 1,
           answers: [
             {
               id: 44,
-              text: "upset",
+              text: "Only one of them will travel",
               correct: true,
-              response: "Correct! He looks upset"
+              response: "Correct! Only one will travel"
             },
             {
               id: 45,
-              text: "happy",
+              text: "They will miss each other",
+              correct: true,
+              response: "Correct!"
+            },
+            {
+              id: 143,
+              text: "They are at the airport",
+              correct: true,
+              response: "Correct!"
+            },
+            {
+              id: 144,
+              text: "They are travelling together",
               correct: false,
-              response: "Look again, are is he smiling?"
+              response: "Look again!"
+            },
+            {
+              id: 145,
+              text: "One of them is waiting for his train",
+              correct: false,
+              response: "Look again!"
+            }
+            ,
+            {
+              id: 146,
+              text: "They have just met for the first time",
+              correct: false,
+              response: "Look again!"
             }
           ],
           hints: [
@@ -667,32 +704,46 @@ export default {
           coordinates: ["13", "43"],
           width: "15vw",
           radius: "33",
-          requiredStars: 7,
+          requiredStars: 2,
           answers: [
             {
               id: 48,
-              text: "good",
+              text: "They are friends",
               correct: true,
               response: "Good!"
             },
             {
               id: 49,
-              text: "bad",
-              correct: false,
-              response: "Not Good!"
+              text: "They are travelling together",
+              correct: true,
+              response: "Correct!"
             },
             {
               id: 50,
-              text: "so so",
-              correct: false,
-              response: "Hmmm"
+              text: "They are waiting for their flight",
+              correct: true,
+              response: "Correct"
             },
             {
               id: 51,
-              text: "okeyish",
-              correct: true,
-              response: "We'll let that pass"
+              text: "They do not know each other",
+              correct: false,
+              response: "Look again"
+            },
+            {
+              id: 148,
+              text: "They are watching a movie",
+              correct: false,
+              response: "Look again"
+            },
+            {
+              id: 149,
+              text: "They are in a train station",
+              correct: false,
+              response: "Look again"
             }
+            
+
           ],
           hints: [
             {
