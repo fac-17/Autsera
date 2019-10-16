@@ -7,7 +7,8 @@
   pointer: cursor;
   &.unlocked p {
     background: #f69a5d;
-    box-shadow: 0 -2px 0 3px #e8894a inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+    box-shadow: 0 -2px 0 3px #e8894a inset, 0 5px 5px rgba(65, 8, 8, 0.17),
+      0 15px rgba(255, 255, 255, 0.25) inset;
     border-radius: 10px;
     min-width: 15vw;
   }
@@ -17,7 +18,8 @@
     // touch-action: none;
     p {
       background: #8f8aef;
-      box-shadow: 0 -2px 0 3px #6f69eb inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+      box-shadow: 0 -2px 0 3px #6f69eb inset, 0 5px 5px rgba(65, 8, 8, 0.17),
+        0 15px rgba(255, 255, 255, 0.25) inset;
       border-radius: 10px;
       min-width: 15vw;
       border-radius: 10px;
@@ -36,7 +38,7 @@
   padding: 3%;
 }
 .place-circle img {
-  max-width: 14vw;
+  max-width: 20vw;
 }
 .router-link a {
   display: flex;
