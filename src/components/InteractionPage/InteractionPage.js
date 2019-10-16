@@ -3,7 +3,9 @@ import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
 import "./interactionpage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
+
 import background1 from "../../assets/SVG/Playground.svg";
+
 import image1 from "../../assets/img/interactions/01_LeonieAndReuben.png";
 import image2 from "../../assets/img/interactions/02_Jan.png";
 import image3 from "../../assets/img/interactions/03_Victor.png";
@@ -42,6 +44,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   };
 
   let shuffledAnswers = interactionObj.answers;
+  let image = interactionObj.image + ".png";
 
   useEffect(() => {
     let shuffleArray = array => {

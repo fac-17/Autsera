@@ -24,7 +24,7 @@ function App() {
             exact
             path="/"
             render={({ history }) => (
-              <HomePage history={history} setCompleted={setCompleted} />
+              <HomePage history={history} setCompleted={setCompleted} completed={completed}/>
             )}
           />
           <Route exact path="/help" component={HelpPage} />

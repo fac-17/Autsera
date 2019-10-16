@@ -5,7 +5,7 @@ $turqouise: #69dfc7;
 $blue: #3c91e6;
 $yellow: #fde74c;
 $orange: #f69a5d;
-$purple: #8f8aef;
+$purple: #5f59d0;
 $green: #7dd764;
 
 // ____________________________FONTS____________________________
@@ -30,6 +30,7 @@ html {
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 // ____________________________Layout____________________________
@@ -49,7 +50,7 @@ a {
 // ____________________________images____________________________
 
 .icon-image {
-  width: 180px;
+  width: 140px;
 }
 // ____________________________Buttons & Signposts____________________________
 
@@ -86,8 +87,19 @@ a {
   cursor: pointer;
 }
 
+.btn-newstart {
+  @include buttons(#8f8aef, #605ad7);
+  border-radius: 20px;
+  height: 3rem;
+  width: 15rem;
+  line-height: 2.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
 .btn-back {
-  @include buttons(#8f8aef, #726ceb);
+  @include buttons($purple, #726ceb);
   border-radius: 20px;
   height: 3rem;
   width: 9rem;
@@ -104,15 +116,22 @@ a {
   margin: 0;
 }
 
+.btn-back:active,
+.btn-start:active,
+.btn-help:active {
+  filter: brightness(120%);
+  transform: scale(0.95);
+}
+
 @mixin signpost {
   display: inline-block;
   color: #f8feff;
   text-align: center;
   font-family: "Fredoka One";
-  background: #5bdcc2;
-  border: 3px solid #25ac91;
+  background: #186fc6;
+  border: 3px solid #fff;
   border-radius: 10px;
-  box-shadow: 0 -2px 0 3px #3fd6b7 inset, 0 2px 2px rgba(241, 78, 61, 0.17),
+  box-shadow: 0 -2px 0 3px #3c91e6 inset, 0 2px 2px rgba(60, 145, 230, 0.17),
     0 10px rgba(255, 255, 255, 0.25) inset;
 }
 

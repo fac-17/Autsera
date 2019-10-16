@@ -9,7 +9,7 @@ import "./placepage.scss";
 import p1 from "../../assets/img/playground.png"
 const images={"/img/playground.png":p1}
 const PlacePage = ({ id, completed }) => {
-  const placeData = data.places.find(place => place.id === id);
+  const placeData = data.places.find((place) => place.id === id);
 
   const style = {
     backgroundImage: `url(${images[placeData.image]})`,
@@ -41,12 +41,14 @@ const PlacePage = ({ id, completed }) => {
         </span>
       </div>
 
-      {placeData.interactions.map(interaction => (
+      {placeData.interactions.map((interaction) => (
         <InteractionCircle
           key={interaction.id}
-          isUnlocked={has >= interaction.requiredStars}
+          isUnlocked={completed.length >= interaction.requiredStars}
           interaction={interaction}
           isCompleted={completed.includes(interaction.id)}
+          setspeechText={setspeechText}
+          completed={completed}
         />
       ))}
       <HelperAvatar speechText={speechText} timeOut={5000} />
