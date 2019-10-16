@@ -11,7 +11,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   const [speechText, setSpeechText] = useState(null);
   const [answerClickCount, setAnswerClickCount] = React.useState(0);
   const [starSpeech, setStarSpeech] = useState(null);
-  const [isCompleted,setIsCompleted] =useState(false)
+  const [isCompleted, setIsCompleted] = useState(false);
 
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
     let foundInteraction = currentPlace.interactions.find(
@@ -93,7 +93,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   }, [selectedAnswers]);
 
   const style = {
-    backgroundImage: `url(/SVG/${placeObj.text}.svg)`,
+    backgroundImage: `url(/img/interactions_backgrounds/${placeObj.text}.svg)`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -140,7 +140,13 @@ const InteractionPage = ({ id, setCompleted }) => {
           </li>
         ))}
       </ul>
-      {isCompleted?<div className="star-popup"><span></span><span>Well done, you completed this puzzle!</span><span></span></div>:null}
+      {isCompleted ? (
+        <div className="star-popup">
+          <span></span>
+          <span>Well done, you completed this puzzle!</span>
+          <span></span>
+        </div>
+      ) : null}
       {starSpeech}
       <HelperAvatar
         speechText={speechText}
