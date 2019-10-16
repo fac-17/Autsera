@@ -11,15 +11,16 @@ const MapPage = ({ completed }) => {
   const [message, setMessage] = useState("");
   useEffect(() => {
     let next = findNextLevel(completed);
-    let newMessage =
-      completed.length === 0
-        ? "Welcome to Autsera Land"
-        : next.requiredStars
-        ? `You're doing great, you only need ${next.requiredStars -
-            completed.length} more stars to unlock ${next.text}`
-        : completed.length === findTotalStars()
-        ? "Congratulations, you have completed the game!"
-        : "Congratulations, you have unlocked every level in the game!";
+    let newMessage = "";
+    if (completed.length === 0) {
+      newMessage = "Welcome to Autsera Land";
+    } else if (next.requiredStars) {
+      newMessage = `You're doing great, you only need ${next.requiredStars - completed.length} more stars to unlock ${next.text}`;
+    } else if (completed.length === findTotalStars()) {
+      newMessage = "Congratulations, you have completed the game!";
+    } else {
+      newMessage = "Congratulations, you have unlocked every level in the game!";
+    }
     setMessage(newMessage);
   }, [completed]);
 
