@@ -79,17 +79,9 @@ test("Test if setCompleted gets called with the right argument", () => {
   });
 
   expect(setCompleted).toBeCalledTimes(1);
-});
-
-test("'Continue' button comes up when all the right answers are selected", () => {
-  const { getByText } = render(
-    <Router>
-      <InteractionPage id={1} isCompleted={true} />
-    </Router>
-  );
   getByText("Continue");
-
 });
+
 
 
 // test("if clicking on answer gives the right response from avatar", () => {
