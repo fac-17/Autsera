@@ -1,28 +1,25 @@
 .helper-avatar-container {
   position: absolute;
+  justify-self: flex-end;
+  height: 30vh;
   right: 15px;
-  bottom: -85px;
+  bottom: -8vh;
+  display: flex;
+  align-items: center;
 }
 
 .helper-avatar {
-  height: 320px;
+  margin-left: 1vw;
+  height: 30vh;
 }
 .speech-box {
-  background: linear-gradient(
-    to bottom,
-    #fef5b1 0%,
-    #fdec6e 20%,
-    #fcde09 80%,
-    #e1c503 100%
-  );
+  background: linear-gradient(to bottom, #fef5b1 0%, #fdec6e 20%, #fcde09 80%, #e1c503 100%);
   border: solid 2px white;
   border-radius: 2em;
-  position: absolute;
-  right: 220px;
-  top: 127px;
   min-width: 25rem;
   align-items: center;
   padding: 3%;
+  position: relative;
   div,
   p {
     text-align: center;

@@ -1,5 +1,4 @@
 .place-circle {
-  height: 20vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -8,8 +7,7 @@
   pointer: cursor;
   &.unlocked p {
     background: #f69a5d;
-    box-shadow: 0 -2px 0 3px #e8894a inset, 0 5px 5px rgba(65, 8, 8, 0.17),
-      0 15px rgba(255, 255, 255, 0.25) inset;
+    box-shadow: 0 -2px 0 3px #e8894a inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
     border-radius: 10px;
     min-width: 15vw;
   }
@@ -19,8 +17,7 @@
     // touch-action: none;
     p {
       background: #8f8aef;
-      box-shadow: 0 -2px 0 3px #6f69eb inset, 0 5px 5px rgba(65, 8, 8, 0.17),
-        0 15px rgba(255, 255, 255, 0.25) inset;
+      box-shadow: 0 -2px 0 3px #6f69eb inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
       border-radius: 10px;
       min-width: 15vw;
       border-radius: 10px;
@@ -31,16 +28,21 @@
 .place-circle p {
   font-family: "Fredoka One", cursive;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 2%;
   color: #04121f;
   background-color: #f69a5d;
   border-radius: 10px;
   padding: 3%;
 }
-
+.place-circle img {
+  max-width: 14vw;
+}
 .router-link a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.stars svg {
+  width: 3vw;
 }
