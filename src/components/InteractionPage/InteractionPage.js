@@ -15,9 +15,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   const [isCompleted, setIsCompleted] = useState(false);
 
   let interactionObj = data.places.reduce((interactionObj, currentPlace) => {
-    let foundInteraction = currentPlace.interactions.find(
-      interaction => interaction.id === id
-    );
+    let foundInteraction = currentPlace.interactions.find((interaction) => interaction.id === id);
     return foundInteraction ? foundInteraction : interactionObj;
   }, {});
 
@@ -38,7 +36,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   let image = interactionObj.image + ".png";
 
   useEffect(() => {
-    let shuffleArray = array => {
+    let shuffleArray = (array) => {
       let currentIndex = array.length,
         temporaryValue,
         randomIndex;
@@ -54,38 +52,23 @@ const InteractionPage = ({ id, setCompleted }) => {
     shuffledAnswers = shuffleArray(interactionObj.answers);
   }, [interactionObj.answers]);
 
-  let placeObj = data.places.find(place =>
-    place.interactions.includes(interactionObj)
-  );
+  let placeObj = data.places.find((place) => place.interactions.includes(interactionObj));
 
   useEffect(() => {
-    const correctAnswersIds = interactionObj.answers
-      .filter(answer => answer.correct)
-      .map(answer => answer.id);
+    const correctAnswersIds = interactionObj.answers.filter((answer) => answer.correct).map((answer) => answer.id);
 
     // update hint
-    const unAnsweredCorrectIds = correctAnswersIds.filter(
-      ca => !selectedAnswers.includes(ca)
-    );
-    const hintedAnswerId =
-      unAnsweredCorrectIds[
-        Math.floor(Math.random() * unAnsweredCorrectIds.length)
-      ];
-    const hint = interactionObj.hints.find(hint =>
-      hint.answers.includes(hintedAnswerId)
-    );
+    const unAnsweredCorrectIds = correctAnswersIds.filter((ca) => !selectedAnswers.includes(ca));
+    const hintedAnswerId = unAnsweredCorrectIds[Math.floor(Math.random() * unAnsweredCorrectIds.length)];
+    const hint = interactionObj.hints.find((hint) => hint.answers.includes(hintedAnswerId));
     if (hint) {
       setHelpText(hint.text);
     } else {
       setHelpText("");
     }
     // all answers are correctly guessed
-    if (
-      correctAnswersIds.every(correctId => selectedAnswers.includes(correctId))
-    ) {
-      setCompleted(completed =>
-        completed.includes(id) ? completed : addStar(id, completed)
-      );
+    if (correctAnswersIds.every((correctId) => selectedAnswers.includes(correctId))) {
+      setCompleted((completed) => (completed.includes(id) ? completed : addStar(id, completed)));
       setIsCompleted(true);
     }
   }, [selectedAnswers]);
@@ -95,43 +78,30 @@ const InteractionPage = ({ id, setCompleted }) => {
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover"
+    backgroundSize: "cover",
   };
 
   return (
     <div className="interaction-background" style={style}>
       <div className="hud">
-        <RouterLink
-          className="btn-back"
-          to={"/place/" + placeObj.id}
-          label="Go Back"
-          title="Go Back"
-        />
+        <RouterLink className="btn-back" to={"/place/" + placeObj.id} label="Go Back" title="Go Back" />
         <span className="signpost">{interactionObj.text}</span>
       </div>
       <h2 className="interaction-question">{interactionObj.question[0]}</h2>
       <h3 className="interaction-instruction">{interactionObj.question[1]}</h3>
       <ul>
-        <li className="grid-center">
-          <img
-            src={assets[interactionObj.image + ".png"]}
-            className="interaction-image"
-          />
-        </li>
-        {shuffledAnswers.map(answer => (
+        <img src={assets[interactionObj.image + ".png"]} className="grid-center interaction-image" />
+
+        {shuffledAnswers.map((answer) => (
           <li key={answer.id}>
             <button
-              className={
-                selectedAnswers.includes(answer.id)
-                  ? "btn-answer selected"
-                  : "btn-answer option"
-              }
+              className={selectedAnswers.includes(answer.id) ? "btn-answer selected" : "btn-answer option"}
               onClick={() => {
                 if (answer.correct && !selectedAnswers.includes(answer.id)) {
                   setSelectedAnswers([...selectedAnswers, answer.id]);
                 } else {
                 }
-                setAnswerClickCount(click => click + 1);
+                setAnswerClickCount((click) => click + 1);
                 setSpeechText(answer.response);
               }}
             >
@@ -153,12 +123,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       ) : null}
       {starSpeech}
 
-      <HelperAvatar
-        speechText={speechText}
-        helpText={helpText}
-        timeOut={4000}
-        answerClickCount={answerClickCount}
-      />
+      <HelperAvatar speechText={speechText} helpText={helpText} timeOut={4000} answerClickCount={answerClickCount} />
     </div>
   );
 };
