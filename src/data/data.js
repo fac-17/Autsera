@@ -43,7 +43,7 @@ export default {
               id: 5,
               text: "Crying",
               correct: false,
-              response: "Look again! Can you see tears? "
+              response: "Look again! Can you see tears?"
             },
             {
               id: 6,
