@@ -101,7 +101,7 @@ a {
   margin-top: 1rem;
 }
 
-.btn-back {
+.btn-back, .btn-play {
   @include buttons($purple, #726ceb);
   border-radius: 20px;
   height: 3rem;
@@ -112,6 +112,7 @@ a {
   justify-self: start;
   cursor: pointer;
 }
+
 
 .btn-back p,
 .btn-start p,

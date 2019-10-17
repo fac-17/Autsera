@@ -4,3 +4,27 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  width: 60vw;
+}
+
+.video-player {
+  align-self: center;
+  width: 100%;
+  height: auto;
+  border: white 8px solid;
+  background-color: white;
+}
+
+.btn-play {
+  align-self: center;
+
+  &.play {
+    background-color: #f69a5d;
+    box-shadow: 0 -2px 0 3px #f69a5d inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  }
+}
