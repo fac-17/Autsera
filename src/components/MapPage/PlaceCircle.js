@@ -9,7 +9,7 @@ const PlaceCircle = ({ place, completed, setMessage }) => {
   let positionStyle = {
     position: "absolute",
     top: place.coordinates[0] + "%",
-    right: place.coordinates[1] + "%"
+    right: place.coordinates[1] + "%",
   };
   useEffect(() => {
     setIsUnlocked(completed.length >= place.requiredStars);
@@ -18,8 +18,7 @@ const PlaceCircle = ({ place, completed, setMessage }) => {
   const changeMessageIfLocked = () => {
     if (!isUnlocked)
       setMessage(
-        `This Place is locked, but you only need ${place.requiredStars -
-          completed.length} more stars to unlock it!`
+        `This Place is locked, but you only need ${place.requiredStars - completed.length} more stars to unlock it!`
       );
   };
   return (
@@ -29,11 +28,7 @@ const PlaceCircle = ({ place, completed, setMessage }) => {
       onClick={changeMessageIfLocked}
     >
       {!isUnlocked ? (
-        <img
-          alt="locked-question-mark"
-          style={{ position: "absolute", opacity: 0.7 }}
-          src="/img/question.svg"
-        />
+        <img className="lock-icon" alt="lock-icon" style={{ position: "absolute", opacity: 0.7 }} src="/img/lock.svg" />
       ) : null}
       <RouterLink
         imageWidth={place.width}

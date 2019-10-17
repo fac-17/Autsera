@@ -34,13 +34,15 @@ const InteractionCircle = ({ interaction, isCompleted, isUnlocked, setspeechText
       onClick={changeMessageIfLocked}
     >
       {isCompleted ? <Stars has={1} max={1} /> : null}
-      {!isUnlocked ? <img style={{ position: "absolute", opacity: 0.7 }} src="/img/question.svg" /> : null}
+      {!isUnlocked ? (
+        <img className="lock-icon" style={{ position: "absolute", opacity: 0.7 }} src="/img/lock.svg" />
+      ) : null}
       <RouterLink
         imageWidth={interaction.width}
         title={interaction.text}
         label={interaction.text}
         icon={icon}
-        to={"/interaction/" + interaction.id}
+        to={isUnlocked ? "/interaction/" + interaction.id : "#"}
       />
     </div>
   );
