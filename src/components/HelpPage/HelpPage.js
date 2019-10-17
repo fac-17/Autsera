@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import RouterLink from "../reusable/RouterLink";
 import "./helppage.scss";
+import background from "../../assets/img/interactions_backgrounds/Town.svg";
+import video from "../../assets/img/AutseraHelpFinal.mp4";
 import HelperAvatar from "../reusable/HelperAvatar";
 
 const HelpPage = props => {
@@ -24,7 +26,7 @@ const HelpPage = props => {
       <RouterLink className="btn-back" to="/" label="Go Back" />
       <div className="video-container">
         <video ref={videoEl} className="video-player" autoPlay >
-          <source src="/AutseraHelpFinal.mp4" type="video/mp4" />
+          <source src={video} type="video/mp4" />
         </video>
         <button
           onClick={togglePlay}
