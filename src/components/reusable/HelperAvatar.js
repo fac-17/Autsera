@@ -1,6 +1,6 @@
 import React from "react";
 import "./HelperAvatar.scss";
-
+import helperImg from "../../assets/img/Hippo.svg";
 const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
   let [displaySomething, setdisplaySomething] = React.useState(true);
   let [showHint, setshowHint] = React.useState(false);
@@ -13,7 +13,7 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
     return () => clearTimeout(timer);
   }, [setdisplaySomething, showHint, clickCount, speechText, answerClickCount]);
 
-  // if new speeText is passed then stop showing hint and show text instead
+  // if new speechText is passed then stop showing hint and show text instead
   React.useEffect(() => {
     setshowHint(false);
   }, [speechText]);
@@ -36,7 +36,7 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
           <p>{helpText}</p>
         </div>
       ) : null}
-      <img src="/img/Hippo.svg" className="helper-avatar" alt="helper-avatar" onClick={toggleshowHint}></img>
+      <img src={helperImg} className="helper-avatar" alt="helper-avatar" onClick={toggleshowHint}></img>
     </div>
   );
 };
