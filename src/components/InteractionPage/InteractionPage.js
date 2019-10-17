@@ -121,7 +121,7 @@ const InteractionPage = ({ id, setCompleted }) => {
           <img
             src={assets[interactionObj.image + ".png"]}
             className="interaction-image"
-            alt={assets[interactionObj.text]}
+            alt="Interaction"
           />
         </li>
         {shuffledAnswers.map(answer => (
