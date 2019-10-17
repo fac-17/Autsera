@@ -19,56 +19,55 @@ export default {
           image: "/img/interactions/Slide_happy",
           coordinates: [20, 66],
           width: "25vw",
-          radius: 12,
           requiredStars: 0,
           answers: [
             {
               id: 2,
               text: "Happy",
               correct: true,
-              response: "Correct! They look like they are happy"
+              response: "Correct! They are having fun."
             },
             {
               id: 3,
               text: "Sad",
               correct: false,
-              response: "Look again! Do they look like they are sad?"
+              response: "Look again! Are they frowning?"
             },
             {
               id: 4,
               text: "Pleased",
               correct: true,
-              response: "Correct! They look pleased"
+              response: "Correct! They are smiling."
             },
             {
               id: 5,
               text: "Crying",
               correct: false,
-              response: "Look again? Focus on their eyes"
+              response: "Look again! Can you see tears? "
             },
             {
               id: 6,
               text: "Gloomy",
               correct: false,
-              response: "Look again, are they sad?"
+              response: "Look again! Are they smiling?"
             },
             {
               id: 7,
               text: "Angry",
               correct: false,
-              response: "Look again, are their angry?"
+              response: "Look again! Are these angry faces?"
             },
             {
               id: 8,
               text: "Fighting",
               correct: false,
-              response: "Look again, are they fighting?"
+              response: "Look again! Are they having fun?"
             },
             {
               id: 9,
               text: "Cheerful",
               correct: true,
-              response: "Correct, they are cheerful"
+              response: "Correct! They look cheerful."
             }
           ],
           hints: [
@@ -99,63 +98,72 @@ export default {
           image: "/img/interactions/Fight_ball",
           width: "18vw",
           coordinates: [60, 42],
-          radius: 8,
           requiredStars: 1,
           answers: [
             {
               id: 13,
               text: "Angry",
               correct: true,
-              response: "Correct! They look angry"
+              response: "Correct! They have an angry look."
             },
             {
               id: 14,
               text: "Having fun",
               correct: false,
-              response: "Look again, are they smiling?"
+              response: "Look again! Are they smiling?"
             },
             {
               id: 74,
               text: "Annoyed",
               correct: true,
-              response: "Correct! They look annoyed"
+              response: "Correct! They look annoyed."
             },
             {
               id: 75,
               text: "Surprised",
               correct: false,
-              response: "Look again, are they surprised?"
+              response: "Look again! How are they looking at each other?"
             },
             {
               id: 76,
-              text: "Physical",
+              text: "Aggresive",
               correct: true,
-              response: "Correct!"
+              response: "Correct! They are nasty to each other."
             },
             {
               id: 77,
               text: "Friendly",
               correct: false,
-              response: "Look again, are they friendly with each other?"
+              response: "Look again! Are they smiling at each other?"
             },
             {
               id: 91,
               text: "Sleepy",
               correct: false,
-              response: "Look again?"
+              response: "Look again! Do they have wide eyes?"
             },
             {
               id: 92,
               text: "Kind",
               correct: false,
-              response: "Look again?"
+              response: "Look again! Are they smiling at each other?"
             }
           ],
           hints: [
             {
               id: 15,
-              text: "Look at his face, are they smiling?",
-              answers: [9, 10]
+              text: "How are they looking at one another?",
+              answers: [76]
+            },
+            {
+              id: 216,
+              text: "Why are they both holding the ball?",
+              answers: [13]
+            },
+            {
+              id: 217,
+              text: "How are they looking at one another?",
+              answers: [74]
             }
           ]
         },
@@ -169,69 +177,74 @@ export default {
           image: "/img/interactions/Slide",
           width: "25vw",
           coordinates: ["39", "8"],
-          radius: "33",
           requiredStars: 2,
           answers: [
             {
               id: 17,
               text: "Scared",
               correct: true,
-              response: "Correct!"
+              response: "Correct! He looks scared."
             },
             {
               id: 18,
               text: "Calm",
               correct: false,
-              response: "Look again!"
+              response: "Look again! Look at his eyes and mouth!"
             },
             {
               id: 19,
               text: "Resting",
               correct: false,
-              response: "Look again!"
+              response: "Look again! Look at his eyes and mouth!"
             },
             {
               id: 20,
               text: "Frightened",
               correct: true,
-              response: "Yes, he looks frightened."
+              response: "Correct! He has a frightened look."
             },
             {
               id: 78,
               text: "Angry",
               correct: false,
-              response: "Does he look angry?"
+              response: "Look again! Does he have angry eyes?"
             },
             {
               id: 79,
-              text: "Excited",
+              text: "Nervous",
               correct: true,
-              response: "Correct!"
+              response: "Correct! He looks nervous."
             },
             {
               id: 80,
               text: "Aggresive",
               correct: false,
-              response: "Does he look aggresive?"
+              response: "Look again! Does he scare you?"
             },
             {
               id: 81,
               text: "Surprised",
               correct: false,
-              response: "Look again!"
+              response: "Look again! Look at his eyes and mouth!"
             }
           ],
           hints: [
             {
-              id: 21,
-              text: "Look at the names of them",
-              answers: [25, 26],
+              id: 218,
+              text: "Look at his eyes!",
+              answers: [17],
             },
             {
-              id: 22,
-              text: "Least bad of them",
-              answers: [27, 28]
+              id: 219,
+              text: "Look at his mouth!",
+              answers: [20]
+            },
+            {
+              id: 220,
+              text: "Look at his face, are they smiling?",
+              answers: [79]
             }
+            
           ]
         },
         {
@@ -244,68 +257,72 @@ export default {
           image: "/img/interactions/Boys_ball",
           width: "18vw",
           coordinates: ["29", "35"],
-          radius: "33",
           requiredStars: 3,
           answers: [
             {
               id: 83,
-              text: "Wounded",
+              text: "Suffering",
               correct: true,
-              response: "Correct! He is wounded."
+              response: "Correct! He is suffering because of the wound!"
             },
             {
               id: 84,
               text: "Hurt",
               correct: true,
-              response: "That's correct!"
+              response: "Correct! He is wounded!"
             },
             {
               id: 85,
               text: "In pain",
               correct: true,
-              response: "Yes, he looks like he is in pain!"
+              response: "Correct! His face shows he is in pain!"
             },
             {
               id: 86,
               text: "Happy",
               correct: false,
-              response: "Look again."
+              response: "Look again! Is he smiling?"
             },
             {
               id: 87,
               text: "Amazed",
               correct: false,
-              response: "Does he look amazed?"
+              response: "Look again! Are his eyes bright?"
             },
             {
               id: 88,
               text: "Glad",
               correct: false,
-              response: "Look again."
+              response: "Look again! Is he smiling?"
             },
             {
               id: 89,
               text: "Cruel",
               correct: false,
-              response: "Does he look cruel?"
+              response: "Look again! Does he have a cruel look?"
             },
             {
               id: 90,
               text: "Aggresive",
               correct: false,
-              response: "Look again?"
+              response: "Look again! Does he have a nasty look?"
             }
           ],
           hints: [
             {
-              id: 21,
-              text: "Look at the names of them",
-              answers: [25, 26]
+              id: 221,
+              text: "Look at his eyes!",
+              answers: [85],
             },
             {
-              id: 22,
-              text: "Least bad of them",
-              answers: [27, 28]
+              id: 222,
+              text: "Look at his mouth!",
+              answers: [83]
+            },
+            {
+              id: 223,
+              text: "Look at his bent leg!",
+              answers: [84]
             }
           ]
         },
@@ -319,68 +336,61 @@ export default {
           image: "/img/interactions/Isolation",
           width: "20vw",
           coordinates: ["50", "75"],
-          radius: "33",
           requiredStars: 3,
           answers: [
             {
               id: 94,
-              text: "He is sad",
+              text: "Is sad",
               correct: true,
-              response: "Correct! He is sad."
+              response: "Correct! He has a sad look."
             },
             {
               id: 95,
-              text: "He wants to join in play",
+              text: "Wants to join in play",
               correct: true,
-              response: "That's correct!"
+              response: "Correct! He can’t take his eyes off them."
             },
             {
               id: 96,
-              text: "He can ask the boys to join in",
+              text: "Shy",
               correct: true,
-              response: "Yes, he can!"
+              response: "Correct! He is rather shy."
             },
             {
               id: 97,
               text: "He does not like football",
               correct: false,
-              response: "Look again."
+              response: "Look again! What is he looking at?"
             },
             {
               id: 98,
               text: "He likes to be on his own",
               correct: false,
-              response: "Does he look amazed?"
+              response: "Look again! Does he look happy?"
             },
             {
               id: 99,
               text: "He has to wait until the boys ask him to join",
               correct: false,
-              response: "Look again."
+              response: "Think again! What do you do when you want to join in play?"
             },
-            {
-              id: 89,
-              text: "Cruel",
-              correct: false,
-              response: "Does he look cruel?"
-            },
-            {
-              id: 90,
-              text: "Aggresive",
-              correct: false,
-              response: "Look again?"
-            }
+          
           ],
           hints: [
             {
-              id: 21,
-              text: "Look at the names of them",
-              answers: [25, 26]
+              id: 224,
+              text: "Look at his eyes and brows!",
+              answers: [94],
             },
             {
-              id: 22,
-              text: "Least bad of them",
-              answers: [27, 28]
+              id: 225,
+              text: "What is he looking at?",
+              answers: [95]
+            },
+            {
+              id: 227,
+              text: "Look at his eyes and brows!",
+              answers: [96]
             }
           ]
         }
@@ -405,7 +415,6 @@ export default {
           image: "/img/interactions/Classroom",
           width: "23vw",
           coordinates: [62, 53],
-          radius: 12,
           answers: [
             {
               id: 25,
@@ -456,7 +465,6 @@ export default {
           ],
           coordinates: ["30", "51"],
           width: "18vw",
-          radius: "12",
           answers: [
             {
               id: 32,
@@ -517,7 +525,6 @@ export default {
           question: ["The three girls are...?", "Select all matches"],
           width: "18vw",
           coordinates: ["69", "24"],
-          radius: "12",
           answers: [
             {
               id: 107,
@@ -571,7 +578,7 @@ export default {
       id: 35,
       text: "Airport",
       icon: "/img/places_icons/Airport_icon.svg",
-      requiredStars: 5,
+      requiredStars: 6,
       image: "/places_backgrounds/Airport.png",
       coordinates: [48, 27],
       width: "25vw",
@@ -586,7 +593,6 @@ export default {
           image: "/img/interactions/Running",
           coordinates: [44, 37],
           width: "18vw",
-          radius: 12,
           requiredStars: 0,
           answers: [
             {
@@ -649,7 +655,6 @@ export default {
           image: "/img/interactions/Hugging",
           coordinates: [74, 58],
           width: "12vw",
-          radius: 8,
           requiredStars: 1,
           answers: [
             {
@@ -704,7 +709,6 @@ export default {
           image: "/img/interactions/Talking",
           coordinates: [14, 43],
           width: "28vw",
-          radius: "33",
           requiredStars: 2,
           answers: [
             {
