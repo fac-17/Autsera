@@ -4,10 +4,7 @@ import data from "../../data/data";
 import "./interactionpage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
 
-import assets from "../../assets"
-
-
-
+import assets from "../../assets";
 
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
@@ -117,7 +114,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       <ul>
         <li className="grid-center">
           <img
-            src={assets[interactionObj.image+".png"]}
+            src={assets[interactionObj.image + ".png"]}
             className="interaction-image"
           />
         </li>
@@ -145,7 +142,6 @@ const InteractionPage = ({ id, setCompleted }) => {
       </ul>
       {isCompleted ? (
         <div className="star-popup">
-          <span></span>
           <span>Well done!</span>
           <RouterLink
             className="btn-back completed-back"
