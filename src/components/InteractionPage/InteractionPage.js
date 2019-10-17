@@ -89,7 +89,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       <h2 className="interaction-question">{interactionObj.question[0]}</h2>
       <h3 className="interaction-instruction">{interactionObj.question[1]}</h3>
       <div className="interaction-grid">
-        <img src={assets[interactionObj.image + ".png"]} className="grid-center interaction-image" />
+        <img src={assets[interactionObj.image + ".png"]} className="grid-center interaction-image" alt="Interaction" />
 
         {shuffledAnswers.map((answer) => (
           <button
