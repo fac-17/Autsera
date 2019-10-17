@@ -24,7 +24,7 @@ const HelpPage = props => {
       <br />
       <RouterLink className="btn-back" to="/" label="Go Back" />
       <div className="video-container">
-        <video ref={videoEl} className="video-player" autoPlay >
+        <video ref={videoEl} className="video-player" alt="Help video player" autoPlay >
           <source src={video} type="video/mp4" />
         </video>
         <button
