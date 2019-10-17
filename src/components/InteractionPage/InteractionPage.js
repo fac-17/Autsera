@@ -4,10 +4,7 @@ import data from "../../data/data";
 import "./interactionpage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
 
-import assets from "../../assets"
-
-
-
+import assets from "../../assets";
 
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
@@ -38,7 +35,6 @@ const InteractionPage = ({ id, setCompleted }) => {
   };
 
   let shuffledAnswers = interactionObj.answers;
-  let image = interactionObj.image + ".png";
 
   useEffect(() => {
     let shuffleArray = array => {
@@ -91,7 +87,13 @@ const InteractionPage = ({ id, setCompleted }) => {
       );
       setIsCompleted(true);
     }
-  }, [selectedAnswers]);
+  }, [
+    selectedAnswers,
+    id,
+    interactionObj.answers,
+    interactionObj.hints,
+    setCompleted
+  ]);
 
   const style = {
     backgroundImage: `url(${assets[placeObj.text]})`,
@@ -117,8 +119,9 @@ const InteractionPage = ({ id, setCompleted }) => {
       <ul>
         <li className="grid-center">
           <img
-            src={assets[interactionObj.image+".png"]}
+            src={assets[interactionObj.image + ".png"]}
             className="interaction-image"
+            alt={assets[interactionObj.text]}
           />
         </li>
         {shuffledAnswers.map(answer => (
