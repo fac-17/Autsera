@@ -10,7 +10,8 @@ Deployed on netlify at [autsera.netlify.com](https://autsera.netlify.com)
 
 For detailed installation instructions view our [wiki on installation](https://github.com/fac-17/Autsera/wiki/Installation)
 
-:::spoiler Short Installation instructions
+<details>
+<summary> Short Installation instructions </summary>
 1. Clone this repo onto your local machine
 ```
 git clone https://github.com/fac-17/Autsera.git
@@ -33,9 +34,7 @@ npm start
 ```
 npm test
 ```
-:::
-
-
+</details>
 
 
 ## About
@@ -99,7 +98,8 @@ As a user, I want to be able to read facial expressions, understand how other pe
 ## Prototype
 Prototype was built with [Figma](https://www.figma.com/file/PdTO0F33I70uCgKALUClCc/Autsera-Prototype?node-id=80%3A159)
 
-:::spoiler Prototype is based on these original user stories
+<details>
+  <summary>Prototype is based on these original user stories</summary>
 As a user, I want to ....
 * be able to access instructions from the start screen 
 * be able to immediately start the game from the start screen
@@ -142,9 +142,10 @@ As a user, I want to ....
 * be shown feedback from the helper-avatar on every answer selection
 * be able to click the helper-avatar for a hint.
 * be able to see a hint when I select the wrong option. 
-:::
+</details>
 
-:::spoiler Prototype was refined based on these user testing results
+<details>
+  <summary>Prototype was refined based on these user testing results</summary>
 
 Users were very intuitive and quick in playing the game
 Users didn’t pause to read avatar text - trial and error approach rather than reading instructions Us
@@ -155,7 +156,7 @@ Users were very keen to collect stars
 Suggestion of a video tutorial
 Avatar text was seen as unnecessary by some users
 When on the map, users click on the circle and not on the name
-:::
+</details>
 
 ## Design  
 Our design was inspired by [Otsimo](https://otsimo.com/en/), Autsera's branding and digital assets provided by Autsera. 
