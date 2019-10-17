@@ -4,6 +4,9 @@ import Stars from "../reusable/Stars";
 import { countStarsInPlace } from "../../utils/starsCounting";
 import "./PlaceCircle.scss";
 
+import lock from "../../assets/img/lock.svg";
+import assets from "../../assets";
+
 const PlaceCircle = ({ place, completed, setMessage }) => {
   const [isUnlocked, setIsUnlocked] = React.useState(false);
   let positionStyle = {
@@ -28,12 +31,17 @@ const PlaceCircle = ({ place, completed, setMessage }) => {
       onClick={changeMessageIfLocked}
     >
       {!isUnlocked ? (
-        <img className="lock-icon" alt="lock-icon" style={{ position: "absolute", opacity: 0.7 }} src="/img/lock.svg" />
+        <img
+          className="lock-icon"
+          alt="locked-question-mark"
+          style={{ position: "absolute", opacity: 0.7 }}
+          src={lock}
+        />
       ) : null}
       <RouterLink
         imageWidth={place.width}
         title={place.text}
-        icon={place.icon}
+        icon={assets[place.icon]}
         label={place.text}
         to={isUnlocked ? "/place/" + place.id : "#"}
       ></RouterLink>

@@ -164,7 +164,7 @@ export default {
           text: "Victor",
           question: [
             "Can you tell how Victor is feeling?",
-            "Select all the matching emotions"
+            "Select all the matching emotions",
           ],
           image: "/img/interactions/Slide",
           width: "25vw",
@@ -225,7 +225,7 @@ export default {
             {
               id: 21,
               text: "Look at the names of them",
-              answers: [25, 26]
+              answers: [25, 26],
             },
             {
               id: 22,

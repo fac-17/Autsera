@@ -6,12 +6,16 @@ import Stars from "../reusable/Stars";
 import { countStarsInPlace } from "../../utils/starsCounting";
 import HelperAvatar from "../reusable/HelperAvatar";
 import "./placepage.scss";
+import place1 from "../../assets/img/places_backgrounds/Playground.png";
+import place2 from "../../assets/img/places_backgrounds/School.png";
+import place3 from "../../assets/img/places_backgrounds/Airport.png";
 
+const images={Playground:place1,School:place2,Airport:place3};
 const PlacePage = ({ id, completed }) => {
   const placeData = data.places.find((place) => place.id === id);
 
   const style = {
-    backgroundImage: `url(/img/${placeData.image})`,
+    backgroundImage: `url(${images[placeData.text]})`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -27,6 +31,8 @@ const PlacePage = ({ id, completed }) => {
         : `Keep going, you're doing great!`;
     setspeechText(newMessage);
   }, [completed]);
+
+ 
 
   return (
     <div style={style}>
