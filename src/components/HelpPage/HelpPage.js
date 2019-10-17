@@ -9,11 +9,10 @@ const HelpPage = props => {
       <br />
       <RouterLink className="btn-back" to="/" label="Go Back" />
       <div className="help-video">
-        <video width="100%" height="auto" autoplay>
+        <video width="100%" height="auto" controls controlsList="nofullscreen nodownload" muted loop autoplay >
           <source src="/AutseraHelpFinal.mp4" type="video/mp4" />
         </video>
       </div>
-      <HelperAvatar speechText="Hi, welcome to Autsera" timeOut={1000} />
     </div>
   );
 };
