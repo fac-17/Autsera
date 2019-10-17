@@ -17,8 +17,8 @@ export default {
             "Select all the matching words"
           ],
           image: "/img/interactions/Slide_happy",
-          coordinates: [20, 66],
-          width: "25vw",
+          coordinates: [39, 65],
+          width: "30vw",
           radius: 12,
           requiredStars: 0,
           answers: [
@@ -97,8 +97,8 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Fight_ball",
-          width: "18vw",
-          coordinates: [60, 42],
+          width: "17vw",
+          coordinates: [69, 48],
           radius: 8,
           requiredStars: 1,
           answers: [
@@ -168,8 +168,8 @@ export default {
           ],
           image: "/img/interactions/Slide",
           width: "25vw",
-          coordinates: ["39", "8"],
-          radius: "33",
+          coordinates: ["28", "5"],
+          radius: "28",
           requiredStars: 2,
           answers: [
             {
@@ -242,8 +242,8 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Boys_ball",
-          width: "18vw",
-          coordinates: ["29", "35"],
+          width: "15vw",
+          coordinates: [41, 37],
           radius: "33",
           requiredStars: 3,
           answers: [
@@ -317,8 +317,8 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Isolation",
-          width: "20vw",
-          coordinates: ["50", "75"],
+          width: "15vw",
+          coordinates: [14, 53],
           radius: "33",
           requiredStars: 3,
           answers: [
