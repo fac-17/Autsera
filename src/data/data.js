@@ -17,8 +17,8 @@ export default {
             "Select all the matching words"
           ],
           image: "/img/interactions/Slide_happy",
-          coordinates: [20, 66],
-          width: "25vw",
+          coordinates: [39, 65],
+          width: "30vw",
           requiredStars: 0,
           answers: [
             {
@@ -96,8 +96,8 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Fight_ball",
-          width: "18vw",
-          coordinates: [60, 42],
+          width: "17vw",
+          coordinates: [69, 48],
           requiredStars: 1,
           answers: [
             {
@@ -172,11 +172,11 @@ export default {
           text: "Victor",
           question: [
             "Can you tell how Victor is feeling?",
-            "Select all the matching emotions",
+            "Select all the matching emotions"
           ],
           image: "/img/interactions/Slide",
           width: "25vw",
-          coordinates: ["39", "8"],
+          coordinates: ["28", "5"],
           requiredStars: 2,
           answers: [
             {
@@ -232,7 +232,7 @@ export default {
             {
               id: 218,
               text: "Look at his eyes!",
-              answers: [17],
+              answers: [17]
             },
             {
               id: 219,
@@ -244,7 +244,6 @@ export default {
               text: "Look at his face, are they smiling?",
               answers: [79]
             }
-            
           ]
         },
         {
@@ -255,8 +254,8 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Boys_ball",
-          width: "18vw",
-          coordinates: ["29", "35"],
+          width: "15vw",
+          coordinates: [41, 37],
           requiredStars: 3,
           answers: [
             {
@@ -312,7 +311,7 @@ export default {
             {
               id: 221,
               text: "Look at his eyes!",
-              answers: [85],
+              answers: [85]
             },
             {
               id: 222,
@@ -334,8 +333,8 @@ export default {
             "Select all the matching emotions"
           ],
           image: "/img/interactions/Isolation",
-          width: "20vw",
-          coordinates: ["50", "75"],
+          width: "15vw",
+          coordinates: [14, 53],
           requiredStars: 3,
           answers: [
             {
@@ -372,15 +371,15 @@ export default {
               id: 99,
               text: "He has to wait until the boys ask him to join",
               correct: false,
-              response: "Think again! What do you do when you want to join in play?"
-            },
-          
+              response:
+                "Think again! What do you do when you want to join in play?"
+            }
           ],
           hints: [
             {
               id: 224,
               text: "Look at his eyes and brows!",
-              answers: [94],
+              answers: [94]
             },
             {
               id: 225,
@@ -413,8 +412,8 @@ export default {
             "Select all descriptions matching this situation"
           ],
           image: "/img/interactions/Classroom",
-          width: "23vw",
-          coordinates: [62, 53],
+          width: "26vw",
+          coordinates: [60, 53],
           answers: [
             {
               id: 25,
@@ -523,8 +522,8 @@ export default {
           text: "Outside school",
           image: "/img/interactions/Bullying",
           question: ["The three girls are...?", "Select all matches"],
-          width: "18vw",
-          coordinates: ["69", "24"],
+          width: "21vw",
+          coordinates: ["66", "21"],
           answers: [
             {
               id: 107,
