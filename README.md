@@ -40,7 +40,7 @@ npm test
 ## About
 
 ### The Problem
-Children with high-functioning autism struggle with social communication including inference or "reading between the lines". There are books and board games that address this issue, but there is a lack of digital and interactive social communication training tools for children with ADS.
+Children with high-functioning autism struggle with social communication including inference or "reading between the lines". There are books and board games that address this issue, but there is a lack of digital and interactive social communication training tools for children with ASD.
 
 ### The Solution
 An interactive game that makes social communication training for children with Autism effective, accessible, affordable and fun.
