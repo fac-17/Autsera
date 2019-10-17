@@ -6,10 +6,15 @@
   background-size: cover;
 }
 
-.help-video {
+.video-container {
   border: white 8px solid;
-  padding-bottom: -80px;
-  margin: auto;
+  background: white;
+  margin: 0px auto;
   width: 60vw;
-  box-sizing: content-box;
+  box-sizing: border-box;
+}
+
+.video-player {
+  width: 100%;
+  height: auto;
 }
