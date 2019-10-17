@@ -1,8 +1,8 @@
 ul {
   margin: 2% auto;
   padding: 0 !important;
-  height: 40vh;
-  width: 80vw;
+  min-height: 40vh;
+  width: 90vw;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: stretch;
@@ -11,6 +11,7 @@ ul {
 li {
   list-style-type: none;
   justify-self: center;
+  width: 100%;
 }
 
 .interaction-question {
@@ -32,7 +33,8 @@ li {
 .btn-answer {
   border: 3px solid #f69a5d;
   background: #feee7e;
-  box-shadow: 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  box-shadow: 0 5px 5px rgba(65, 8, 8, 0.17),
+    0 15px rgba(255, 255, 255, 0.25) inset;
   display: inline-block;
   color: #0a2e27;
   text-align: center;
@@ -40,10 +42,10 @@ li {
   text-decoration: none;
   cursor: pointer;
   border-radius: 20px;
-  width: 20vw;
+  width: 100%;
   margin: 1.5vh 0;
   font-size: 1.2rem;
-  padding: 0.8rem 0;
+  padding: 0.9rem 0;
 }
 
 .selected {
@@ -55,6 +57,7 @@ li {
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 5;
+  width: 80%;
 }
 
 .interaction-image {
@@ -75,7 +78,7 @@ li {
   text-align: center;
   font-weight: 700;
   svg {
-    margin: 0 2vw;
+    margin: 0 1vw;
   }
 }
 

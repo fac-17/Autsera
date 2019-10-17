@@ -3,7 +3,8 @@ import RouterLink from "../reusable/RouterLink";
 import data from "../../data/data";
 import "./interactionpage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
-import { findByLabelText } from "@testing-library/dom";
+
+import assets from "../../assets";
 
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
@@ -90,7 +91,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   }, [selectedAnswers]);
 
   const style = {
-    backgroundImage: `url(/img/interactions_backgrounds/${placeObj.text}.svg)`,
+    backgroundImage: `url(${assets[placeObj.text]})`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -112,7 +113,10 @@ const InteractionPage = ({ id, setCompleted }) => {
       <h3 className="interaction-instruction">{interactionObj.question[1]}</h3>
       <ul>
         <li className="grid-center">
-          <img src={image} className="interaction-image" />
+          <img
+            src={assets[interactionObj.image + ".png"]}
+            className="interaction-image"
+          />
         </li>
         {shuffledAnswers.map(answer => (
           <li key={answer.id}>
@@ -138,7 +142,6 @@ const InteractionPage = ({ id, setCompleted }) => {
       </ul>
       {isCompleted ? (
         <div className="star-popup">
-          <span></span>
           <span>Well done!</span>
           <RouterLink
             className="btn-back completed-back"
