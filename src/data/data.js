@@ -324,37 +324,37 @@ export default {
           answers: [
             {
               id: 94,
-              text: "Is sad",
+              text: "He is sad",
               correct: true,
               response: "Correct! He is sad."
             },
             {
               id: 95,
-              text: "Wants to join in play",
+              text: "He wants to join in play",
               correct: true,
               response: "That's correct!"
             },
             {
               id: 96,
-              text: "Can ask the boys to join in",
+              text: "He can ask the boys to join in",
               correct: true,
               response: "Yes, he can!"
             },
             {
               id: 97,
-              text: "Paul does not like football",
+              text: "He does not like football",
               correct: false,
               response: "Look again."
             },
             {
               id: 98,
-              text: "Paul likes to be on his own",
+              text: "He likes to be on his own",
               correct: false,
               response: "Does he look amazed?"
             },
             {
               id: 99,
-              text: "Paul has to wait until the boys ask him to join",
+              text: "He has to wait until the boys ask him to join",
               correct: false,
               response: "Look again."
             },
