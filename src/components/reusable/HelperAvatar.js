@@ -11,17 +11,24 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
       setdisplaySomething(false);
     }, timeOut);
     return () => clearTimeout(timer);
-  }, [setdisplaySomething, showHint, clickCount, speechText, answerClickCount]);
+  }, [
+    setdisplaySomething,
+    showHint,
+    clickCount,
+    speechText,
+    answerClickCount,
+    timeOut
+  ]);
 
   // if new speechText is passed then stop showing hint and show text instead
   React.useEffect(() => {
     setshowHint(false);
   }, [speechText]);
 
-  let toggleshowHint = (e) => {
+  let toggleshowHint = e => {
     setdisplaySomething(true);
     setshowHint(true);
-    setclickCount((clickCount) => clickCount + 1);
+    setclickCount(clickCount => clickCount + 1);
   };
 
   return (
@@ -36,7 +43,12 @@ const HelperAvatar = ({ speechText, helpText, timeOut, answerClickCount }) => {
           <p>{helpText}</p>
         </div>
       ) : null}
-      <img src={helperImg} className="helper-avatar" alt="helper-avatar" onClick={toggleshowHint}></img>
+      <img
+        src={helperImg}
+        className="helper-avatar"
+        alt="helper-avatar"
+        onClick={toggleshowHint}
+      ></img>
     </div>
   );
 };
