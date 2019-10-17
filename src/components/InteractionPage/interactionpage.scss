@@ -1,4 +1,4 @@
-ul {
+.interaction-grid {
   margin: 2% auto;
   padding: 0 !important;
   min-height: 40vh;
@@ -9,17 +9,11 @@ ul {
   justify-items: center;
 }
 
-li {
-  list-style-type: none;
-  justify-self: center;
-  width: 100%;
-}
-
 .interaction-question {
   text-align: center;
   font-family: "Amatic SC", cursive;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 2% 0 0 0;
 }
 
@@ -27,7 +21,7 @@ li {
   text-align: center;
   font-family: "Amatic SC", cursive;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0;
 }
 

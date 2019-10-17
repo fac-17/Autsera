@@ -33,7 +33,6 @@ const InteractionPage = ({ id, setCompleted }) => {
   };
 
   let shuffledAnswers = interactionObj.answers;
-  let image = interactionObj.image + ".png";
 
   useEffect(() => {
     let shuffleArray = (array) => {
@@ -71,7 +70,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       setCompleted((completed) => (completed.includes(id) ? completed : addStar(id, completed)));
       setIsCompleted(true);
     }
-  }, [selectedAnswers]);
+  }, [selectedAnswers, id, interactionObj.answers, interactionObj.hints, setCompleted]);
 
   const style = {
     backgroundImage: `url(${assets[placeObj.text]})`,
@@ -89,27 +88,26 @@ const InteractionPage = ({ id, setCompleted }) => {
       </div>
       <h2 className="interaction-question">{interactionObj.question[0]}</h2>
       <h3 className="interaction-instruction">{interactionObj.question[1]}</h3>
-      <ul>
+      <div className="interaction-grid">
         <img src={assets[interactionObj.image + ".png"]} className="grid-center interaction-image" />
 
         {shuffledAnswers.map((answer) => (
-          <li key={answer.id}>
-            <button
-              className={selectedAnswers.includes(answer.id) ? "btn-answer selected" : "btn-answer option"}
-              onClick={() => {
-                if (answer.correct && !selectedAnswers.includes(answer.id)) {
-                  setSelectedAnswers([...selectedAnswers, answer.id]);
-                } else {
-                }
-                setAnswerClickCount((click) => click + 1);
-                setSpeechText(answer.response);
-              }}
-            >
-              {answer.text}
-            </button>
-          </li>
+          <button
+            key={answer.id}
+            className={selectedAnswers.includes(answer.id) ? "btn-answer selected" : "btn-answer option"}
+            onClick={() => {
+              if (answer.correct && !selectedAnswers.includes(answer.id)) {
+                setSelectedAnswers([...selectedAnswers, answer.id]);
+              } else {
+              }
+              setAnswerClickCount((click) => click + 1);
+              setSpeechText(answer.response);
+            }}
+          >
+            {answer.text}
+          </button>
         ))}
-      </ul>
+      </div>
       {isCompleted ? (
         <div className="star-popup">
           <span>Well done!</span>
