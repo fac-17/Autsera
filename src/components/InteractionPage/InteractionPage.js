@@ -98,7 +98,6 @@ const InteractionPage = ({ id, setCompleted }) => {
             onClick={() => {
               if (answer.correct && !selectedAnswers.includes(answer.id)) {
                 setSelectedAnswers([...selectedAnswers, answer.id]);
-              } else {
               }
               setAnswerClickCount((click) => click + 1);
               setSpeechText(answer.response);
