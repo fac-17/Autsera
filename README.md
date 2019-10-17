@@ -101,6 +101,7 @@ Prototype was built with [Figma](https://www.figma.com/file/PdTO0F33I70uCgKALUCl
 <details>
   <summary>Prototype is based on these original user stories</summary>
 As a user, I want to ....
+
 * be able to access instructions from the start screen 
 * be able to immediately start the game from the start screen
 * go back to the onboarding screen after I've read the instructions
@@ -147,15 +148,15 @@ As a user, I want to ....
 <details>
   <summary>Prototype was refined based on these user testing results</summary>
 
-Users were very intuitive and quick in playing the game
-Users didn’t pause to read avatar text - trial and error approach rather than reading instructions Us
-Interaction screen: the fact that you could/should choose more then one answer wasn’t clear
-Users requested more complexity and features (particularly on map)
-Users suggested having animations
-Users were very keen to collect stars
-Suggestion of a video tutorial
-Avatar text was seen as unnecessary by some users
-When on the map, users click on the circle and not on the name
+* Users were very intuitive and quick in playing the game
+* Users didn’t pause to read avatar text - trial and error approach rather than reading instructions Us
+* Interaction screen: the fact that you could/should choose more then one answer wasn’t clear
+* Users requested more complexity and features (particularly on map)
+* Users suggested having animations
+* Users were very keen to collect stars
+* Suggestion of a video tutorial
+* Avatar text was seen as unnecessary by some users
+* When on the map, users click on the circle and not on the name
 </details>
 
 ## Design  
