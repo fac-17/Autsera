@@ -35,7 +35,6 @@ const InteractionPage = ({ id, setCompleted }) => {
   };
 
   let shuffledAnswers = interactionObj.answers;
-  let image = interactionObj.image + ".png";
 
   useEffect(() => {
     let shuffleArray = array => {
@@ -88,7 +87,13 @@ const InteractionPage = ({ id, setCompleted }) => {
       );
       setIsCompleted(true);
     }
-  }, [selectedAnswers]);
+  }, [
+    selectedAnswers,
+    id,
+    interactionObj.answers,
+    interactionObj.hints,
+    setCompleted
+  ]);
 
   const style = {
     backgroundImage: `url(${assets[placeObj.text]})`,
@@ -116,6 +121,7 @@ const InteractionPage = ({ id, setCompleted }) => {
           <img
             src={assets[interactionObj.image + ".png"]}
             className="interaction-image"
+            alt="Interaction"
           />
         </li>
         {shuffledAnswers.map(answer => (
