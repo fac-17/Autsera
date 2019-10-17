@@ -412,8 +412,8 @@ export default {
             "Select all descriptions matching this situation"
           ],
           image: "/img/interactions/Classroom",
-          width: "23vw",
-          coordinates: [62, 53],
+          width: "26vw",
+          coordinates: [60, 53],
           answers: [
             {
               id: 25,
@@ -522,8 +522,8 @@ export default {
           text: "Outside school",
           image: "/img/interactions/Bullying",
           question: ["The three girls are...?", "Select all matches"],
-          width: "18vw",
-          coordinates: ["69", "24"],
+          width: "21vw",
+          coordinates: ["66", "21"],
           answers: [
             {
               id: 107,
