@@ -4,40 +4,10 @@ import data from "../../data/data";
 import "./interactionpage.scss";
 import HelperAvatar from "../reusable/HelperAvatar";
 
-import background1 from "../../assets/img/interactions_backgrounds/Playground.svg";
-import background2 from "../../assets/img/interactions_backgrounds/School.svg";
-import background3 from "../../assets/img/interactions_backgrounds/Airport.svg";
+import assets from "../../assets"
 
-import image1 from "../../assets/img/interactions/Blackboard.png";
-import image2 from "../../assets/img/interactions/Boys_ball.png";
-import image3 from "../../assets/img/interactions/Bullying.png";
-import image4 from "../../assets/img/interactions/Slide_happy.png";
-import image5 from "../../assets/img/interactions/Classroom.png";
-import image6 from "../../assets/img/interactions/Slide.png";
-import image7 from "../../assets/img/interactions/Fight_ball.png";
-import image8 from "../../assets/img/interactions/Isolation.png";
-import image9 from "../../assets/img/interactions/Hugging.png";
-import image10 from "../../assets/img/interactions/Running.png";
-import image11 from "../../assets/img/interactions/Talking.png";
-const images = {
-  "/img/interactions/Blackboard": image1,
-  "/img/interactions/Boys_ball": image2,
-  "/img/interactions/Bullying": image3,
-  "/img/interactions/Slide_happy": image4,
-  "/img/interactions/Classroom": image5,
-  "/img/interactions/Slide": image6,
-  "/img/interactions/Fight_ball": image7,
-  "/img/interactions/Isolation": image8,
-  "/img/interactions/Hugging": image9,
-  "/img/interactions/Running": image10,
-  "/img/interactions/Talking": image11
-};
 
-const backgrounds={
-  Playground:background1,
-  School:background2,
-  Airport:background3
-}
+
 
 const InteractionPage = ({ id, setCompleted }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
@@ -124,7 +94,7 @@ const InteractionPage = ({ id, setCompleted }) => {
   }, [selectedAnswers]);
 
   const style = {
-    backgroundImage: `url(${backgrounds[placeObj.text]})`,
+    backgroundImage: `url(${assets[placeObj.text]})`,
     minHeight: "100vh",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -147,7 +117,7 @@ const InteractionPage = ({ id, setCompleted }) => {
       <ul>
         <li className="grid-center">
           <img
-            src={images[interactionObj.image]}
+            src={assets[interactionObj.image+".png"]}
             className="interaction-image"
           />
         </li>
