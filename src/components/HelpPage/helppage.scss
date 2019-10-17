@@ -7,22 +7,25 @@
 }
 
 .video-container {
-  border: white 8px solid;
-  background: white;
+  display: flex;
+  flex-direction: column;
   margin: 0px auto;
   width: 60vw;
-  box-sizing: border-box;
 }
 
 .video-player {
+  align-self: center;
   width: 100%;
   height: auto;
+  border: white 8px solid;
+  background-color: white;
 }
 
-.play-button {
-  position: fixed;
-  top: 0px;
-  width: 200px;
-  height: 50px;
-  background: red;
+.btn-play {
+  align-self: center;
+
+  &.play {
+    background-color: #f69a5d;
+    box-shadow: 0 -2px 0 3px #f69a5d inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  }
 }

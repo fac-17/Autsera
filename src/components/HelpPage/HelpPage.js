@@ -10,11 +10,9 @@ const HelpPage = props => {
   const togglePlay = () => {
     if (play) {
       videoEl.current.pause();
-      videoEl.current.innerHtml = "Play";
       setPlay(false);
     } else {
       videoEl.current.play();
-      videoEl.current.innerHtml = "Pause";
       setPlay(true);
     }
   };
@@ -29,10 +27,11 @@ const HelpPage = props => {
         </video>
         <button
           onClick={togglePlay}
-          className="play-button" >
+          className={`btn-play ${play ? 'play' : 'pause'}`} >
           {play ? "Pause" : "Play"}
         </button>
       </div>
+
     </div>
   );
 };
