@@ -148,7 +148,6 @@ const InteractionPage = ({ id, setCompleted }) => {
       </ul>
       {isCompleted ? (
         <div className="star-popup">
-          <span></span>
           <span>Well done!</span>
           <RouterLink
             className="btn-back completed-back"
