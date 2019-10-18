@@ -6,7 +6,7 @@ A progressive web app to help children with high-functioning autism learn social
 
 Deployed on netlify at [autsera.netlify.com](https://autsera.netlify.com)
 
-Note: The current version is optimised for tablet use only. If you view it in your browser, please set the display to ipad landscape. 
+Note: The current version is optimised for tablet use only. If you view it in your browser, please set the display to ipad landscape.
 
 ## Local Installation Instructions (for developers)
 
@@ -69,7 +69,7 @@ Founded by Inas Ismail and Omar Massoud, Autsera is a social-impact startup that
 
 
 ## The App
-Currently the app is a Minimum Viable Product (MVP) for tablet use only, focussing on three places with up to five interactions each. The codebase includes a data.js file which allows the product owner to add places and interactions easily. 
+Currently the app is a Minimum Viable Product (MVP) for tablet use only, focussing on three places with up to five interactions each. The codebase includes a data.js file which allows the product owner to add places and interactions easily.
 
 The game requires the user to navigate through different places, collecting stars along the way by decoding social interactions.
 
@@ -176,14 +176,12 @@ Our design was inspired by [Otsimo](https://otsimo.com/en/), Autsera's branding 
 
 Assets were partyly sourced online and partly created by UX/UI lead.
 
-## Technical challenges
 
-### Progressive Web Application
+## Progressive Web Application
 
-We wanted to have our app as fully offline once installed using PWA features. One of the requirements is to have all the static assets cached, but assets filenames are coming from a data object therefore unknown at build time. We solved it buy creating an index of all assets from scenario object file and refered in components.
+We wanted to have our app fully available offline once installed, and took the required steps to bring the app to PWA standards: configured the built-in Service Worker and JSON manifest, added various icon sizes and made it possible to cache the whole app.
 
-### Testing with react router
-Initally we had to figure out how to wrap routed components in testing
+One of the requirements is to have all the static assets cached, but assets filenames are coming from a data object therefore unknown at build time. We solved it by creating an index of all the assets linking their reference in the scenario object file to the relevant components.
 
 
 ## Testing
@@ -192,7 +190,7 @@ Initally we had to figure out how to wrap routed components in testing
 - Focused on interaction testing rather than functional testing.
 - For each component, we aimed to test each possibility offered to the user, so that each of our user journeys get tested.
 - Achieved an overall 78% code coverage.
-
+- Wrapping routed components in `<Router />`.
 
 
 <details>
