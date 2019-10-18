@@ -6,6 +6,8 @@ A progressive web app to help children with high-functioning autism learn social
 
 Deployed on netlify at [autsera.netlify.com](https://autsera.netlify.com)
 
+Note: The current version is optimised for tablet use only. If you view it in your browser, please set the display to ipad landscape. 
+
 ## Local Installation Instructions (for developers)
 
 For detailed installation instructions view our [wiki on installation](https://github.com/fac-17/Autsera/wiki/Installation)
@@ -67,7 +69,7 @@ Founded by Inas Ismail and Omar Massoud, Autsera is a social-impact startup that
 
 
 ## The App
-Currently the app is a Minimum Viable Product (MVP) primarily focussing on three places with up to five interactions each.
+Currently the app is a Minimum Viable Product (MVP) for tablet use only, focussing on three places with up to five interactions each. The codebase includes a data.js file which allows the product owner to add places and interactions easily. 
 
 The game requires the user to navigate through different places, collecting stars along the way by decoding social interactions.
 
